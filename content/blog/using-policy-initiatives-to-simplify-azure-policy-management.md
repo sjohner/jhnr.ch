@@ -144,7 +144,7 @@ There are some general tips and tricks to follow when creating initiatives in th
 
 
 
-# Assing initiatives
+# Assigning initiatives
 
 
 Once you have created your custom initiative definitions you probably want to assign them to your subscriptions and resource groups. As with definitions, initiatives can be assigned easily by using the portal UI, PowerShell or Azure CLI. When using the portal and assigning a custom initiative, make sure that the selected initiative definition is in the same scope as the subscription or resource group you want it to be assigned.

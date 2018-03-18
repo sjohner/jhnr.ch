@@ -3,8 +3,8 @@ author: sjohner
 comments: true
 date: 2014-02-17 21:08:20+00:00
 layout: post
-slug: customize-service-manager-user-profiles-by-using-c-and-sdk
-title: Customize Service Manager User Profiles by using C# and SDK
+slug: customize-service-manager-user-profiles-by-using-scsm-sdk
+title: Customize Service Manager User Profiles by using SCSM SDK
 wordpress_id: 847
 categories:
 - Service Manager

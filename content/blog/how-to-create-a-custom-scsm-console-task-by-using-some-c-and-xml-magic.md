@@ -4,7 +4,7 @@ comments: true
 date: 2013-12-09 14:45:47+00:00
 layout: post
 slug: how-to-create-a-custom-scsm-console-task-by-using-some-c-and-xml-magic
-title: How to create a custom SCSM console task by using some C# and XML magic :-)
+title: How to create a custom SCSM console task by using some SDK and XML magic
 wordpress_id: 717
 categories:
 - Service Manager

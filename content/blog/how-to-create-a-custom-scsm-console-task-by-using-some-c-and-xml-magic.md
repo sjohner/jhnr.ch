@@ -9,7 +9,6 @@ wordpress_id: 717
 categories:
 - Service Manager
 tags:
-- C#
 - Management Pack
 - Management Pack Bundle
 - SCSM Console

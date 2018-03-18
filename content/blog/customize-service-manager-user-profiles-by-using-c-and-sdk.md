@@ -9,7 +9,6 @@ wordpress_id: 847
 categories:
 - Service Manager
 tags:
-- C#
 - Incident
 - Management Group
 - PowerShell

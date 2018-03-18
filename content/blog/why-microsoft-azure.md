@@ -180,4 +180,4 @@ Microsoft is very committed about building the fastest and most reliable global 
 
 People at Microsoft Research are working in many different fields like Human-computer interaction to artificial intelligence, quantum computing, social sciences and economics just to name a few. A lot of great projects and products were started at Microsoft Research including for example [Project Sopris](https://www.wired.com/story/project-sopris-iot-security/), the [Seeing AI app](https://www.microsoft.com/en-us/seeing-ai/), Project [InnerEye](https://www.microsoft.com/en-us/research/project/medical-image-analysis/) and [Project Emma](https://www.microsoft.com/en-us/research/project/project-emma/), a wearable that helps with Parkinson's tremors. Many research teams also make source code available to the public like with the [Language Integrated Quantum Operations Simulator](https://stationq.github.io/Liquid/) or the [Microsoft Cognitive Toolkit](https://github.com/Microsoft/CNTK/).
 
-https://youtu.be/R6rAlFYDffQ
+[![Project Emma on Youtube](/images/youtube-screenshot-project-emma.png)](https://youtu.be/R6rAlFYDffQ "This invention helped me write again - BBC Stories")

@@ -9,7 +9,6 @@ wordpress_id: 1766
 categories:
 - Service Manager
 tags:
-- C#
 - Code-Behind
 - Data Warehouse
 - Database

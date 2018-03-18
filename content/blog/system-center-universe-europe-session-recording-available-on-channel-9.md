@@ -11,7 +11,6 @@ categories:
 - Orchestrator
 - Service Manager
 tags:
-- C#
 - Code-Behind
 - Custom Form
 - dll file

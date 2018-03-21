@@ -1,4 +1,4 @@
-baseURL = "https://festive-fermi-e49930.netlify.com/"
+baseURL = "https://blog.jhnr.ch/"
 languageCode = "en-us"
 title = "Stefan Johner"
 theme = "hyde"
@@ -12,7 +12,7 @@ relativeURLs = true
 
 [params]
     author = "Stefan Johner"
-    profilePic = "img/avatar.png"
+    profilePic = "images/avatar.png"
     description = "Working with #Azure. Microsoft MVP. Likes cheese, chocolate and @burgdorferbier. Runs Experts Live Café Switzerland"
     githubUsername = "sjohner"
     accent = "#007acc"

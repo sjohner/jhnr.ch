@@ -27,61 +27,10 @@ On Wednesday, Jan. 3, security researchers [publicly detailed](https://googlepr
 
 | Exploited Vulnerability | CVE | Exploit Name | Public Vulnerability Name | Silicon Microcode Update Required on Host |
 | ----------------------- | --- | ------------ | ------------------------- | ----------------------------------------- |
-| Spectre                 |[CVE-2017-5753](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5753)
-</td>
+| Spectre                 |[CVE-2017-5753](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5753)|Variant 1|Bounds Check Bypass|No|
+| Spectre                 |[CVE-2017-5715](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)|Variant 2|Branch Target Injection|Yes|
+| Meltdown                |[CVE-2017-5754](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)|Variant 3|Rogue Data Cache Load|No|
 
-<td >
-</td>
-
-<td >Variant 1
-</td>
-
-<td >Bounds Check Bypass
-</td>
-
-<td >No
-</td>
-</tr>
-<tr >
-
-<td >**Spectre**
-</td>
-
-<td >[CVE-2017-5715](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5715)
-</td><table >
-<tbody >
-<tr >
-
-<td >
-
-<td >Variant 2
-</td>
-
-<td >Branch Target Injection
-</td>
-
-<td >Yes
-</td>
-</tr>
-<tr >
-
-<td >**Meltdown**
-</td>
-
-<td >[CVE-2017-5754](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5754)
-</td>
-
-<td >Variant 3
-</td>
-
-<td >Rogue Data Cache Load
-</td>
-
-<td >No
-</td>
-</tr>
-</tbody>
-</table>
 In an environment where multiple servers are sharing capabilities (for example virtual machines hosted in a cloud or on premise environment ), these vulnerabilities could mean it is possible for someone to access information in one virtual machine from another.
 
 Below I tried to collect various statements from public cloud providers explaining how they protect their infrastructure from the above mentioned vulnerabilities and what are the recommended actions for their customers.

@@ -20,7 +20,7 @@ tags:
 - Most Valuable Professional
 ---
 
-I am excited to share that I have been awarded Microsoft **Most Valuable Professional (MVP) 2016 **in Cloud and Datacenter Management!
+I am excited to share that I have been awarded Microsoft **Most Valuable Professional (MVP) 2016** in Cloud and Datacenter Management!
 
 This is actually the first time I receive this award and I can't wait to find out what's in store for me. :-) I am truly honored to be part of this awesome community and I am looking forward to meet a lot of great people!
 

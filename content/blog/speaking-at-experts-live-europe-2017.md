@@ -42,7 +42,7 @@ Myself I will co-host two sessions at this years event:
 
  	
   * **[Azure TestDev Labs - What the heck is it?](http://sched.co/AH8Z)**
-**Wednesday**,** August 23 • 10:45am - 11:45am**
+**Wednesday, August 23 • 10:45am - 11:45am**
 In this session we show you how you can use Azure TestDev Labs to build your own lab and keep control of cost and resources.
 
 
@@ -50,10 +50,11 @@ In this session we show you how you can use Azure TestDev Labs to build your own
 
  	
   * **[sudo OMS loves Linux](http://sched.co/AH8w)**
-**Thursda****y, August 24 • 8:00am - 9:00am**
+**Thursday, August 24 • 8:00am - 9:00am**
 This session is all about how we can manage Linux workloads in our data centers using Microsoft Operations Management suite. We will discuss how to automate, monitor, configure and manage Linux operating systems that are running in your hybrid data center using different OMS solutions. Session Takeaways OMS Log Analytics for Linux, Integrating Zabbix/Nagios/syslog with OMS, Linux Configuration Management with OMS, Update Management & Change Tracking, Container Management in OMS.
 
 
 Hope to see you in Berlin! :-)
 
-[caption id="" align="alignnone" width="765"][![Sunrise Berlin](https://upload.wikimedia.org/wikipedia/commons/f/f7/Sunrise_Berlin_2014.jpg)](https://upload.wikimedia.org/wikipedia/commons/f/f7/Sunrise_Berlin_2014.jpg) von Lear 21 (Eigenes Werk) [CC BY-SA 4.0 (http://creativecommons.org/licenses/by-sa/4.0)], via Wikimedia Commons[/caption]
+[![Sunrise Berlin](https://upload.wikimedia.org/wikipedia/commons/f/f7/Sunrise_Berlin_2014.jpg)](https://upload.wikimedia.org/wikipedia/commons/f/f7/Sunrise_Berlin_2014.jpg)
+*by Lear 21 [CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0), via Wikimedia Commons*

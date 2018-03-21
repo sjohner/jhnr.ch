@@ -292,7 +292,17 @@ In addition to the monthly fees shown below, one-time fees for providing cages i
 
 You will notice that the cost for the Azure ExpressRoute circuits are much less than the cost for the provider.
 
-[table id=1 /]
+| SKU                                       	| Base          	| Price/Month  	| Notes                       	|
+|-------------------------------------------	|---------------	|--------------	|-----------------------------	|
+| ExpressRoute 1 Gbps                       	| CHF 393.75    	| CHF 393.75   	| West Europe, Metered        	|
+| Outbound data transfer                    	| CHF 0.0226/GB 	| CHF 716.70   	| 1 TB/day = 31 TB/month      	|
+| Standard ExpressRoute Gateway             	| CHF 0.1716/hr 	| CHF 127.67   	| 744h, bandwidth up to 1Gbps 	|
+| 2 Cabinets at Cloud Exchange Location     	| CHF 2000/mth  	| CHF 4000     	|                             	|
+| 2 Cloud Exchange Ports                    	| CHF 185/mth   	| CHF 370      	| 2 x 10GB                    	|
+| 2 Cross Connects to Cloud Exchange        	| CHF 120/mth   	| CHF 240      	|                             	|
+| Virtual Circuit to Cloud Service Provider 	| CHF 185/mth   	| CHF 370      	| 2 x 1GB                     	|
+| Remote Virtual Circuit                    	| CHF 600/mth   	| CHF 1200     	| 2 x 1GB                     	|
+| **Total**                                 	|               	| **CHF 7418** 	|                             	|
 
 
 ### Zones
@@ -302,13 +312,13 @@ Azure ExpressRoute pricing also depends on which zone is going to be connected.
 
 For ExpressRoute, the following sub-regions correspond to Zones 1, 2, 3 and Government, where a sub-region is the lowest level geo-location that you may select to deploy your applications and associated data (e.g. West US, North Europe).
 
-·         **Zone 1:** West US, East US, North Central US, South Central US, East US 2, Central US, West Europe, North Europe, Canada East, Canada Central
+* **Zone 1:** West US, East US, North Central US, South Central US, East US 2, Central US, West Europe, North Europe, Canada East, Canada Central
 
-·         **Zone 2:** East Asia, Southeast Asia, Australia East, Australia Southeast, Japan East, Japan West, Korea Central, Korea South, India South, India West, India Central
+* **Zone 2:** East Asia, Southeast Asia, Australia East, Australia Southeast, Japan East, Japan West, Korea Central, Korea South, India South, India West, India Central
 
-·         **Zone 3:** Brazil South
+* **Zone 3:** Brazil South
 
-·         **Government Zone:** US Gov Iowa, US Gov Virginia
+* **Government Zone:** US Gov Iowa, US Gov Virginia
 
 For ExpressRoute deployments in region Europe (sub-regions North Europe and West Europe), outbound data transfer is therefore charged with Zone 1 pricing (CHF 0.0226 per GB as of Novemnber 2017).
 
@@ -318,9 +328,9 @@ For ExpressRoute deployments in region Europe (sub-regions North Europe and West
 
 There exist two pricing plans to chose from. Both options **include unlimited inbound data transfer**.
 
-·         Metered Data (No outbound data transfer included, outbound data transfer is charged at a rate based on corresponding Zone)
+* Metered Data (No outbound data transfer included, outbound data transfer is charged at a rate based on corresponding Zone)
 
-·         Unlimited Data (Unlimited outbound data transfer included)
+* Unlimited Data (Unlimited outbound data transfer included)
 
 In general the _Unlimited Data_ pricing option would be a better choice if you have high levels of utilization, and the _Metered Data_ pricing option would be preferable for low levels of utilization.
 

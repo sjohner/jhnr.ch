@@ -46,7 +46,7 @@ Of course there exists already a [pretty good manual](https://docs.microsoft.com
 
 For example the installation manual states that you should install the Self Service portal _ideally, on the primary or secondary server. _Well, that does not seem to be 100% correct because in some other scenarios (e.g. in [this install instructions](https://www.microsoft.com/en-us/download/details.aspx?id=54060) of a Self Service portal upgrade fix) Microsoft does explicitly advises against installing the portal on the primary management server.
 
-_Installing the Self Service portal on the same computer as the primary management server is not recommended. _
+**Installing the Self Service portal on the same computer as the primary management server is not recommended.**
 
 So for the sake of completeness I will outline the installation of a secondary management server as well as the following installation of the Self Service portal.
 

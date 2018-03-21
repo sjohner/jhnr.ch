@@ -86,7 +86,7 @@ Besides installing the above mentioned prerequisites, you will need three servic
 
 It is also recommended to create an Active Directory group which can be used to specify Service Manager Management Group Administrators. See [Accounts Required During Setup](https://technet.microsoft.com/en-us/library/hh495662(v=sc.12).aspx) for more information about needed accounts and groups.
 
-**Important:** _Make sure that you run Service Manager setup with a domain user which has appropriate permissions on the corresponding SQL server instance (sysadmin) as well as local administrator permissions for the server where you are installing Service Manager._
+**Important:** *Make sure that you run Service Manager setup with a domain user which has appropriate permissions on the corresponding SQL server instance (sysadmin) as well as local administrator permissions for the server where you are installing Service Manager.*
 
 
 ### Install SQL Server 2016
@@ -100,7 +100,7 @@ Service Manager is somewhat touchy when it comes to SQL collations. I recommend 
 
 Most people probably will be fine with _Latin1_General_100_CI_AS _which is recommended for Latin based languages like English, German, Italian, Portuguese and Dutch. However be sure to check [Language Support for System Center 2012 - Service Manager](https://technet.microsoft.com/en-us/library/hh495583(v=sc.12).aspx) for the appropriate collation used with your language.
 
-_**Important:** Support for multiple languages in Service Manager is not possible when you are using the default collation (SQL_Latin1_General_CP1_CI_AS). If later you decide to support multiple languages using a different collation, you have to reinstall SQL Server._
+**Important:** *Support for multiple languages in Service Manager is not possible when you are using the default collation (SQL_Latin1_General_CP1_CI_AS). If later you decide to support multiple languages using a different collation, you have to reinstall SQL Server.*
 
 [![SQL Collation](/images/SQL_Collation.png)](/images/SQL_Collation.png)
 
@@ -128,14 +128,13 @@ Now let's get started with Service Manager setup! If you installed all the neces
 
 Next specify SQL Server and Instance name where Service Manager should create its database. Make sure that corresponding ports are open when using a separate SQL Server with firewall enabled. This should not be a problem in this scenario since SQL server is installed on the same computer. Note that since Service Manager 2016, setup also supports SQL AlwaysOn installations.
 
-_Note that if you are using the default collation (SQL_Latin1_General_CP1_CI_AS), a warning message appears which you should read carefully. As stated in the beginning of this post, support for multiple languages in Service Manager is not possible when using the default collation
-_
+*Note that if you are using the default collation (SQL_Latin1_General_CP1_CI_AS), a warning message appears which you should read carefully. As stated in the beginning of this post, support for multiple languages in Service Manager is not possible when using the default collation*
 
 [![Provide SQL Server Information](/images/SCSM2016_SQLServer.png)](/images/SCSM2016_SQLServer.png)
 
 Next up we will define the name of the new Service Manager management group. Management group names must be unique.
 
-_**Important:** Do not use the same management group name even when you are deploying a Service Manager management server and a Service Manager data warehouse management server. Furthermore, do not use the management group name that is used for Operations Manager._
+**Important:** *Do not use the same management group name even when you are deploying a Service Manager management server and a Service Manager data warehouse management server. Furthermore, do not use the management group name that is used for Operations Manager.*
 
 Besides the management group name, you also want to specify a management group administrators group.
 

@@ -27,7 +27,7 @@ When installing Service Manager Data Warehouse management server you might run i
 When you see the above error message, check the setup log (which can be found in 'C:\Users\<User>\AppData\Local\Temp') if you see the following error:
 
 
-<blockquote>_AssignSsrsRole Error: System.Web.Services.Protocols.SoapException : System.Web.Services.Protocols.SoapException: **The user or group name 'BUILTIN\BUILTIN' is not recognized.** ---> Microsoft.ReportingServices.Diagnostics.Utilities.UnknownUserNameException: The user or group name 'BUILTIN\BUILTIN' is not recognized._</blockquote>
+    AssignSsrsRole Error: System.Web.Services.Protocols.SoapException : System.Web.Services.Protocols.SoapException: The user or group name 'BUILTIN\BUILTIN' is not recognized. ---> Microsoft.ReportingServices.Diagnostics.Utilities.UnknownUserNameException: The user or group name 'BUILTIN\BUILTIN' is not recognized  .
 
 
 In my case, setup had failed to add the specified Reporting Services account as _Publisher_ for the Service Manager folder in Reporting Services. When checking the Reporting Services security configuration for the newly created Service Manager folder, there was indeed an account named '_BUILTIN\BUILTIN'_ configured as Content Manager

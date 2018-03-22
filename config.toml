@@ -2,7 +2,7 @@ baseURL = "https://blog.jhnr.ch/"
 languageCode = "en-us"
 title = "Stefan Johner"
 theme = "hyde"
-disqusShortname = "sjohner"
+disqusShortname = "jhnr"
 googleAnalytics = "UA-72698700-1"
 relativeURLs = true
 

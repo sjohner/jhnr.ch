@@ -13,7 +13,7 @@ relativeURLs = true
 [params]
     author = "Stefan Johner"
     profilePic = "images/avatar.png"
-    description = "Working with #Azure. Microsoft MVP. Likes cheese, chocolate and @burgdorferbier. Runs Experts Live Café Switzerland"
+    description = "Working with #Azure. Microsoft MVP. Likes cheese, chocolate and @burgdorferbier. Runs [Experts Live Café Switzerland](http://itproch.expertslive.cafe)"
     githubUsername = "sjohner"
     accent = "#007acc"
     showBorder = true

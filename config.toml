@@ -2,7 +2,7 @@ baseURL = "https://blog.jhnr.ch/"
 languageCode = "en-us"
 title = "Stefan Johner"
 theme = "hyde"
-#disqusShortname = "username" # delete this to disable disqus comments
+disqusShortname = "sjohner"
 googleAnalytics = " UA-72698700-1"
 relativeURLs = true
 

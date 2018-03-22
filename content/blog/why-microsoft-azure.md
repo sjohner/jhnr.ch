@@ -50,7 +50,8 @@ Choosing THE ONE cloud provider for your business is hard if not impossible. For
 
 The question seems obvious: why not just go with AWS? That is what probably most people think when asking the above questions. Maybe they are right. I mean what could possibly go wrong? AWS clearly is leading the cloud market in **terms of IaaS and PaaS**. In the [Gartner Magic Quadrant for Cloud Infrastructure as a Service, Worldwide](https://www.gartner.com/doc/reprints?id=1-2G2O5FC&ct=150519) AWS is the uncontested leader.
 
-[![Research image courtesy of Gartner, Inc.](https://www.gartner.com/resources/315200/315215/315215_0001.png;wa4036249d8f17fcd1?reprintKey=1-2G2O5FC)](https://www.gartner.com/resources/315200/315215/315215_0001.png;wa4036249d8f17fcd1?reprintKey=1-2G2O5FC) Source: Gartner (June 2017)[/caption]
+[![Research image courtesy of Gartner, Inc.](https://www.gartner.com/resources/315200/315215/315215_0001.png;wa4036249d8f17fcd1?reprintKey=1-2G2O5FC)](https://www.gartner.com/resources/315200/315215/315215_0001.png;wa4036249d8f17fcd1?reprintKey=1-2G2O5FC)
+*Source: Gartner (June 2017)*
 
 Same picture when looking at market share. [According to a study of Synergy Research](https://www.srgresearch.com/articles/cloud-market-keeps-growing-over-40-amazon-still-increases-share), although Microsoft, Google and others are growing their revenues and continue to gain market share, the reality is that AWS remains bigger than its next five largest competitors combined.
 

@@ -4,25 +4,28 @@ title = "Stefan Johner"
 theme = "hyde"
 #disqusShortname = "username" # delete this to disable disqus comments
 googleAnalytics = " UA-72698700-1"
-copyright = "This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
 relativeURLs = true
 
 [permalinks]
   blog = "/:year/:month/:day/:title/"
 
 [params]
-    author = "Stefan Johner"
-    profilePic = "images/avatar.png"
-    description = "Working with #Azure. Microsoft MVP. Likes cheese, chocolate and @burgdorferbier. Runs [Experts Live Café Switzerland](http://itproch.expertslive.cafe)"
-    githubUsername = "sjohner"
-    accent = "#007acc"
-    showBorder = true
-    backgroundColor = "white"
-    font = "Raleway" # should match the name on Google Fonts!
-    highlight = true
-    highlightStyle = "solarized-dark"
-    highlightLanguages = ["go", "haskell", "kotlin", "scala", "swift"]
     themeColor = "theme-base-0d"
+    description = "Working with #Azure. Microsoft MVP. Likes cheese, chocolate and @burgdorferbier. Runs Experts Live Café Switzerland"
+    copyright = "This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
+
+    # Minimal theme params
+    #author = "Stefan Johner"
+    #profilePic = "images/avatar.png"
+    #githubUsername = "sjohner"
+    #accent = "#007acc"
+    #showBorder = true
+    #backgroundColor = "white"
+    #font = "Raleway" # should match the name on Google Fonts!
+    #highlight = true
+    #highlightStyle = "solarized-dark"
+    #highlightLanguages = ["go", "haskell", "kotlin", "scala", "swift"]
+    
 
 #[[menu.main]]
 #    url = "/"

@@ -1,8 +1,8 @@
-* Privacy Policy
+# Privacy Policy
 
 I do not collect any personally identifying data. However like many other website owners, I use [Google Analytics](https://support.google.com/analytics/answer/6004245) to measure my visitors and [Disqus](https://help.disqus.com/terms-and-policies/disqus-privacy-policy) for commenting.
 
-** Measuring visitors with Google Analytics
+## Measuring visitors with Google Analytics
 
 I measure visitors to my website using Google Analytics. This is a piece of software that grabs data about my visitors (you) to help website owners (me) better understand what my audience is. Google Analytics records for example:
 
@@ -18,7 +18,7 @@ The tracking information from Google Analytics allows me to better understand th
 
 You do not want to be tracked? You can [opt out](https://tools.google.com/dlpage/gaoptout) of Google Analytics tracking software.
 
-** Commenting with Disqus
+## Commenting with Disqus
 
 To allow visitors of my blog to discuss articles I use a service called Disqus. Therefore I use code which Disqus provides and I do not control by myself. Disqus does track its visitors and they remember who you are if you login to their service. This way you can comment on any website using their service.
 
@@ -26,10 +26,10 @@ To comment on an article, you need to login or sign up with Disqus. You can log 
 
 Disqus will also know what pages you viewed on this site and what you wrote on those comments. Of course all comments you leave are publicly visible on the Internet together with your name.
 
-** Updates to this policy
+## Updates to this policy
 
 I may update this privacy policy from time-to-time, particularly as technology and services change. You can always check this page for the latest version.
 
-** Any questions?
+## Any questions?
 
 If you have any questions about this privacy policy or your personal data, please reach out to me by email to sjohner at outlook.com

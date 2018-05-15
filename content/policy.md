@@ -4,8 +4,6 @@ date: 2018-05-15 09:44:18+00:00
 title: Privacy Policy
 ---
 
-# Privacy Policy
-
 I do not collect any personally identifying data. However like many other website owners, I use [Google Analytics](https://support.google.com/analytics/answer/6004245) to measure my visitors and [Disqus](https://help.disqus.com/terms-and-policies/disqus-privacy-policy) for commenting.
 
 ## Measuring visitors with Google Analytics

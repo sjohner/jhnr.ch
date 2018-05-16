@@ -8,6 +8,7 @@ relativeURLs = true
 
 [permalinks]
   blog = "/:year/:month/:day/:title/"
+  singles = "/:title/"
 
 [params]
     themeColor = "theme-base-0d"
@@ -28,7 +29,7 @@ relativeURLs = true
     
 
 [[menu.main]]
-    url = "/policy"
+    url = "/privacy-policy"
     name = "Privacy Policy"
     weight = 1
 

@@ -62,3 +62,4 @@ SSH key files '/home/sjohner/.ssh/id_rsa' and '/home/sjohner/.ssh/id_rsa.pub' ha
   "resourceGroup": "MyRG",
   "zones": ""
 }
+```

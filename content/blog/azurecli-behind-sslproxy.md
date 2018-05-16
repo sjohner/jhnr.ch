@@ -1,7 +1,22 @@
 ---
 title: "Working with Azure CLI behind SSL intercepting proxy server"
 date: 2018-05-16T22:50:45+02:00
-draft: true
+author: sjohner
+comments: true
+layout: post
+slug: working-with-azure-cli-behind-ssl-intercepting-proxy-server
+categories:
+- Cloud
+- Linux
+tags:
+- SSL
+- Azure
+- CLI
+- Proxy
+- Certificate
+- Error
+- VM
+- Verification
 ---
 
 The Azure CLI is one of Azure's command-line experiences for managing Azure resources (besides Azure PowerShell). Azure CLI is open source and built on Python. The cool thing about Azure CLI is that you can use it with pretty much all known platforms like macOS, Windows and Linux. This means you do not have to learn another command line tool for each platform.

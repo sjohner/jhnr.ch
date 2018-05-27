@@ -14,6 +14,11 @@ relativeURLs = true
     themeColor = "theme-base-0d"
     description = "Working with #Azure. Microsoft MVP. Likes cheese, chocolate and @burgdorferbier. Runs Experts Live Café Switzerland"
     copyright = "This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
+    creativeCommons = "by-sa"
+    github = "sjohner"
+    twitter = "johnerstefan"
+    linkedin = "sjohner"
+
 
     # Minimal theme params
     #author = "Stefan Johner"
@@ -47,22 +52,3 @@ relativeURLs = true
 #    url = "/event/"
 #    name = "Community Events"
 #    weight = 3
-#
-# Social icons to be shown on the right-hand side of the navigation bar
-# The "name" field should match the name of the icon to be used
-# The list of available icons can be found at http://fontawesome.io/icons/
-
-[[menu.icon]]
-    url = "https://github.com/sjohner/"
-    name = "github"
-    weight = 2
-
-[[menu.icon]]
-    url = "https://twitter.com/johnerstefan/"
-    name = "twitter"
-    weight = 3
-
-[[menu.icon]]
-    url = "https://www.linkedin.com/in/sjohner/"
-    name = "linkedin"
-    weight = 4

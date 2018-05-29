@@ -3,6 +3,7 @@ author: sjohner
 comments: true
 date: 2018-05-29 12:58:26+00:00
 slug: azure-expressroute-overview
+layout: post
 title: Circuits, Peerings, Pricing, Latency... All you need to know about Azure ExpressRoute
 categories:
 - Azure

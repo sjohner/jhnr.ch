@@ -116,6 +116,7 @@ In terms of Software as a Service offerings, like Office 365 and Dynamics 365, 
 I will not go into details about security since I am in no way an expert in this field. However there is one thing which sometimes is not thought of in the first place: Although ExpressRoute is a private connection, __traffic flowing over the network is not encrypted__. Encryption in transit can be achieved by encrypting traffic flowing over the connection.
 
 Basically you have three options to encrypt traffic flowing over ExpressRoute:
+
 * Application level encryption
 * IPsec Site-to-Site VPN over ExpressRoute using Azure VPN Gateways. Check out [ExpressRoute documentation](https://docs.microsoft.com/en-us/azure/expressroute/site-to-site-vpn-over-microsoft-peering) for guidance about how to configure a site-to-site VPN over ExpressRoute Microsoft peering
 * Third-party appliance that performs encryption of traffic flowing over ExpressRoute. For example by deploying physical and/or virtual encryption devices on both sides (e.g. Fortinet, F5, Steelhead, etc)

@@ -68,7 +68,7 @@ It is possible to order multiple ExpressRoute circuits. Each circuit can be in t
 
 Below you will find kind of a big picture which hopefully gives you a good overview on how ExpressRoute works on a high level. I will reference to some of the components outlined in the picture.
 
-[![](/images/ExpressRoute_Overview-1024x519.png)](/images/ExpressRoute_Overview-1024x519.png)
+[![](/images/ExpressRoute_Overview.png)](/images/ExpressRoute_Overview.png)
 
 ## Common scenarios
 

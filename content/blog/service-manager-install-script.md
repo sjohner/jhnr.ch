@@ -5,7 +5,6 @@ date: 2017-08-24 11:02:59+00:00
 layout: post
 slug: service-manager-install-script
 title: Service Manager Installation by using a PowerShell Script
-wordpress_id: 2166
 categories:
 - Service Manager
 tags:
@@ -34,7 +33,7 @@ This is the fifth part of a blog post series called "Installing Service Manager 
   * [Installing Service Manager 2016 Part 3: Self Service Web Portal](https://blog.jhnr.ch/2016/10/25/installing-service-manger-2016-self-service-portal/)
 
  	
-  * [Installing Service Manager 2016 Part 4: Data Warehouse Management Server](https://blog.jhnr.ch/2017/01/19/installing-service-manager-2016-data-warehouse/)
+  * [Installing Service Manager 2016 Part 4: Data Warehouse Management Server](https://blog.jhnr.ch/2017/01/19/installing-service-manager-2016-data-warehouse-management-server/)
 
  	
   * Installing Service Manager 2016 Part 5: Scripting the installation (this post)

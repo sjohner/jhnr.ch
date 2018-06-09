@@ -32,15 +32,15 @@ This is the third part of a blog post series called "Installing Service Manager 
   * Installing Service Manager 2016 Part 3: Self Service Web Portal (this post)
 
  	
-  * [Installing Service Manager 2016 Part 4: Data Warehouse Management Server](https://blog.jhnr.ch/2017/01/19/installing-service-manager-2016-data-warehouse/)
+  * [Installing Service Manager 2016 Part 4: Data Warehouse Management Server](https://blog.jhnr.ch/2017/01/19/installing-service-manager-2016-data-warehouse-management-server/)
 
  	
-  * [Installing Service Manager 2016 Part 5: Scripting the installation](https://blog.jhnr.ch/2017/08/24/service-manager-install-script/)
+  * [Installing Service Manager 2016 Part 5: Scripting the installation](https://blog.jhnr.ch/2017/08/24/service-manager-installation-by-using-a-powershell-script/)
 
 
 In this blog post series I will describe the installation of Service Manager 2016 based on a pretty simple 3 computer scenario. The first computer hosts the Service Manager management server as well as the Service Manager database. The second computer hosts the Self Service Web Portal and the third one the data warehouse management server and the Data Warehouse databases.
 
-[![Install Scenario](/images/BlogScenario2-1024x323.png)](/images/BlogScenario2.png)
+[![Install Scenario](/images/BlogScenario2-1024x323.png)](/images/BlogScenario2-1024x323.png)
 
 Of course there exists already a [pretty good manual](https://docs.microsoft.com/en-us/system-center/scsm/deploy-self-service-portal) on how to install the HTML based Self Service portal. However there are some points I want to highlight when installing the Service Manager portal.
 

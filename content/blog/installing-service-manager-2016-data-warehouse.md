@@ -47,12 +47,12 @@ This is the fourth part of a blog post series called “Installing Service Manag
   * Installing Service Manager 2016 Part 4: Data Warehouse Management Server (this post)
 
  	
-  * [Installing Service Manager 2016 Part 5: Scripting the installation](https://blog.jhnr.ch/2017/08/24/service-manager-install-script/)
+  * [Installing Service Manager 2016 Part 5: Scripting the installation](https://blog.jhnr.ch/2017/08/24/service-manager-installation-by-using-a-powershell-script/)
 
 
 In this blog post series I will describe the installation of Service Manager 2016 based on a pretty simple 3 computer scenario. The first computer hosts the Service Manager management server as well as the Service Manager database. The second computer hosts the Self Service Web Portal and the third one the data warehouse management server and the Data Warehouse databases.
 
-[![Install Scenario](/images/BlogScenario3-1024x315.png)](/images/BlogScenario3.png)
+[![Install Scenario](/images/BlogScenario3-1024x315.png)](/images/BlogScenario3-1024x315.png)
 
 The Service Manager data warehouse is an optimized component for reporting purposes. It can be extended via management packs. The data warehouse and the reporting infrastructure can be used in other System Center products like Configuration Manager as well as Operations Manager.
 

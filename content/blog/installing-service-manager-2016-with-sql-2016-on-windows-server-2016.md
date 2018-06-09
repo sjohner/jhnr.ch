@@ -37,15 +37,15 @@ This is the second part of a blog post series called "Installing Service Manager
   * [Installing Service Manager 2016 Part 3: Self Service Web Portal](https://blog.jhnr.ch/2016/10/25/installing-service-manger-2016-self-service-portal/)
 
  	
-  * [Installing Service Manager 2016 Part 4: Data Warehouse Management Server](https://blog.jhnr.ch/2017/01/19/installing-service-manager-2016-data-warehouse/)
+  * [Installing Service Manager 2016 Part 4: Data Warehouse Management Server](https://blog.jhnr.ch/2017/01/19/installing-service-manager-2016-data-warehouse-management-server/)
 
  	
-  * [Installing Service Manager 2016 Part 5: Scripting the installation](https://blog.jhnr.ch/2017/08/24/service-manager-install-script/)
+  * [Installing Service Manager 2016 Part 5: Scripting the installation](https://blog.jhnr.ch/2017/08/24/service-manager-installation-by-using-a-powershell-script/)
 
 
 In this blog post series I will describe the installation of Service Manager 2016 based on a pretty simple 3 computer scenario. The first computer hosts the Service Manager management server as well as the Service Manager database. The second computer hosts the Self Service Web Portal and the third one the data warehouse management server and the Data Warehouse databases.
 
-[![Install Scenario](/images/SCSM_Install_Scenario-1024x318.png)](/images/SCSM_Install_Scenario.png)
+[![Install Scenario](/images/SCSM_Install_Scenario-1024x318.png)](/images/SCSM_Install_Scenario-1024x318.png)
 
 This configuration is - in my opinion - also perfectly fine for a small production environment. One might say that the Service Manager database should not be installed on the primary management server for performance and availability reasons. However when using a computer with enough horse power, this shouldn't be an issue. Furthermore the primary management server which runs all the Service Manager workflows is kind of a single point of failure. If this server goes down, your Service Manager environment is basically out of order and in this case its probably not an issue if the database is not available as well. But of course you are free to use separate database servers for both Service Manager and Data Warehouse databases. Service Manager 2016 does also support SQL AlwaysOn availability groups.
 

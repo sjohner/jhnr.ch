@@ -20,7 +20,7 @@ relativeURLs = true
     linkedin = "sjohner"   
 
 [[menu.main]]
-    url = "/privacy-policy"
+    url = "/privacy-policy/"
     name = "Privacy Policy"
     weight = 1
 

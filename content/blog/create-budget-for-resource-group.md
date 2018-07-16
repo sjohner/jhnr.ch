@@ -1,12 +1,31 @@
 ---
-title: "Create Budget for Resource Group"
+author: sjohner
+comments: true
 date: 2018-07-12T22:43:55+02:00
-draft: true
+layout: post
+slug: create-budget-for-resource-group
+title: "Create budget for resource group and get notified in case of overspending"
+categories:
+- Azure
+- Cloud
+tags:
+- Azure
+- Cost
+- Management
+- Notification
+- Cloudyn
+- Spending
+- Limit
+- API
+- ARM
+- Postman
+- JSON
+- REST
 ---
 
-Azure customers normally are very interested in how much money a given project or application is burning. Microsoft provides multiple instruments to manage cost including [Azure Cost Management](https://azure.microsoft.com/en-us/services/cost-management/) (powered by Clouddyn). Azure Cost Management can help you to manage cost for your Azure and other cloud environments by providing you the tools to monitor, allocate, and optimize your cloud costs. For example, Clouddyn helps you manage budgets at a workload level and monitoring the spend on cloud services.
+Azure customers normally are very interested in how much money a given project or application is burning. Microsoft provides multiple instruments to manage cost including [Azure Cost Management](https://azure.microsoft.com/en-us/services/cost-management/) (powered by Cloudyn). Azure Cost Management can help you to manage cost for your Azure and other cloud environments by providing you the tools to monitor, allocate, and optimize your cloud costs. For example, Cloudyn helps you manage budgets at a workload level and monitoring the spend on cloud services.
 
-However in my understanding, Azure Cost Management (or Clouddyn) targets cloud cost management on a higher level where for example a department wants to know what services they are running in which subscriptions and how they could optimize their spending as a whole. In my opinion, Cost Management is not (yet) ready to be used in a very granular fashion for example when it comes down to analyzing costs based on resource groups. But very often resource groups serve as cost boundaries and workload therefor share a subscription. Yet they need to be budgeted for individually. That's where budgets kick in. For making these granular controls available Azure offers an ARM API to set and manage a budget at the subscription, resource group and even resource scope. 
+However in my understanding, Azure Cost Management (or Cloudyn) targets cloud cost management on a higher level where for example a department wants to know what services they are running in which subscriptions and how they could optimize their spending as a whole. In my opinion, Cost Management is not (yet) ready to be used in a very granular fashion for example when it comes down to analyzing costs based on resource groups. But very often resource groups serve as cost boundaries and workload therefor share a subscription. Yet they need to be budgeted for individually. That's where budgets kick in. For making these granular controls available, Azure offers an ARM API to set and manage a budget at the subscription, resource group and even resource scope. 
 
 With the budgets API you can for example address the following scenarios:
 
@@ -17,23 +36,25 @@ With the budgets API you can for example address the following scenarios:
 * Budgets based on usage on a subscription or resource group.
 
 When looking at budget API there are some things to keep in mind:
+
 1. Budgets are currently __only supported for Enterprise customers__. The budget API is part of the Azure consumption APIs which currently __only support Enterprise Enrollments and Web Direct Subscriptions__ (with a few exceptions). The APIs are continually updated to support other types of Azure subscriptions.
 2. Calls to the budgets API enforce a user context. So you will need to call the budgets API in the context of a user and not a service principal. [ARMClient](http://blog.davidebbo.com/2015/01/azure-resource-manager-client.html) is a good option to get a user token to use with the request
 3. Usage based budgets require a meter, the constraint enforced by the budget API is to enforce a single unit of measure for all meters within a budget. For instance, if you are budgeting your compute hours, you cannot include meters for networking that measure the GB transferred in the same budget.
-
 
 I recommend watching [Managing costs with the Azure Budgets API and Action Groups](https://channel9.msdn.com/Shows/Azure-Friday/Managing-costs-with-the-Azure-Budgets-API-and-Action-Groups) on Azure Friday to get a good overview on the budgets API.
 
 Creating a budget for a resource group is fairly easy once you have an access token for ARM API. Check out this [ARMClient: a command line tool for the Azure API](http://blog.davidebbo.com/2015/01/azure-resource-manager-client.html) post by [David Ebbo](https://twitter.com/davidebbo) for details on how to get a token with ARMClient or [Using the Azure ARM REST API – Get Access Token](https://blogs.technet.microsoft.com/stefan_stranger/2016/10/21/using-the-azure-arm-rest-apin-get-access-token/) by [Stefan Stranger](https://twitter.com/sstranger).
 
 Basically you can get an access token using ARMClient with the following command.
+
 ```
 ARMClient.exe token <SubscriptionId>
 ```
 
 I use [Postman](https://www.getpostman.com/) to talk to the ARM API. If you do as well, [Using Postman to call Azure REST APIs](https://blogs.msdn.microsoft.com/benjaminperkins/2017/01/03/using-postman-to-call-azure-rest-apis/) might be a good starting point. This post also shows how to get the access token using Fiddler.
 
-The resource group for which you want to create a budget has to be present in the given subscription. All whats needed now is a PUT request to the following URL which contains the budget defintion in the request body.
+The resource group for which you want to create a budget has to be present in the given subscription. All whats needed now is a PUT request to the following URL which contains the budget definition in the request body.
+
 ```
 https://management.azure.com/subscriptions/<SubscriptionId>/resourceGroups/<RGname>/providers/Microsoft.Consumption/budgets/mybudget?api-version=2018-03-31
 ```
@@ -45,47 +66,16 @@ Authorization: bearer <Your access token>
 Content-Type: application/json
 ```
 
+[![Screenshot of Postman request header](/images/budget-postman-header.png)](/images/budget-postman-header.png)
+
 The body of the request contains the budget definition as json. Check out the [Budgets API documentation](https://docs.microsoft.com/en-us/rest/api/consumption/budgets) for details. When updating a budget definition you will need to specify the eTag of the current budget to handle concurrent update scenarios. This field will be used to determine whether your updating the latest version of the budget or not.
 
-A note about start date and end date: the budget start date __must be on or after June 1, 2017__. Future start date should not be more than three months. Furthermore, __past start date should be selected within the timegrain preiod__. If no end date is provided, it will default to 10 years from the start date.
+A note about start date and end date: the budget start date __must be on or after June 1, 2017__. Future start date should not be more than three months. Furthermore, __past start date should be selected within the time grain period__. If no end date is provided, it will default to 10 years from the start date.
 
-###### GIST
-```
-{
-    "id": "subscriptions/<SubscriptionId>/resourceGroups/<RGname>/providers/Microsoft.Consumption/budgets/mybudget",
-    "name": "mybudget",
-    "type": "Microsoft.Consumption/budgets",
-    "eTag": "\"1d4179236090217\"",
-    "properties": {
-        "timePeriod": {
-            "startDate": "2018-07-01T00:00:00Z",
-            "endDate": "2028-07-01T00:00:00Z"
-        },
-        "timeGrain": "Monthly",
-        "amount": 2,
-        "currentSpend": null,
-        "category": "Cost",
-        "notifications": {
-            "actual_GreaterThan_80_Percent": {
-                "enabled": true,
-                "operator": "GreaterThan",
-                "threshold": 80,
-                "contactEmails": [],
-                "contactRoles": [
-                    "Owner",
-                    "Contributor"
-                ],
-                "contactGroups": []
-            }
-        },
-        "filters": {
-            "resourceGroups": [],
-            "resources": [],
-            "meters": [],
-            "tags": {}
-        }
-    }
-}
-```
+{{< gist sjohner e62a851cdcae8dc7c198b2c8d9d3505f >}}
 
-In the above sample, I added _Owner_ and _Contributor_ as contact roles. This means that once the budget reaches its notification threshold all the Contributors and Owners of the given resource group are notified. They will receive an e-mail similar to the one below making sure they are aware that the defined threshold is reached and whats the actual spending. Instead of using contact roles you might want to check out contact groups where you can specify [action groups](https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-action-groups) which might already be available in your environment. The cool thing about action groups is that you can trigger for example an Azure Automation runbook or a Logic App to take some action or remediation.
+[![Screenshot of Postman request body](/images/budget-postman-body.png)](/images/budget-postman-body.png)
+
+In the above sample, I added _Owner_ and _Contributor_ as contact roles. This means that once the budget reaches its notification threshold all the Contributors and Owners of the given resource group are notified. They will receive an e-mail similar to the one below making sure they are aware that the defined threshold is reached and outlining the actual spending. Instead of using contact roles you might want to check out contact groups where you can specify [action groups](https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-action-groups) which might already be available in your environment. The cool thing about action groups is that you can trigger for example an Azure Automation runbook or a Logic App to take some action or remediation.
+
+[![Screenshot of budget alert e-mail notification](/images/budget-alert-notification.png)](/images/budget-alert-notification.png)

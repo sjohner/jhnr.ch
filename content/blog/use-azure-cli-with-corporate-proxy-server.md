@@ -34,13 +34,13 @@ Due to the authentication schematics of Azure Service, Azure CLI needs to pass a
     Failed to establish a new connection: [WinError 10060]
 
 
-This can be easily solved by setting _HTTPS_PROXY_ environment variable. If you don't know what proxy you are using, check out [this superuser answer](https://superuser.com/questions/346372/how-do-i-know-what-proxy-server-im-using#346376).
+This can be easily solved by setting *HTTPS_PROXY* environment variable. If you don't know what proxy you are using, check out [this superuser answer](https://superuser.com/questions/346372/how-do-i-know-what-proxy-server-im-using#346376).
 
     
     set HTTPS_PROXY=http://proxy.jhnr.ch:8080
 
 
-After setting _HTTPS_PROXY_ in your command prompt you should be able to successfully execute az login and connect to your Azure environment.
+After setting *HTTPS_PROXY* in your command prompt you should be able to successfully execute _az login_ and connect to your Azure environment.
 
 [![](/images/AZ_Login_Success.png)](/images/AZ_Login_Success.png)
 
@@ -48,4 +48,4 @@ For a permanent solution just add the above variable to your environment variabl
 
 [![HTTPS_PROXY environment variable](/images/https_proxy-environment-variable.png)](/images/https_proxy-environment-variable.png)
 
-
+Note that changing the environment variables requires a reboot of your terminal to take effect.

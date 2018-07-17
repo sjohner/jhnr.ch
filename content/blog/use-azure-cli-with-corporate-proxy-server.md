@@ -44,8 +44,7 @@ After setting *HTTPS_PROXY* in your command prompt you should be able to success
 
 [![](/images/AZ_Login_Success.png)](/images/AZ_Login_Success.png)
 
-For a permanent solution just add the above variable to your environment variables.
+For a permanent solution just add the above variable to your environment variables. Note that changing the environment variables requires a reboot of your terminal to take effect.
 
 [![HTTPS_PROXY environment variable](/images/https_proxy-environment-variable.png)](/images/https_proxy-environment-variable.png)
 
-Note that changing the environment variables requires a reboot of your terminal to take effect.

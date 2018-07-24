@@ -43,7 +43,7 @@ When looking at budget API there are some things to keep in mind:
 
 I recommend watching [Managing costs with the Azure Budgets API and Action Groups](https://channel9.msdn.com/Shows/Azure-Friday/Managing-costs-with-the-Azure-Budgets-API-and-Action-Groups) on Azure Friday to get a good overview on the budgets API.
 
-Creating a budget for a resource group is fairly easy once you have an access token for ARM API. Check out this [ARMClient: a command line tool for the Azure API](http://blog.davidebbo.com/2015/01/azure-resource-manager-client.html) post by [David Ebbo](https://twitter.com/davidebbo) for details on how to get a token with ARMClient or [Using the Azure ARM REST API – Get Access Token](https://blogs.technet.microsoft.com/stefan_stranger/2016/10/21/using-the-azure-arm-rest-apin-get-access-token/) by [Stefan Stranger](https://twitter.com/sstranger).
+Creating a budget for a resource group by using ARM REST API is fairly easy once you have an access token for the ARM API. Check out this [ARMClient: a command line tool for the Azure API](http://blog.davidebbo.com/2015/01/azure-resource-manager-client.html) post by [David Ebbo](https://twitter.com/davidebbo) for details on how to get a token with ARMClient or [Using the Azure ARM REST API – Get Access Token](https://blogs.technet.microsoft.com/stefan_stranger/2016/10/21/using-the-azure-arm-rest-apin-get-access-token/) by [Stefan Stranger](https://twitter.com/sstranger).
 
 Basically you can get an access token using ARMClient with the following command.
 
@@ -79,3 +79,7 @@ A note about start date and end date: the budget start date __must be on or afte
 In the above sample, I added _Owner_ and _Contributor_ as contact roles. This means that once the budget reaches its notification threshold all the Contributors and Owners of the given resource group are notified. They will receive an e-mail similar to the one below making sure they are aware that the defined threshold is reached and outlining the actual spending. Instead of using contact roles you might want to check out contact groups where you can specify [action groups](https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-action-groups) which might already be available in your environment. The cool thing about action groups is that you can trigger for example an Azure Automation runbook or a Logic App to take some action or remediation.
 
 [![Screenshot of budget alert e-mail notification](/images/budget-alert-notification.png)](/images/budget-alert-notification.png)
+
+Besides using the ARM REST API directly, you can also create a budget by creating an ARM template and apply it to a resource group. Microsoft already provides an ARM template in their [Azure quickstart templates repository on Github](https://github.com/Azure/azure-quickstart-templates/tree/master/create-budget) which can be used for that purpose.
+
+{{< gist sjohner 305945169b9bece38ccd0416af829e3a >}}

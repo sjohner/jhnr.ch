@@ -80,7 +80,7 @@ In the above sample, I added _Owner_ and _Contributor_ as contact roles. This me
 
 [![Screenshot of budget alert e-mail notification](/images/budget-alert-notification.png)](/images/budget-alert-notification.png)
 
-Besides creating your budgets you may want to update or even delete it at some point in time. Updating can easily be done by just sending another PUT request which contains your existing budget but with the updated values in the body of the request. Same as creating a new budget but since you are going to update an existing budget you will need to include the current __eTag__ of the budget in the request body.
+Besides creating your budgets you may want to update or even delete it at some point in time. Updating can easily be done by just sending another PUT request which contains your existing budget but with the updated values in the body of the request. Same as creating a new budget but since you are going to update an existing budget you will need to include the current _eTag_ of the budget in the request body.
 
 You can get it by getting a specific buget and thus sending the below GET request.
 

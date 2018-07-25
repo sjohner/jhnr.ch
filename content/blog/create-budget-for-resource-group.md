@@ -80,6 +80,26 @@ In the above sample, I added _Owner_ and _Contributor_ as contact roles. This me
 
 [![Screenshot of budget alert e-mail notification](/images/budget-alert-notification.png)](/images/budget-alert-notification.png)
 
+Besides creating your budgets you may want to update or even delete it at some point in time. Updating can easily be done by just sending another PUT request which contains your existing budget but with the updated values in the body of the request. Same as creating a new budget but since you are going to update an existing budget you will need to include the current __eTag__ of the budget in the request body.
+
+You can get it by getting a specific buget and thus sending the below GET request.
+
+```
+https://management.azure.com/subscriptions/<SubscriptionId>/resourceGroups/<RGname>/providers/Microsoft.Consumption/budgets/mybudget?api-version=2018-03-31
+```
+
+Or you can list all existing budgets for a specific subscription by sending the below GET request:
+
+```
+https://management.azure.com/subscriptions/<SubscriptionId>/providers/Microsoft.Consumption/budgets?api-version=2018-06-30
+```
+
+Deleting a budget is also fairly simple. Send the below DELETE request which includes the budget ID in the URL:
+
+```
+https://management.azure.com/subscriptions/<SubscriptionId>/resourceGroups/<RGname>/providers/Microsoft.Consumption/budgets/mybudget?api-version=2018-06-30
+```
+
 Besides using the ARM REST API directly, you can also create a budget by creating an ARM template and apply it to a resource group. Microsoft already provides an ARM template in their [Azure quickstart templates repository on Github](https://github.com/Azure/azure-quickstart-templates/tree/master/create-budget) which can be used for that purpose.
 
 {{< gist sjohner 305945169b9bece38ccd0416af829e3a >}}

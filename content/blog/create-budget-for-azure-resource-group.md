@@ -3,8 +3,8 @@ author: sjohner
 comments: true
 date: 2018-07-12T22:43:55+02:00
 layout: post
-slug: create-budget-for-resource-group
-title: "Create budget for resource group and get notified in case of overspending"
+slug: create-budget-for-azure-resource-group
+title: "Create budget for Azure resource group and get notified in case of overspending"
 categories:
 - Azure
 - Cloud
@@ -53,10 +53,10 @@ ARMClient.exe token <SubscriptionId>
 
 I use [Postman](https://www.getpostman.com/) to talk to the ARM API. If you do as well, [Using Postman to call Azure REST APIs](https://blogs.msdn.microsoft.com/benjaminperkins/2017/01/03/using-postman-to-call-azure-rest-apis/) might be a good starting point. This post also shows how to get the access token using Fiddler.
 
-The resource group for which you want to create a budget has to be present in the given subscription. All whats needed now is a PUT request to the following URL which contains the budget definition in the request body.
+The resource group for which you want to create a budget has to be present in the given subscription. All whats needed now is a PUT request which contains the budget definition in the request body.
 
 ```
-https://management.azure.com/subscriptions/<SubscriptionId>/resourceGroups/<RGname>/providers/Microsoft.Consumption/budgets/mybudget?api-version=2018-03-31
+PUT https://management.azure.com/subscriptions/<SubscriptionId>/resourceGroups/<RGname>/providers/Microsoft.Consumption/budgets/mybudget?api-version=2018-03-31
 ```
 
 To authenticate yourself to the ARM API you will need to add an appropriate Authorization header which contains your bearer access token (that you got with ARMClient for example). Furthermore Content-Type header has to be set to _application/json_
@@ -82,24 +82,24 @@ In the above sample, I added _Owner_ and _Contributor_ as contact roles. This me
 
 Besides creating your budgets you may want to update or even delete it at some point in time. Updating can easily be done by just sending another PUT request which contains your existing budget but with the updated values in the body of the request. Same as creating a new budget but since you are going to update an existing budget you will need to include the current _eTag_ of the budget in the request body.
 
-You can get it by getting a specific buget and thus sending the below GET request.
+You can find the current eTag by querying the API for information about a specific budget:
 
 ```
-https://management.azure.com/subscriptions/<SubscriptionId>/resourceGroups/<RGname>/providers/Microsoft.Consumption/budgets/mybudget?api-version=2018-03-31
+GET https://management.azure.com/subscriptions/<SubscriptionId>/resourceGroups/<RGname>/providers/Microsoft.Consumption/budgets/mybudget?api-version=2018-03-31
 ```
 
-Or you can list all existing budgets for a specific subscription by sending the below GET request:
+You can also list all existing budgets for a specific subscription whith the following request:
 
 ```
-https://management.azure.com/subscriptions/<SubscriptionId>/providers/Microsoft.Consumption/budgets?api-version=2018-06-30
+GET https://management.azure.com/subscriptions/<SubscriptionId>/providers/Microsoft.Consumption/budgets?api-version=2018-06-30
 ```
 
-Deleting a budget is also fairly simple. Send the below DELETE request which includes the budget ID in the URL:
+Deleting a budget is also fairly simple:
 
 ```
-https://management.azure.com/subscriptions/<SubscriptionId>/resourceGroups/<RGname>/providers/Microsoft.Consumption/budgets/mybudget?api-version=2018-06-30
+DELETE https://management.azure.com/subscriptions/<SubscriptionId>/resourceGroups/<RGname>/providers/Microsoft.Consumption/budgets/mybudget?api-version=2018-06-30
 ```
 
-Besides using the ARM REST API directly, you can also create a budget by creating an ARM template and apply it to a resource group. Microsoft already provides an ARM template in their [Azure quickstart templates repository on Github](https://github.com/Azure/azure-quickstart-templates/tree/master/create-budget) which can be used for that purpose.
+Besides using the ARM REST API directly, you can also create a budget by creating an ARM template and apply it to a resource group. This might come in handy if you are automating budget creating within a resource group provisioning script for example. Microsoft already provides an ARM template in their [Azure quickstart templates repository on Github](https://github.com/Azure/azure-quickstart-templates/tree/master/create-budget) which can be used for that purpose.
 
 {{< gist sjohner 305945169b9bece38ccd0416af829e3a >}}

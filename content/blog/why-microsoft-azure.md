@@ -39,6 +39,7 @@ tags:
 - SaaS
 - Visual Studio
 - Xamarin
+- Github
 ---
 
 I had several arguments lately about why a business should consider Microsoft Azure for IaaS and PaaS in place of any other big cloud provider (aka AWS or Google). Let me start with the following: My boss once told me that choosing a cloud provider seems to be like a marriage. The choice you make may (hopefully) be the right one for the rest of your life. Consider that a business which is working with one cloud provider only, establishes a very tight relationship with its services. Working with cloud services, especially PaaS offerings, pretty much locks you into the providers ecosystem. As with marriage, breaking up may be ending by fighting the famous Wars of Roses.
@@ -54,7 +55,7 @@ So why not just go with AWS? That is what probably most people think when asking
 
 Same picture when looking at market share. [According to a study of Synergy Research](https://www.srgresearch.com/articles/cloud-market-keeps-growing-over-40-amazon-still-increases-share), although Microsoft, Google and others are massively growing their revenues and continue to gain market share, the reality is that AWS remains bigger than its next four largest competitors combined.
 
-[![Cloud Provider Competitive Positioning](/images/CIS_Q317.jpg)](/images/CIS_Q317.jpg)
+[![Cloud Provider Competitive Positioning](/images/CIS_Q218.jpg)](/images/CIS_Q218.jpg)
 
 In terms of revenue we get pretty much the same result: [Amazon Web Services generated $6.11 billion in revenue in Q2 2018](https://www.cnbc.com/2018/07/26/aws-earnings-q2-2018.html), and nobody else is even close. Microsoft reported $6.9 billion in revenue for its commercial cloud business, but remember that we are still primarily talking about IaaS and PaaS now. Microsoft does not disclose Azure revenue and it is believed that they earn the majority of that sum of money from its SaaS business — namely Office 365, Microsoft 365 and Dynamics 365 — and not from Azure which is believed to contribute "only" about $2.05bn to $3.6bn to the commercial cloud earnings depending on wether you belief [KeyBanc](https://www.cnbc.com/2018/07/18/microsoft-earnings-q4-2018.html) or [Canalys](https://www.canalys.com/newsroom/cloud-infrastructure-spend-reaches-us%2420-billion-in-q2-2018-with-hybrid-it-approach-dominant) analyists.
 

@@ -42,13 +42,13 @@ tags:
 - Github
 ---
 
-I had several arguments lately about why a business should consider Microsoft Azure for IaaS and PaaS in place of any other big cloud provider (aka AWS or Google). Let me start with the following: My boss once told me that choosing a cloud provider seems to be like a marriage. The choice you make may (hopefully) be the right one for the rest of your life. Consider that a business which is working with one cloud provider only, establishes a very tight relationship with its services. Working with cloud services, especially PaaS offerings, pretty much locks you into the providers ecosystem. As with marriage, breaking up may be ending by fighting the famous Wars of Roses.
+Choosing a cloud provider sometimes seems like a marriage. The choice you make may (hopefully) be the right one for the rest of your life. Compared to choosing the right cloud provider, finding the right girl or boy pretty much seems like a piece of cake. Love at first sight. Boooom! No one - or the minority of people at least - seriously considers comparing features, revenue, testimonials or market share before asking him or her to tie the band of their life's. Yes, maybe there are actually some people doing this but lets forget about them for now...
 
-Compared to choosing the right cloud provider, finding the right girl or boy pretty much seems like a piece of cake. Love at first sight. Boooom! No one - or the minority of people at least - seriously considers comparing features, revenue, testimonials or market share before asking him or her to tie the band of their life's. Yes, maybe there are actually some people doing this but lets forget about them for now...
+A business which is working with one cloud provider only establishes a very tight relationship with its services. Working with cloud services, especially PaaS offerings, pretty much locks you into the providers ecosystem. And as with marriage, breaking up may be ending by fighting the famous Wars of Roses.
 
-Choosing THE ONE cloud provider for your business is hard if not impossible. For example how are you going to match up the providers against each other? Of course there is this benefit analysis where you evaluate different criteria and in the end a number pop out and tells you what provider you need to go for. But what criteria are to be used? Marketshare? Number of data centers? Quality of support? Number of Services? Gartner Magic Quadrant classification? And how the heck do you compare services which evolve faster than lightning? As a larger company, you will probably base your business decision on existing investments as well as on the commitment and financial stability of the respective providers - and this is more important than small differences in the price and service portfolio.
+But how are you going to match up the providers against each other? Of course there is this benefit analysis where you evaluate different criteria and in the end a number pop out and tells you what provider you need to go for. But what criteria are to be used? Marketshare? Number of data centers? Quality of support? Number of Services? Gartner Magic Quadrant classification? And how do you compare services which evolve faster than lightning? In the end, you will probably base your business decision on existing investments as well as on the commitment and financial stability of the respective providers - and this is in fact more important than small differences in the price and service portfolio.
 
-So why not just go with AWS? That is what probably most people think when asking the above questions. AWS clearly is leading the cloud market in **terms of IaaS and PaaS**. In the [Gartner Magic Quadrant for Cloud Infrastructure as a Service, Worldwide](https://www.gartner.com/doc/reprints?id=1-2G2O5FC&ct=150519) AWS is the uncontested leader.
+So why not just go with AWS? That is what probably most people think when asking the above questions. AWS clearly is leading the cloud market in **terms of IaaS and PaaS**. In the [Gartner Magic Quadrant for Cloud Infrastructure as a Service, Worldwide](https://www.gartner.com/doc/reprints?id=1-2G2O5FC&ct=150519) AWS is (still for now) the uncontested leader.
 
 [![Magic Quadrant for Cloud Infrastructure as a Service, Worldwide](/images/gartner_iaas_mq_2018.png)](/images/gartner_iaas_mq_2018.png)
 *Source: Gartner (May 2018)*
@@ -57,15 +57,15 @@ Same picture when looking at market share. [According to a study of Synergy Rese
 
 [![Cloud Provider Competitive Positioning](/images/CIS_Q218.jpg)](/images/CIS_Q218.jpg)
 
-In terms of revenue we get pretty much the same result: [Amazon Web Services generated $6.11 billion in revenue in Q2 2018](https://www.cnbc.com/2018/07/26/aws-earnings-q2-2018.html), and nobody else is even close. Microsoft reported $6.9 billion in revenue for its commercial cloud business, but remember that we are still primarily talking about IaaS and PaaS now. Microsoft does not disclose Azure revenue and it is believed that they earn the majority of that sum of money from its SaaS business — namely Office 365, Microsoft 365 and Dynamics 365 — and not from Azure which is believed to contribute "only" about $2.05bn to $3.6bn to the commercial cloud earnings depending on wether you belief [KeyBanc](https://www.cnbc.com/2018/07/18/microsoft-earnings-q4-2018.html) or [Canalys](https://www.canalys.com/newsroom/cloud-infrastructure-spend-reaches-us%2420-billion-in-q2-2018-with-hybrid-it-approach-dominant) analyists.
+In terms of revenue we get pretty much the same result: [Amazon Web Services generated $6.11 billion in revenue in Q2 2018](https://www.cnbc.com/2018/07/26/aws-earnings-q2-2018.html), and nobody else is even close. Microsoft reported $6.9 billion in revenue for its commercial cloud business, but remember that we are still primarily talking about IaaS and PaaS now. Microsoft does not disclose Azure revenue and it is believed that they earn the majority of that sum of money from its SaaS business — namely Office 365, Microsoft 365 and Dynamics 365 — and not from Azure which is believed to contribute "only" about $2.05bn to $3.6bn to the commercial cloud earnings, depending on wether you belief [KeyBanc](https://www.cnbc.com/2018/07/18/microsoft-earnings-q4-2018.html) or [Canalys](https://www.canalys.com/newsroom/cloud-infrastructure-spend-reaches-us%2420-billion-in-q2-2018-with-hybrid-it-approach-dominant) analyists.
 
-Given the above numbers it is very hard to ignore AWS when thinking about cloud infrastructure and platform. When a company leads a market the way AWS does for cloud infrastructure and platform it cannot be ignored. And besides all the numbers, it is fair to say that AWS does offer some great products and services. [Many big businesses such as Netflix, GE, Spotify and many more](https://aws.amazon.com/solutions/case-studies) rely heavily on AWS infrastructure which I think definitively points out that it is a very mature and reliable platform.
+Given the above numbers it is very hard to ignore AWS when thinking about cloud infrastructure and platform. And besides all the numbers, it is fair to say that AWS does offer some great products and services. [Many big businesses such as Netflix, GE, Spotify and many more](https://aws.amazon.com/solutions/case-studies) rely heavily on AWS infrastructure which I think definitively points out that it is a very mature and reliable platform.
 
 Although AWS dominates the IaaS and PaaS cloud market I am conviced that Azure is very competitive and that there are some very good reasons to consider Microsoft Azure as your cloud provider. I will try to point out some of them below and I am sure that there are many more good reasons why you may fall for Azure instead of other providers. Please share your thoughts in the comments section. And besides all that "cloud wars" discussion, please keep in mind that as a large company you may not want to focus on just one cloud provider. [According to Gartner Analyst Elias Khnaser](https://www.eliaskhnaser.com/) "Multicloud is no longer a matter of if, it is a matter of when"... 
 
 **SaaS applications**
 
-Remember the above mentioned Microsoft commercial cloud revenue of$6.9bn for Q2 in 2018? [Microsoft is leading the SaaS market followed by Salesforce and Adobe](https://www.srgresearch.com/articles/microsoft-leads-saas-market-salesforce-adobe-oracle-and-sap-follow). That is actually a big argument why you want to choose Microsoft Azure as one of your cloud providers (or even as the one provider when thinking in SME size). Unlike other cloud providers, Microsoft is deeply involved in all three layers of the cloud (IaaS, PaaS and SaaS).
+Remember the above mentioned Microsoft commercial cloud revenue of $6.9bn for Q2 in 2018? [Microsoft is leading the SaaS market followed by Salesforce and Adobe](https://www.srgresearch.com/articles/microsoft-leads-saas-market-salesforce-adobe-oracle-and-sap-follow). That is actually a big argument why you want to choose Microsoft Azure as one of your cloud providers (or even as the one provider when thinking in SME size). Unlike other cloud providers, Microsoft is deeply involved in all three layers of the cloud (IaaS, PaaS and SaaS).
 
 [![Enterprise SaaS Growth and Market Leaders Q2 2017](/images/19553521_14732414839984_rId12.jpg)](/images/19553521_14732414839984_rId12.jpg)
 
@@ -83,21 +83,13 @@ Besides Office 365, Microsoft provides a vast amount of SaaS offerings which are
 
 In many cases, regulations, previous investments or even psychology are big road block on your journey to the cloud. Hybrid Cloud gives you the option to adopt the public cloud although you are not able to move all and everything out into the public cloud. make use of best of both world.
 
-In a hybrid world, the same application might be run either on-premises or in the cloud. Accordingly, an important part of creating a hybrid cloud is setting up a DevOps process that works identically for both. Microsoft is passionate about the value of hybrid cloud and is committed to deliver hybrid solutions for Azure. They offer a broad range of cloud and on-premises technologies that work together in a coherent way. Many of products and services address both on-premise environments as well as the cloud (e.g. SQL Server, Hyper-V, Exchange Server, Active Directory, etc.).
+In a hybrid world, the same application might be run either on-premises or in the cloud. Accordingly, an important part of creating a hybrid cloud is setting up a DevOps process that works identically for both. Microsoft is passionate about the value of hybrid cloud and is committed to deliver hybrid solutions for Azure. They offer a broad range of cloud and on-premises technologies that work together in a coherent way. Many of products and services address both on-premise environments as well as the cloud (e.g. SQL Server, Hyper-V, Exchange Server, Active Directory, etc.). Other providers are catching up with hybrid offerings as well (Google announced its [GKE On-Prem](https://cloud.google.com/gke-on-prem/) or AWS has [Snowball Edge](https://aws.amazon.com/de/snowball-edge/) offering) but Microsoft definitively has a lead here
 
 Providing consistent identity whether a user accesses applications on-premise or in the cloud is a core part of a successfully hybrid cloud. Azure Active Directory can provide a consistent identity and offers secure single sign-on, automated provisioning of new users, and more.
-
-
-
  	
-  * Use Azure Active Directory for a single sign-on experience across on-premises and cloud apps from virtually anywhere.
-
- 	
-  * Azure AD supports cloud applications from Microsoft, including Office 365 and Dynamics 365. It also supports many other SaaS offerings, including Google Apps, Salesforce CRM, Dropbox, Box, Slack, Service Now, Workday, and many more.
-
- 	
+  * Use Azure Active Directory for a single sign-on experience across on-premises and cloud apps from virtually anywhere.	
+  * Azure AD supports cloud applications from Microsoft, including Office 365 and Dynamics 365. It also supports many other SaaS offerings, including Google Apps, Salesforce CRM, Dropbox, Box, Slack, Service Now, Workday, and many more. 	
   * Access on-premises web applications securely from anywhere without a VPN with Azue AD Application Proxy
-
 
 Microsoft’s broad support for hybrid identity is pretty unique among major cloud platform providers. For example, AWS Identity and Access Management focuses on managing identity for AWS itself and for resources running on AWS. Unlike Azure AD, it doesn’t provide a general solution for single sign-on that works across cloud applications from many vendors.
 
@@ -109,27 +101,13 @@ Azure has a broad offering of Hybrid cloud services for infrastructure and devel
 
 Clearly Azure Stack is their flagship when it comes to hybrid cloud, but don't miss out on plenty of other services which offer hybrid cloud functionality:
 
- 	
-  * Azure Service Fabric
-
- 	
-  * Azure Monitor
-
- 	
-  * Azure Security Center
-
- 	
-  * Azure File Sync
-
- 	
-  * Azure Backup
-
- 	
-  * Azure Automation
-
- 	
+  * Azure Service Fabric	
+  * Azure Monitor 	
+  * Azure Security Center 	
+  * Azure File Sync 	
+  * Azure Backup 	
+  * Azure Automation 	
   * …
-
 
 Also when it comes to edge computing, the hybrid cloud strategy of Microsoft might be a big difference compared to other cloud providers. Some are saying that Edge Computing will be the next wave of innovation. [Gartner defines Edge Computing as key platform-enabling technology](https://www.forbes.com/sites/louiscolumbus/2017/08/15/gartners-hype-cycle-for-emerging-technologies-2017-adds-5g-and-deep-learning-for-first-time).
 

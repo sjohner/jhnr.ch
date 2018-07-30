@@ -2,7 +2,6 @@
 author: sjohner
 comments: true
 date: 2015-08-02 21:29:51+00:00
-layout: post
 slug: rebranding-blog-scsmlab-com-is-now-jhnr-ch
 title: 'Rebranding blog: scsmlab.com is now blog.jhnr.ch'
 categories:

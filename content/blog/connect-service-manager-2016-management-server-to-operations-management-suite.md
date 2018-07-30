@@ -2,7 +2,6 @@
 author: sjohner
 comments: true
 date: 2016-11-10 00:50:54+00:00
-layout: post
 slug: connect-service-manager-2016-management-server-to-operations-management-suite
 title: Connect Service Manager 2016 management server to Operations Management Suite
 categories:

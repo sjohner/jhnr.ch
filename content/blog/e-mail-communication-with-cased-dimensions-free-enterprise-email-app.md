@@ -2,7 +2,6 @@
 author: sjohner
 comments: true
 date: 2015-06-04 07:59:53+00:00
-layout: post
 slug: e-mail-communication-with-cased-dimensions-free-enterprise-email-app
 title: E-Mail Communication with Cased Dimensions free Enterprise Email app
 categories:
@@ -26,17 +25,14 @@ While most of you probably attended Microsoft Ignite Conference in Chicago, [Cas
 After registering for your free copy of Enterprise Email, you should shortly get an email from Cased Dimensions sales team which contains your personal download link as well as a valid license key. The download contains a Windows Installer file as well as installation documentation. The **installer hast to be run on your primary Management Server**.
 
 Normally this happens to be the first Management Server that was installed in the Management Group.  If you are not sure about your primary Management Server, check this by using the following SQL Query against the Service Manager database.
- 
 
-    
-    
+```sql
     SELECT DisplayName,[PrincipalName] FROM [MTV_Computer]
     WHERE [BaseManagedEntityId] =
     (SELECT ScopedInstanceId
     FROM dbo.[ScopedInstanceTargetClass]
     WHERE [ManagedTypeId] = dbo.fn_ManagedTypeId_MicrosoftSystemCenterWorkflowTarget())
-
-
+```
 
 The installer will guide you through the installation and also prompt you for a license key at a certain stage. Right before asking for a license key it may occur that the installation fails with the following error right after installation status shows _Retrieving Product Key…_
 
@@ -46,26 +42,12 @@ After talking to the Cased Dimensions support team, this turned out to be relate
 
 In order to update security settings follow these steps:
 
-
-
-	
-  1. Go to _Control Panel -> System and Security -> Administrative Tools -> Local Security Policy -> Local Policies -> Security Options_
-
-	
-  2. Scroll down to _User Account Control_
-
-	
-  3. Select and double click _User Account Control: Run all administrators in Admin Approval Mode_
-
-	
-  4. Select _Disabled_ Click _Apply_ and _Ok_
-
-	
-  5. Restart the server
-
-	
-  6. Run the installer again
-
+1. Go to _Control Panel -> System and Security -> Administrative Tools -> Local Security Policy -> Local Policies -> Security Options_
+2. Scroll down to _User Account Control_
+3. Select and double click _User Account Control: Run all administrators in Admin Approval Mode_
+4. Select _Disabled_ Click _Apply_ and _Ok_
+5. Restart the server
+6. Run the installer again
 
 Note: _User Account Control: Run all administrators in Admin Approval Mode_ setting can be set back to _Enabled _after installation is completed. Server will need to be restarted again.
 

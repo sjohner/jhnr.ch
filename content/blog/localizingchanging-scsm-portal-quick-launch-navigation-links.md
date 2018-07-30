@@ -2,7 +2,6 @@
 author: sjohner
 comments: true
 date: 2013-03-25 22:25:25+00:00
-layout: post
 slug: localizingchanging-scsm-portal-quick-launch-navigation-links
 title: Localizing/Changing SCSM Portal quick launch navigation links
 categories:
@@ -14,7 +13,7 @@ tags:
 - Sharepoint
 ---
 
-In Switzerland a total of four languages are spoken. Beside German, Italian and French there is also a fourth language called Romansh (see also [http://en.wikipedia.org/wiki/Romansh_language](http://en.wikipedia.org/wiki/Romansh_language)) which only a few people speak. However, because there are multiple languages spoken in Switzerland it is common that we have to localize System Center Service Manager portal. There are already many blog posts (including this one from Travis Wright [http://blogs.technet.com/b/servicemanager/archive/2012/02/14/how-to-select-the-portal-language-in-scsm-2012.aspx](http://blogs.technet.com/b/servicemanager/archive/2012/02/14/how-to-select-the-portal-language-in-scsm-2012.aspx)) about localizing Sharepoint by installing the appropriate language packs. However, installing the language packs does not localize the navigation links like _Help Articles_, _My Request_ and _My Activities_ located in the quick launch section of the SCSM portal.<!-- more -->
+In Switzerland a total of four languages are spoken. Beside German, Italian and French there is also a fourth language called Romansh (see also [http://en.wikipedia.org/wiki/Romansh_language](http://en.wikipedia.org/wiki/Romansh_language)) which only a few people speak. However, because there are multiple languages spoken in Switzerland it is common that we have to localize System Center Service Manager portal. There are already many blog posts (including this one from Travis Wright [http://blogs.technet.com/b/servicemanager/archive/2012/02/14/how-to-select-the-portal-language-in-scsm-2012.aspx](http://blogs.technet.com/b/servicemanager/archive/2012/02/14/how-to-select-the-portal-language-in-scsm-2012.aspx)) about localizing Sharepoint by installing the appropriate language packs. However, installing the language packs does not localize the navigation links like _Help Articles_, _My Request_ and _My Activities_ located in the quick launch section of the SCSM portal.
 
 Before changing the text of such a navigation link, select language you want to change the quick launch link text for.
 

@@ -2,7 +2,6 @@
 author: sjohner
 comments: true
 date: 2017-06-09 13:24:27+00:00
-layout: post
 slug: scsm-2016-ur3-breaks-html-portal-hamburger-menu-links
 title: SCSM 2016 UR3 breaks HTML portal Hamburger menu hyperlinks
 categories:
@@ -20,13 +19,13 @@ This issue was initially discovered by [Jure Jeram](https://twitter.com/JureJera
 
 With [update rollup 3 for Service Manager 2016](https://support.microsoft.com/en-us/help/4019979/update-rollup-3-for-system-center-2016-service-manager) released by the end of May 2017, a small issue seems to pop up after applying it to the out of the box HTML portal of Service Manager 2016.
 
-The installation of UR3 applies some changes to the files _sidenavigator.js_ and _Sidebar.cshtml_ of the HTML portal. However it seems as if this breaks the hyperlinks in the expanded Hamburger menu on the portal.
+The installation of UR3 applies some changes to the files `sidenavigator.js` and `Sidebar.cshtml` of the HTML portal. However it seems as if this breaks the hyperlinks in the expanded Hamburger menu on the portal.
 
-Basically several lines in _menuActions_ function in _sidenavigator.js_ are commented out after applying update rollup 3.
+Basically several lines in `menuActions` function in `sidenavigator.js` are commented out after applying update rollup 3.
 
 [![Sidenavigator.js after installing UR3](/images/SideNavigatorWithUR3-1024x576.png)](/images/SideNavigatorWithUR3.png)
 
-Furthermore UR3 adds some hyperlink HTML tags to Sidebar.cshtml. It seems that some functionality affecting the Hamburger menu was moved from _sidenavigator.js_ to _Sidbar.cshtml _with upate rollup 3.
+Furthermore UR3 adds some hyperlink HTML tags to Sidebar.cshtml. It seems that some functionality affecting the Hamburger menu was moved from `sidenavigator.js` to `Sidbar.cshtml` with update rollup 3.
 
 [![Sidebar CSHTML Minimized Menu](/images/SidbarLinks-1024x575.png)](/images/SidbarLinks.png)
 
@@ -36,36 +35,36 @@ But apparently these these changes are only added for the minimized version of t
 
 As Jure outlines in Technet Forums, as a workaround we can add the missing HTML tags manually in Sidebar.cshtml file. All we have to do is to add the following code to each menu item
 
-    
-    <div class="row side_nav_home">
-    	<a class="side_nav_bar_icon" href="/home">
-               <span class="icon-Dictionary icon-medium icon icon-pos"></span>
-               <span class="icon-text icon-text-pos">@Resources.SelfServicePortalResources.ServiceCatalog</span>
-    	</a>
-        </div>
-        <div class="row side_nav_request">
-    	<a class="side_nav_bar_icon" href="/MyRequests">
-               <span class="icon-ContactInfo icon-medium icon icon-pos"></span>
-               <span class="icon-text icon-text-pos">@Resources.SelfServicePortalResources.MyRequests</span>
-    	</a>
-        </div>
-        <div class="row side_nav_activities">
-    	<a class="side_nav_bar_icon" href="/MyActivities">
-               <span class="icon-MultiSelectMirrored icon-medium icon icon-pos"></span>
-               @if (ViewBag.Notications > 0)
-               {
-                   <div class="notification"><span class="activities_count">@ViewBag.Notications</span></div>
-               }
-               <span class="icon-text icon-text-pos">@Resources.SelfServicePortalResources.MyActvities</span>
-    	</a>
-        </div>
-        <div class="row side_nav_help">
-    	<a class="side_nav_bar_icon" href="/KnowledgeBase">
-               <span class="icon-WhatsThis icon-medium icon icon-pos"></span>
-               <span class="icon-text icon-text-pos">@Resources.SelfServicePortalResources.HelpArticles </span>
-    	</a>
-        </div>
-
+```html
+<div class="row side_nav_home">
+	<a class="side_nav_bar_icon" href="/home">
+           <span class="icon-Dictionary icon-medium icon icon-pos"></span>
+           <span class="icon-text icon-text-pos">@Resources.SelfServicePortalResources.ServiceCatalog</span>
+	</a>
+    </div>
+    <div class="row side_nav_request">
+	<a class="side_nav_bar_icon" href="/MyRequests">
+           <span class="icon-ContactInfo icon-medium icon icon-pos"></span>
+           <span class="icon-text icon-text-pos">@Resources.SelfServicePortalResources.MyRequests</span>
+	</a>
+    </div>
+    <div class="row side_nav_activities">
+	<a class="side_nav_bar_icon" href="/MyActivities">
+           <span class="icon-MultiSelectMirrored icon-medium icon icon-pos"></span>
+           @if (ViewBag.Notications > 0)
+           {
+               <div class="notification"><span class="activities_count">@ViewBag.Notications</span></div>
+           }
+           <span class="icon-text icon-text-pos">@Resources.SelfServicePortalResources.MyActvities</span>
+	</a>
+    </div>
+    <div class="row side_nav_help">
+	<a class="side_nav_bar_icon" href="/KnowledgeBase">
+           <span class="icon-WhatsThis icon-medium icon icon-pos"></span>
+           <span class="icon-text icon-text-pos">@Resources.SelfServicePortalResources.HelpArticles </span>
+	</a>
+    </div>
+```
 
 [![Sidebar CSHTML Expanded Menu Added Links](/images/SidebarAddedLinks.png)](/images/SidebarAddedLinks.png)
 

@@ -2,7 +2,6 @@
 author: sjohner
 comments: true
 date: 2013-08-16 14:53:41+00:00
-layout: post
 slug: scsm-data-cubes-outdated-and-mpsync-job-fails-for-cube-library-management-packs
 title: SCSM Data Cubes outdated and MPSync Job fails for Cube Library Management Packs
 categories:
@@ -38,22 +37,25 @@ I noticed that every time I restarted the deployment of a failed Management Pack
 
 The errors state that a table already has a primary key defined on it.
 
-
-    Data Access Layer rejected retry on SqlError:
-    Request: Ral_ExecuteSql -- (statement=exec('IF OBJECT_ID(''[dbo].[WorkItemImpactsServiceFact_2013_Feb]'') IS NULL
-    BEGIN
-    CREATE TABLE [dbo].[WorkItemImpactsServiceFa...), (RETURN_VALUE=0)
-    Class: 16
-    Number: 1779
-    Message: Table 'ReviewerVotedByUserFact_2013_Jul' already has a primary key defined on it.
+```sql
+Data Access Layer rejected retry on SqlError:
+Request: Ral_ExecuteSql -- (statement=exec('IF OBJECT_ID(''[dbo].[WorkItemImpactsServiceFact_2013_Feb]'') IS NULL
+BEGIN
+CREATE TABLE [dbo].[WorkItemImpactsServiceFa...), (RETURN_VALUE=0)
+Class: 16
+Number: 1779
+Message: Table 'ReviewerVotedByUserFact_2013_Jul' already has a primary key defined on it.
+```
 
 A quick internet search discovered that this error was known and happened in some environments after the installation of Service Pack 1 but mostly the _System Center Data Warehouse Base Library_ Management Pack is affected. It seems that the MP Sync process tries to create a Primary Key although one already exists, which causes the sync to fail. There exists a [Microsoft KB article ](http://support.microsoft.com/kb/2853442)which describes how to resolve the issue by running a query on DWRepository database to get the some SQL scripts which will drop and add constraint of the primary key of fact tables on DWRepository database. However, since _System Center Data Warehouse Base Library_ was synced properly I did not use the script provided by Microsoft in this case.
 
 To recover from the various sync errors, it is necessary to drop the primary key from the tables shown in the various error messages . Use the following SQL query to drop a constraint. You should of course adapt the query to alter the tables shown in the error messages on your system.
-    
-    USE DWRepository ALTER TABLE
-    dbo.ReviewActivityHasReviewerFact_2013_Jul drop constraint
-    [PK_ReviewActivityHasReviewerFact_2013_Jul]
+
+```sql
+USE DWRepository ALTER TABLE
+dbo.ReviewActivityHasReviewerFact_2013_Jul drop constraint
+[PK_ReviewActivityHasReviewerFact_2013_Jul]
+```
 
 In my case I had to drop about 20 different PK's to get rid of the first bunch of error messages. Try to redeploy a failed Management Pack afterwards. Because of the dependencies of Management Packs it could happen that you will see some new errors caused by other Management Packs. After a while and some redeployments you should see that more and more Management Packs deploying properly to the data warehouse.
 

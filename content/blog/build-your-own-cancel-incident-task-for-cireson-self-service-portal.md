@@ -2,7 +2,6 @@
 author: sjohner
 comments: true
 date: 2015-05-13 19:34:52+00:00
-layout: post
 slug: build-your-own-cancel-incident-task-for-cireson-self-service-portal
 title: Build your own "Cancel Incident" task for Cireson self-service portal
 categories:
@@ -20,17 +19,11 @@ Most of our customers replaced the out of the box, Silverlight based Service Man
 But for this post I will concentrate on the Cireson portal, escpecially on the functionality which allows you to create custom tasks for work item forms. Based on a Cireson [support article](https://support.cireson.com/KnowledgeBase/View/52?selectedtab=enduser) I created a custom task which enables endusers to cancel an active Incident.
 
 ![Cancel Incident Task](/images/cancelincidenttask.png?w=604)
-<!-- more -->
+
 Basically the following steps are necessary to create a custom task for the Cireson Self-Service portal:
 
-
-
- 	
-  * Define custom task in _CustomSpace/custom.js_
-
- 	
-  * Add any custom HTML templates your _CustomSpace_ directory
-
+* Define custom task in _CustomSpace/custom.js_
+* Add any custom HTML templates your _CustomSpace_ directory
 
 The second step is optional but in order to give your custom task a richer UI you can define HTML templates that your custom task can use. Just add a new HTML file in your _CustomSpace_ directory or in a subdirectory of _CustomSpace. _You will later have to specify the exact path in your _custom.js_ file.
 
@@ -42,23 +35,15 @@ The task is designed to support multiple languages. When using localized strings
 
 Furthermore, when cancelling an Incident the task it will do the following for the selected Incident:
 
-
-
- 	
-  * Change Status to _Resolved_
-
- 	
-  * Change Resolution category to _Cancelled _and set corresponding resolution text
-
- 	
-  * Create appropriate Action Log entry
-
+* Change Status to _Resolved_
+* Change Resolution category to _Cancelled _and set corresponding resolution text
+* Create appropriate Action Log entry
 
 Please find the custom.js file below followed by the corresponding HTML definition. Have fun building your very own custom portal tasks!
 
 **Important Update: **Since the below version of the script does not work properly anymore with Cireson Portal v6 and newer ('actionLogModel.push()' has unfortunately never really been a supported method, and stopped working), I recommend using the solution provided by Cireson consultant [Nicholas Velich](https://community.cireson.com/profile/Nicholas_Velich) which can be downloaded from [Cireson Community](https://us.v-cdn.net/6026663/uploads/editor/yq/sh9ruf4v6s79.zip)
 
-    
+```javascript
     app.custom.formTasks.add('Incident', "Cancel Incident", function (formObj, viewModel) {
     	console.log(formObj);
     	//use requirejs to load the template first 
@@ -136,11 +121,9 @@ Please find the custom.js file below followed by the corresponding HTML definiti
     		customWindow.open().center(); 
     	}); 
     });
-    
+```
 
-
-
-    
+```html
     <div>
       <!--Make sure you have an outer div if you are putting this in a kendo window-->
       <div class="defined-form">
@@ -171,3 +154,4 @@ Please find the custom.js file below followed by the corresponding HTML definiti
         </div>
       </div>
     </div>
+```

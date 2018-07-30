@@ -2,7 +2,6 @@
 author: sjohner
 comments: true
 date: 2013-05-29 15:03:01+00:00
-layout: post
 slug: insert-ci-property-values-into-microsoft-word-template-and-print-directly-from-service-manager-console
 title: Insert CI property values into Microsoft Word Template and print directly from
   Service Manager Console
@@ -24,23 +23,13 @@ tags:
 
 I am always impressed how customizable SCSM can be. Lately I was working for a company who manages their users smartphones and SIM cards in SCSM. That's already pretty cool but there is always some space for improvements :-) The company process of handing out a new phone together with a SIM card to an employee works as follows:
 
-
-
-	
-  * An employee reports the need for a mobile phone to the IT department
-
-	
-  * A new contract with one of Switzerlands major telecommunications provider will be closed for this employee.
-
-	
-  * The new phone together with the SIM card is delivered to the IT department which creates a new record for them in SCSM
-
-	
-  * IT department delivers the phone and SIM card together with a printed form to the employee who has to sign this form to confirm that he received the phone.
-
+* An employee reports the need for a mobile phone to the IT department
+* A new contract with one of Switzerlands major telecommunications provider will be closed for this employee.
+* The new phone together with the SIM card is delivered to the IT department which creates a new record for them in SCSM
+* IT department delivers the phone and SIM card together with a printed form to the employee who has to sign this form to confirm that he received the phone.
 
 Now this all sounds pretty straightforward but when it comes to the last step of the above process there was a small drawback when handing out a printed form to the employee. Before switching to Service Manager for managing the phone assets, the IT company maintained a Microsoft Office Excel worksheet which contained all the phones and SIM cards. Pretty old-school you would say but it had one major advantage compared to Service Manager: They could easily print a form based on the information contained in the Excel worksheet and hand it out to the employee together with the phone.
-<!-- more -->
+
 Ok - Service Manager also provides a very basic task to print information of a CI but as you may know the printout is not formatted in a manner that one could hand out this to an employee. Furthermore it is not possible to just print a small set of information or to add custom text and logos.
 
 To improve this last step of handing out a printed form I was asked to create a custom SCSM task which prints a predefined Microsoft Word template which contains some of the phone data from SCSM. I wanted to share the solution in case anyone else has a similar demand for printing information from SCSM. Basically the result looked like the following:
@@ -52,9 +41,8 @@ A custom class for SIM cards and phones was already available in Service Manager
 [![SCSM SIM Card Form](/images/form.png?w=300)](/images/form.png)
 
 First of all I had to create a task which prints a existing Word template but also updates this template with some values from SCSM before printing it.
- 
 
-    
+```xml
     <Presentation>
         <ConsoleTasks>
           <!--Task simcard class-->
@@ -84,8 +72,7 @@ First of all I had to create a task which prints a existing Word template but al
         <Assembly ID="scsmlab.simcard.templateprint" Accessibility="Public" FileName="scsmlab.simcard.templateprint.dll" HasNullStream="false" QualifiedName="scsmlab.simcard.templateprint, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8275f1190deadcc4" />
         <Image ID="Word16x16" Accessibility="Public" FileName="Word16.png" HasNullStream="false" />
       </Resources>
-
-
+```
 
 As you see in the code listing above, the newly created task uses a custom assembly which contains all the action necessary to print a Word template directly from SCSM. The task is displayed for all SIM card objects in SCSM.
 
@@ -98,16 +85,14 @@ Make sure the Word document is saved as template (dotx) and in a path where it i
 [![Microsoft Word Bookmarks](/images/bookmarks.png)](/images/bookmarks.png)
 
 What is missing now is the custom assembly to print the document. I developed this in Visual Studio 2010 by creating a new class which inherits _ConsoleCommand_ from _Microsoft.EnterpriseManagement.UI.SdkDataAccess.dll_ and overrides_ ExecuteCommand()_ to contain my code for printing the document.
- 
 
-    
+```csharp
     public class TaskHandler : ConsoleCommand
     {
     [STAThread]
     public override void ExecuteCommand(IList nodes, NavigationModelNodeTask task, ICollection parameters)
     {
-
-
+```
 
 Since every client in the before mentioned company which has Service Manager Console installed also has Microsoft Office 2010 installed, I decided to use the Microsoft
 Office 2010 Primary Interop Assemblies to open, modify etc. the Word document programmatically. More information about Microsoft Office Primary Interop Assemblies can be found on [MSDN](http://msdn.microsoft.com/en-us/library/15s06t57.aspx). Microsoft Office 2010 Primary Interop Assemblies can be downloaded from [Microsoft Download Center](http://www.microsoft.com/en-us/download/details.aspx?id=3508).
@@ -115,9 +100,8 @@ Office 2010 Primary Interop Assemblies to open, modify etc. the Word document pr
 Basically my code for opening, altering and printing the predefined Word template looks like the following, where _inst _is the current instance. Since I do not change anything in SCSM it does not depend if the task is run from a form or from a view. Depending on the SCSM data type (String, Date, Enum) the values may be converted to a String value.
 
 Since I am no C# expert, feel free to correct and adjust the following code :-)
- 
 
-    
+```csharp
     try
     {
     //Create new Application and open the existing Word template
@@ -155,8 +139,7 @@ Since I am no C# expert, feel free to correct and adjust the following code :-)
     //Show error so it looks like regular console exception
     ConsoleContextHelper.Instance.ShowErrorDialog(ex, "Error", ConsoleJobExceptionSeverity.Error);
     }
-
-
+```
 
 Et voilà, I am able to fill in values of an object in SCSM to a Word document and print it directly. It is also be possible to show a print dialog rather than printing the document directly to the default printer. Many code examples and step-by-step procedures for handling Microsoft Office documents can be found on [MSDN](http://msdn.microsoft.com/en-us/library/vstudio/bb157880.aspx).
 

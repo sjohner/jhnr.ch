@@ -2,7 +2,6 @@
 author: sjohner
 comments: true
 date: 2015-07-20 21:26:30+00:00
-layout: post
 slug: dynamically-update-service-manager-enum-values-from-mysql-database-by-using-powershell
 title: Dynamically update Service Manager enum values from MySQL database by using
   PowerShell
@@ -18,116 +17,48 @@ tags:
 - SQL
 ---
 
-
-
-
-
-
-
-
-
-
 Lists in SCSM can sometimes be pretty dynamic. As an example it may be the case that you want to publish job titles for an employee joiner offering to the end users. Job titles may change over time and if your company is using kind of an external system to manage these titles together with other employee data, it would be nice to have your list updated dynamically right?
 
-
-
-
 Besides many other commands, SMLets module provides you also with the following cmdlets to manage enumerations.
-
-
-
-
-
-
 	
-  * Get-SCSMEnumeration
-
-	
-  * Get-SCSMChildEnumeration
-
-	
-  * Remove-SCSMEnumeration
-
-	
-  * Add-SCSMEnumeration
-
-	
-  * Get-SCSMTopLevelEnumeration
-
-
-
+* Get-SCSMEnumeration
+* Get-SCSMChildEnumeration
+* Remove-SCSMEnumeration
+* Add-SCSMEnumeration
+* Get-SCSMTopLevelEnumeration
 
 With these cmdlets in mind it is pretty straight forward to add new and remove existing enumerations. The only challenge when adding new enums can be the definition of the appropriate ordinal. Easiest way of solving this is to always add new enums to the very bottom of an existing list. With this approach, one only has to get the largest ordinal of all child enums and increment this for the newly added one.
 
-
-<!-- more -->
-
-
-As always with Service Manager and PowerShell, there are many ways of skinning a cat :-) But some of them are faster :-)
-
-
-
-
-For example when getting the largest ordinal number for all child enums of a particular enumeration list this can be achieved in (at least) two different ways:
-
-
-
+As always with Service Manager and PowerShell, there are many ways of skinning a cat :-) But some of them are faster :-) For example when getting the largest ordinal number for all child enums of a particular enumeration list this can be achieved in (at least) two different ways:
 
 One is getting all child enumerations, sort them by Ordinal value and select Ordinal of the last object in the sorted list.
 
-
-
-
-    
+```powershell    
     ($ChildEnums | Sort-Object Ordinal | select -Last 1).Ordinal
-    
-
-
-
+```
 
 Another way would be to use the Measure-Object cmdlet on the Ordinal property and to measure for max value.
 
-
-
-
-    
+```powershell    
     ($ChildEnums | Measure-Object -Property Ordinal -Maximum).Maximum
-    
-
-
-
+```
 
 However when comparing these two methods, getting the largest ordinal value using Measure-Object seems to be much faster than sorting an getting last objects ordinal value
 
-
-
-
-    
+```powershell    
     PS C:> (Measure-Command {($ChildEnums | Measure-Object -Property Ordinal -Maximum).Maximum}).TotalMilliseconds
     0,892
     PS C:> (Measure-Command {($ChildEnums | Sort-Object Ordinal | select -Last 1).Ordinal}).TotalMilliseconds
     4,0093
-    
-
-
-
+```
 
 When working with a large number of child enums, this can slow down your script remarkably.
 
-
-
-
 Below you can find some snippets which are used to update an existing enum list in Service Manager. I also uploaded the complete PowerShell script to [TechNet Gallery here](https://gallery.technet.microsoft.com/Service-Manager-Update-bc571449). Furthermore the script checks whether a enum does not anymore exist in MySQL database and removes it from Service Manager if applicable. **Be aware that this would have impact on CIs or WorkItems where the enum to be removed is selected**.
 
+For the MySQL part, [Thomas Maurer wrote a great post](http://www.thomasmaurer.ch/2011/04/powershell-run-mysql-querys-with-powershell/) about querying MySQL with PowerShell.  I recommend reading his post if you need more details about this step. When querying MS SQL databases one could use [Invoke-Sqlcmd cmdlet](//msdn.microsoft.com/en-us/library/cc281720.aspx) instead.
 
-
-
-For the MySQL part,[ Thomas Maurer wrote a great post](http://www.thomasmaurer.ch/2011/04/powershell-run-mysql-querys-with-powershell/) about querying MySQL with PowerShell.  I recommend reading his post if you need more details about this step. When querying MS SQL databases one could use [Invoke-Sqlcmd cmdlet ](//msdn.microsoft.com/en-us/library/cc281720.aspx)instead.
-
-
-
-
-    
+```powershell    
     #Define MySQL query to get job titles
     $MySqlQuery = "select title from jobtitles where deleted = 0";
     
@@ -165,17 +96,11 @@ For the MySQL part,[ Thomas Maurer wrote a great post](http://www.thomasmaurer.c
     
         #Get Job Titles from Tippps MySQL database
         $Result = Invoke-MySQL -Query $MySqlQuery
-    
-
-
-
+```
 
 Below you can find a snippet which get job titles from a MySQL database and creates an enumeration for each of the received titles if not already existing in Service Manager.
 
-
-
-
-    
+```powershell    
         #Import SMLets
         Import-Module smlets
     
@@ -204,17 +129,10 @@ Below you can find a snippet which get job titles from a MySQL database and crea
                 Add-SCSMEnumeration -Parent $ParentEnum -Name $ChildEnumName -DisplayName $Title -Ordinal $Ordinal -ManagementPack $EnumManagementPack
             }
         }
-    
-
-
-
-
+```
 The script checks whether a enum does not anymore exist in MySQL database and removes it from Service Manager if applicable.
 
-
-
-
-    
+```powershell
         #Remove obsolete titles from enum list if not anymore in database
         Foreach($ChildEnum in $ChildEnums) {
             if($($Result.Title) -notcontains $($ChildEnum.DisplayName)) {
@@ -222,13 +140,4 @@ The script checks whether a enum does not anymore exist in MySQL database and re
                 Write-Verbose "Removed $($ChildEnum.DisplayName) from Enum List"
             }
         }
-    
-
-
-
-
-
-
-
-
-
+```

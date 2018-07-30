@@ -2,7 +2,6 @@
 author: sjohner
 comments: true
 date: 2015-03-29 22:04:41+00:00
-layout: post
 slug: recursively-get-all-review-activities-related-to-a-workitem
 title: Recursively get all Review Activities related to a WorkItem
 categories:
@@ -32,49 +31,50 @@ Below you will find a small PowerShell snippet, which contains a function to rec
 One thing to mention is that we need to use ArrayList datatype instead of the default System.Array to be able to add and remove elements. When you create an array in PowerShell you normally use the default type which is of a fixed size. [The MSDN page for the ISFixedSize Property](http://msdn.microsoft.com/en-us/library/system.array.isfixedsize(v=vs.110).aspx) helps to explain this. Note that it supports the modification of existing elements, but not the addition or removal of others.
 
 ```powershell
-    #Import SMLets module
-    import-module smlets
-    
-    #Get necessary classes and relationships
-    $ReviewActivityClass = Get-SCSMClass -name ^System.WorkItem.Activity.ReviewActivity$
-    $WorkItemRelatesToWorkItemRelClass = Get-SCSMRelationshipClass -name ^System.WorkItemRelatesToWorkItem$
-    $WorkItemContainsActivityRelClass = Get-SCSMRelationshipClass -name ^System.WorkItemContainsActivity$
-    
-    #Define ArrayList to store Review Activities. We need to use ArrayList instead of System.Array to be able to add and remove elements.
-    #The MSDN page for the ISFixedSize Property helps to explain this. Note that it supports the modification of existing elements,
-    #but not the addition or removal of others.
-    [System.Collections.ArrayList]$ReviewActivities = @()
-    
-    #Recursively get all Review Activities for specific WorkItem
-    Function getReviewActivities {
-        Param
-            (
-            [Parameter(Mandatory=$true)]$WorkItem
-            ) 
-    
-    	#Get all activities contained in the given WorkItem
-    	$ContainedActivities =  @()
-    	$ContainedActivities += Get-SCSMRelatedObject -Relationship $WorkItemContainsActivityRelClass -SMObject $WorkItem
-    
-    	#Check if an activity is a Review Activity and add it to the ArrayList
-    	foreach ($Activity in $ContainedActivities)
-    	{
-    		if($Activity.ClassName -eq $ReviewActivityClass.Name)
-    		{
-    			$Index = $ReviewActivities.Add($Activity)
-    		}
-    		#If not Review Activity, recursively call getReviewActivities to get RAs in nested Activities
-    		else
-    		{
-    			getReviewActivities -WorkItem $Activity
-    		}
-    	}
-    }
+#Import SMLets module
+import-module smlets
+
+#Get necessary classes and relationships
+$ReviewActivityClass = Get-SCSMClass -name ^System.WorkItem.Activity.ReviewActivity$
+$WorkItemRelatesToWorkItemRelClass = Get-SCSMRelationshipClass -name ^System.WorkItemRelatesToWorkItem$
+$WorkItemContainsActivityRelClass = Get-SCSMRelationshipClass -name ^System.WorkItemContainsActivity$
+
+#Define ArrayList to store Review Activities. We need to use ArrayList instead of System.Array to be able to add and remove elements.
+#The MSDN page for the ISFixedSize Property helps to explain this. Note that it supports the modification of existing elements,
+#but not the addition or removal of others.
+[System.Collections.ArrayList]$ReviewActivities = @()
+
+#Recursively get all Review Activities for specific WorkItem
+Function getReviewActivities {
+    Param
+        (
+        [Parameter(Mandatory=$true)]$WorkItem
+        ) 
+
+	#Get all activities contained in the given WorkItem
+	$ContainedActivities =  @()
+	$ContainedActivities += Get-SCSMRelatedObject -Relationship $WorkItemContainsActivityRelClass -SMObject $WorkItem
+
+	#Check if an activity is a Review Activity and add it to the ArrayList
+	foreach ($Activity in $ContainedActivities)
+	{
+		if($Activity.ClassName -eq $ReviewActivityClass.Name)
+		{
+			$Index = $ReviewActivities.Add($Activity)
+		}
+		#If not Review Activity, recursively call getReviewActivities to get RAs in nested Activities
+		else
+		{
+			getReviewActivities -WorkItem $Activity
+		}
+	}
+}
 ```
+
 To execute the function you just have to provide a WorkItem object e.g. a Service Request.
 
 ```powershell
-    $ServiceRequestObj = Get-SCSMObject -Class (Get-SCSMClass -Name System.Workitem.ServiceRequest$) -Filter "Id -eq SR12345"
-    
-    getReviewActivities -WorkItem $ServiceRequestObj
+$ServiceRequestObj = Get-SCSMObject -Class (Get-SCSMClass -Name System.Workitem.ServiceRequest$) -Filter "Id -eq SR12345"
+
+getReviewActivities -WorkItem $ServiceRequestObj
 ```

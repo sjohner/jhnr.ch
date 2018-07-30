@@ -2,7 +2,6 @@
 author: sjohner
 comments: true
 date: 2015-02-24 20:00:00+00:00
-layout: post
 slug: get-installed-scsm-version-for-multiple-computers-by-using-powershell
 title: Get installed SCSM Version for multiple computers by using PowerShell
 categories:
@@ -20,7 +19,6 @@ I recently worked in a project where people are working with several Service Man
 Well, when working with several environments, one has to make sure that all Service Manager servers are on the same patch level. Especially integration and production should be on the same level.
 
 [![Screenshot Script Check File Version](/images/checkfileversion.png?w=660)](/images/checkfileversion.png)
-<!-- more -->
 
 To check for Service Manager versions on multiple servers I wrote a small PowerShell script which checks file version of _Microsoft.EnterpriseManagement.DataAccessLayer.dll_ on every computer passed in a CSV file. To check files, a remote PowerShell session is established so the computers specified must be configured to receive Windows PowerShell remote commands that are sent by using the WS-Management technology
 
@@ -32,9 +30,8 @@ _SCSMSERVER01_
 _MS01_
 
 It is kind of a first draft and may be improved in some ways. Feel free to comment if you have any suggestions on how to enhance the script!
- 
 
-    
+```powershell
     <#
      
     .SYNOPSIS
@@ -91,7 +88,4 @@ It is kind of a first draft and may be improved in some ways. Feel free to comme
             Write-Warning "Specified file $PathToFile on computer $($Server.Computername) not found"
         }
     }
-
-
-
-
+```

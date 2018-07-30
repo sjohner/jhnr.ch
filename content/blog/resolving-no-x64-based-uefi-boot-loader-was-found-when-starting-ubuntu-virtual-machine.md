@@ -2,7 +2,6 @@
 author: sjohner
 comments: true
 date: 2017-02-23 17:11:21+00:00
-layout: post
 slug: resolving-no-x64-based-uefi-boot-loader-was-found-when-starting-ubuntu-virtual-machine
 title: Resolving "No x64-based UEFI boot loader was found" when starting Ubuntu virtual
   machine
@@ -31,9 +30,9 @@ After some troubleshooting I noticed that for this particular Linux VM, the File
 
 For Linux VMs (or Ubuntu at least, I can't tell about other distributions but assume it is the same) this is not the case. Fortunately solving the issue is pretty straight forward using Ubuntu rescue mode:
 
-  1. Boot into a rescue system
-  2. Select _Force GRUB installation to EFI removable media path_
-  3. Reboot
+1. Boot into a rescue system
+2. Select _Force GRUB installation to EFI removable media path_
+3. Reboot
 
 Forcing GRUB installation to EFI removable media path does basically the same thing as when Ubuntu installer asks you if you want to force UEFI installation: it installs to the removable media path in the ESP (EFI System Partition). This is fine for environment where no other operating system is present. However if there is another operating system present on the device which depends on this fallback location "removable media path" it will make this system temporary unbootable (you can manually configure GRUB later to boot it if necessary though).
 

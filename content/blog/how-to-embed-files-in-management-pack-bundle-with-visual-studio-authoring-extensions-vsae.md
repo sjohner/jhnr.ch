@@ -2,7 +2,6 @@
 author: sjohner
 comments: true
 date: 2013-01-17 22:22:53+00:00
-layout: post
 slug: how-to-embed-files-in-management-pack-bundle-with-visual-studio-authoring-extensions-vsae
 title: How to embed Files in Management Pack Bundle with Visual Studio Authoring Extensions
   (VSAE)
@@ -15,7 +14,7 @@ tags:
 - VSEA
 ---
 
-Recently I wrote a [post ](http://scsmlab.com/2013/01/03/include-files-in-management-pack-bundle-with-vsae/)about adding dll resource files to a Management Pack Bundle with Visual Studio Authoring Extensions (VSAE). Now this only works for .mp and .dll files. If you want to include for example an image file to your Management Pack Bundle which is going to be displayed as a Folder Icon, you first have to add the file to your Management Pack Project.
+Recently I wrote a [post](http://scsmlab.com/2013/01/03/include-files-in-management-pack-bundle-with-vsae/) about adding dll resource files to a Management Pack Bundle with Visual Studio Authoring Extensions (VSAE). Now this only works for .mp and .dll files. If you want to include for example an image file to your Management Pack Bundle which is going to be displayed as a Folder Icon, you first have to add the file to your Management Pack Project.
 
 [![Add Existing Item](/images/addexistingitem.png?w=460)](/images/addexistingitem.png)
 

@@ -2,7 +2,6 @@
 author: sjohner
 comments: true
 date: 2014-12-23 16:27:58+00:00
-layout: post
 slug: resolve-sql-server-service-not-running-when-installing-service-manager-database-on-sql-alwayson-availability-group
 title: Resolve "SQL Server service not running" when installing Service Manager database
   on SQL AlwaysOn Availability Group
@@ -29,10 +28,10 @@ Some posts out there are suggesting installing Service Manager database to one o
 
 To be able to continue with Service Manager setup you have to add the following key to the registries of your SQL AlwaysOn cluster nodes. According to a [Microsoft article](http://support2.microsoft.com/default.aspx?scid=kb;EN-US;306985)  the _NoRemapPipes_ registry key controls how named pipes are opened on the network that is managed by the Network Name resource. If RemapPipeNames is set to TRUE, named pipes are always opened by using local pipe names.
 
-**Key:**_ HKEY_LOCAL_MACHINESYSTEMCurrentControlSetServicesLanmanServerParameters_
-**Name:** _NoRemapPipes_
-**Type:** _REG_MULTI_SZ_
-**Data:** _winreg __svcctl __eventlog_
+**Key:** *HKEY_LOCAL_MACHINESYSTEMCurrentControlSetServicesLanmanServerParameters*
+**Name:** *NoRemapPipes*
+**Type:** *REG_MULTI_SZ*
+**Data:** *winreg __svcctl __eventlog*
 
 ![RegChange](/images/regchange.png?w=604)
 

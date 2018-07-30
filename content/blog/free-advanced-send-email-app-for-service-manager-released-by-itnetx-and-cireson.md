@@ -2,7 +2,6 @@
 author: sjohner
 comments: true
 date: 2014-01-16 14:21:11+00:00
-layout: post
 slug: free-advanced-send-email-app-for-service-manager-released-by-itnetx-and-cireson
 title: Free Advanced Send Email App for Service Manager released by itnetx and Cireson
 categories:
@@ -25,29 +24,26 @@ Analysts often have to check with someone (mostly the affected user in case of i
 
 I recently wrote a [blog post](http://scsmlab.com/2013/07/15/effective-e-mail-communication-with-service-manager-send-message-from-scsm-console/) about a messaging solution I created for one of our customers to address these issues. Many of you seem to have the same problems when it comes down to communication with end users and were asking for a public release of the solution. I am happy to announce that [itnetx together with Cireson now released a free app](http://www.prweb.com/releases/2014/01/prweb11465908.htm) based on this solution – **the Advanced Send Email app** - that simplifies communication between analysts and end users.
 
-<!-- more -->
-
-
 All you need to do to get this working is:
 
-  1. Download the Advanced Send Email app from [itnetx website](http://www.itnetx.ch)
-  2. Import Management Pack by using Service Manager Console  
+1. Download the Advanced Send Email app from [itnetx website](http://www.itnetx.ch)
+2. Import Management Pack by using Service Manager Console
 [![Import Advanced Send Email MPB](/images/importadvancedsendemailmp.png?w=604)](/images/importadvancedsendemailmp.png)
-  3. Configure SMTP server settings
-  4. Create message templates if needed
-  5. No more messing around with end user communication :-)
+3. Configure SMTP server settings
+4. Create message templates if needed
+5. No more messing around with end user communication :-)
 
-Give it a try in your lab environment and let us know what you think. There is also a short documentation written by [Travis Wright ](http://twitter.com/radtravis)included in the download. In addition to this I will now explain what you get with this free app.
+Give it a try in your lab environment and let us know what you think. There is also a short documentation written by [Travis Wright](http://twitter.com/radtravis) included in the download. In addition to this I will now explain what you get with this free app.
 
-The free [Advanced Send Email app ](http://www.itnetx.ch)basically has the following features:
+The free [Advanced Send Email app](http://www.itnetx.ch) basically has the following features:
 
-  * Send e-mail to affected user by default, but be able to add other e-mail addresses or to delete the affected user's address.
-  * Possibility to add additional e-mail addresses in TO and CC
-  * Message subject contains the incident's title but can be altered.
-  * Predefined e-mail templates are available to the analysts
-  * Attachments can be added to the message
-  * The analyst is free to choose whether the message body should be logged in the incident's action log or not
-  * No need to edit XML files, just import the MPB and you are done
+* Send e-mail to affected user by default, but be able to add other e-mail addresses or to delete the affected user's address.
+* Possibility to add additional e-mail addresses in TO and CC
+* Message subject contains the incident's title but can be altered.
+* Predefined e-mail templates are available to the analysts
+* Attachments can be added to the message
+* The analyst is free to choose whether the message body should be logged in the incident's action log or not
+* No need to edit XML files, just import the MPB and you are done
 
 [![Advanced Send Email Form](/images/advancedsendemailform.png)](/images/advancedsendemailform.png)
 

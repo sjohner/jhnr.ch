@@ -2,7 +2,6 @@
 author: sjohner
 comments: true
 date: 2017-02-06 22:41:57+00:00
-layout: post
 slug: new-user-group-experts-live-cafe-microsoft-it-pro-switzerland
 title: 'New User Group: Experts Live Café - Microsoft IT Pro Switzerland'
 categories:
@@ -27,4 +26,4 @@ It is planned to have two sessions organized per event. Anyone who has anything 
 
 If you are interested, register for the event on our [Meetup site](https://www.meetup.com/MicrosoftITProSchweiz/). Thanks to Microsoft there will be snacks and drinks for everyone :-)
 
-For more details about _Experts Live Café - Microsoft IT Pro Switzerland_ check our [website ](http://itproch.expertslive.cafe/)and follow us on [Twitter](https://twitter.com/ExpertsLiveCafe) . Hope to see you there!
+For more details about _Experts Live Café - Microsoft IT Pro Switzerland_ check our [website](http://itproch.expertslive.cafe/) and follow us on [Twitter](https://twitter.com/ExpertsLiveCafe) . Hope to see you there!

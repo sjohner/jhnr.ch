@@ -2,7 +2,6 @@
 author: sjohner
 comments: true
 date: 2016-03-07 20:27:51+00:00
-layout: post
 slug: assessment-guide-for-public-cloud-workloads
 title: Assessment Guide for Public Cloud Workloads
 categories:
@@ -29,20 +28,10 @@ Companies have to choose wisely, which applications they run on a Public Cloud. 
 
 There is plenty of literature out there which describes how to migrate applications to a Public Cloud. But sometimes all these papers and guides are just not that easy to understand. Below you find a list of interesting papers which are in my opinion definitively worth reading when dealing with migration of applications to a Public Cloud. If you have any other experiences or you may know other interesting papers please let me know in the comment section.
 
-
-
-	
-  * Andrikopoulos, V., Binz, T., Leymann, F., & Strauch, S. (2012). [How to adapt applications for the Cloud environment](ftp://ftp.informatik.uni-stuttgart.de/pub/library/medoc.ustuttgart_fi/MSTR-3572/MSTR-3572.pdf)
-
-	
-  * Khajeh-Hosseini, A., Greenwood, D., & Sommerville, I. (2010). [Cloud Migration: A Case Study of Migrating an Enterprise IT System to IaaS](http://arxiv.org/pdf/1002.3492v1)
-
-	
-  * Jamshidi P., Ahmad A., & Pahl C. (2013). [Cloud Migration Research: A Systematic Review](http://doras.dcu.ie/19636/1/TCC-AuthorsVersion.pdf)
-
-	
-  * Sriram, I. & Khajeh-Hosseini, A. (2010). [Research agenda in cloud technologies](http://arxiv.org/abs/1001.3259)
-
+* Andrikopoulos, V., Binz, T., Leymann, F., & Strauch, S. (2012). [How to adapt applications for the Cloud environment](ftp://ftp.informatik.uni-stuttgart.de/pub/library/medoc.ustuttgart_fi/MSTR-3572/MSTR-3572.pdf)
+* Khajeh-Hosseini, A., Greenwood, D., & Sommerville, I. (2010). [Cloud Migration: A Case Study of Migrating an Enterprise IT System to IaaS](http://arxiv.org/pdf/1002.3492v1)
+* Jamshidi P., Ahmad A., & Pahl C. (2013). [Cloud Migration Research: A Systematic Review](http://doras.dcu.ie/19636/1/TCC-AuthorsVersion.pdf)
+* Sriram, I. & Khajeh-Hosseini, A. (2010). [Research agenda in cloud technologies](http://arxiv.org/abs/1001.3259)
 
 Since many customers and IT people probably do not have time to rifle through tons of scientific papers it tired to create kind of easy to read guidelines which hopefully help people to more easily understand what criteria have to be considered when thinking about migrating applications to a Public Cloud.
 
@@ -58,18 +47,7 @@ I definitively recommend digging deeper into some of the above papers if you are
 
 Also there are some software products and frameworks which claim to be able to check applications on their cloud readiness. I personally did not use any of them but you may want to check out the following links:
 
-
-
-	
-  * [Cloudamize](http://www.cloudamize.com/product/)
-
-	
-  * Persistent Cloud Assessment Tool 
-
-	
-  * [Asia Cloud Computing Association Cloud Assessment Tool (CAT) ](http://www.asiacloudcomputing.org/cloud-assessment-tool)
-
-	
-  * [PlanForCloud by Rightscale](http://www.planforcloud.com/)
-
-
+* [Cloudamize](http://www.cloudamize.com/product/)
+* Persistent Cloud Assessment Tool 
+* [Asia Cloud Computing Association Cloud Assessment Tool (CAT) ](http://www.asiacloudcomputing.org/cloud-assessment-tool)
+* [PlanForCloud by Rightscale](http://www.planforcloud.com/)

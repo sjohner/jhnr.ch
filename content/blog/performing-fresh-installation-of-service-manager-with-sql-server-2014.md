@@ -2,7 +2,6 @@
 author: sjohner
 comments: true
 date: 2016-01-15 00:24:46+00:00
-layout: post
 slug: performing-fresh-installation-of-service-manager-with-sql-server-2014
 title: Performing fresh installation of  Service Manager with SQL Server 2014
 categories:
@@ -29,29 +28,28 @@ In order to get past the above mentioned issue, you could install a dummy instan
 
 Add the namespace to WMI of your SQL server by using the following commands:
 
-    
+```powershell
     $nameSpace = [wmiclass]”root\Microsoft\SQLServer:__Namespace”
     $newNameSpace=$nameSpace.CreateInstance()
     $newNameSpace.Name=”ComputerManagement11”
     $newNameSpace.Put()
-
+```
 
 With the above commands we can in fact trick the Service Manager installer to think that SQL Server 2012 is present on our database server.
 
 What works for the installation of a secondary management server does also for a fresh installation of Service Manager 2012 R2. We just have to slightly adjust the command to start a fresh Service Manager installation instead of adding a secondary management server:
 
-    
+```powershell
     .\Setup.exe /Install:Server /AcceptEula /ProductKey:'' /CreateNewDatabase /SqlServerInstance:'' /ManagementGroupName:'SM_Lab' /AdminRoleGroup:'Lab\SCSM-Admins' /ServiceRunUnderAccount:'lab\svc-scsm\password' /WorkflowAccount:'lab\svc-scsm\password' /CustomerExperienceImprovementProgram:NO /EnableErrorReporting:NO /Silent
-    
-
+```
 
 I have to mention, that this installation procedure may not be completely supported by Microsoft as in fact SQL Server 2014 is only supported with Update Rollup 6 installed. But there is no process to manually slipstream UR6 into existing Service Manager installation media and you would basically be forced to do a fresh installation of Service Manager 2012 R2 with SQL Server 2012 and upgrade SQL Server after applying UR6.
 
 Using the above command line installation completes successfully even without UR6 installed. You can check installation status by looking into the installer log files located in _C:\Users\<Username>\AppData\Local\Temp\2.
 _Of course you will have to install the latest Update Rollup to make sure SQL Server 2014 is properly supported. You can then safely remove the previously created _ComputerManagement11_ namespace from your SQL server:
 
-    
+```powershell
     Get-WMIObject –query “Select * from __namespace where name=’ComputerManagement11’” –namespace “root\Microsoft\SQLServer” | Remove-WMIObject
-
+```
 
 Voilà, your Service Manager environment should now be up and running with SQL Server 2014 without the hassle of performing a SQL upgrade. Just remember to use command line again if you want to install additional management servers. An example can be found on the [official Service Manager blog](http://blogs.technet.com/b/servicemanager/archive/2015/07/30/deploying-secondary-management-server-after-sql-2104-upgrade.aspx).

@@ -2,7 +2,6 @@
 author: sjohner
 comments: true
 date: 2016-08-03 20:05:47+00:00
-layout: post
 slug: running-scsm-2016-tp5-on-sql-alwayson-availability-group-execution-of-user-code-in-the-net-framework-is-disabled
 title: Running SCSM 2016 TP5 on SQL AlwaysOn Availability Group - "Execution of user
   code in the .Net Framework is disabled"
@@ -20,23 +19,11 @@ tags:
 
 Now that the new Service Manager release is just around the corner, more and more customers are asking to deploy Service Manager 2016 TP5 in production. Benefits of deploying Service Manager 2016 TP5 are listed below. For a complete list of new features in Service Manager 2016 TP5, please see [https://technet.microsoft.com/en-us/system-center-docs/sm/get-started/what-s-new-in-service-manager](https://msdn.microsoft.com/en-us/library/ms131048(v=sql.110).aspx)
 
-
-
- 	
-  * New Self-Service Portal
-
- 	
-  * Performance improvements
-
- 	
-  * Support for Lync 2013 and Skype for Business
-
- 	
-  * Changes to Setup supporting SQL AlwaysOn Availability Groups installation
-
- 	
-  * Support for .NET Framework 4.5.1
-
+* New Self-Service Portal
+* Performance improvements
+* Support for Lync 2013 and Skype for Business
+* Changes to Setup supporting SQL AlwaysOn Availability Groups installation
+* Support for .NET Framework 4.5.1
 
 One cool thing is that Setup now supports SQL AlwaysOn Availability Groups installation. No more hacks and workarounds when [Performing a fresh installation of Service Manager with SQL Server 2014.](https://blog.jhnr.ch/2016/01/15/performing-fresh-installation-of-service-manager-with-sql-server-2014/) :-)
 
@@ -54,7 +41,7 @@ As suspected, the option was only enabled on the one node which was the primary 
 
 Luckily, enabling this configuration option is a piece of cake :-) The following SQL commands will enable "CLR Enabled". Check out [https://msdn.microsoft.com/en-us/library/ms131048(v=sql.110).aspx](https://msdn.microsoft.com/en-us/library/ms131048(v=sql.110).aspx) for more information
 
-    
+```powershell
     sp_configure 'show advanced options', 1;
     GO
     RECONFIGURE;
@@ -63,7 +50,7 @@ Luckily, enabling this configuration option is a piece of cake :-) The following
     GO
     RECONFIGURE;
     GO
-
+```
 
 [![CLR Configuration Option Enabled](/images/CLR_Configuration_Option_Enabled.png)](/images/CLR_Configuration_Option_Enabled.png)
 

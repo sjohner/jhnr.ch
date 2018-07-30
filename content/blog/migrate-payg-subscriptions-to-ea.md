@@ -1,7 +1,7 @@
 ---
 author: sjohner
 comments: true
-date: 2018-07-30T22:13:56+02:00
+date: 2018-07-30T20:13:56+02:00
 slug: migrate-existing-azure-payg-subscriptions-to-ea
 title: "Migrate existing Azure pay as you go subscriptions to Enterprise Agreement"
 categories:

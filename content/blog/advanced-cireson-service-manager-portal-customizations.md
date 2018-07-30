@@ -2,7 +2,6 @@
 author: sjohner
 comments: true
 date: 2016-07-04 18:21:00+00:00
-layout: post
 slug: advanced-cireson-service-manager-portal-customizations
 title: Advanced Cireson Service Manager Portal Customizations
 categories:
@@ -30,9 +29,7 @@ However, the Cireson portal provides a neat way to customize quite a lot of thin
 
 Luckily a talented web developer works for the above mentioned customer :-) With his permission, I want to share some of the customizations which he made to boost their Cireson portal experience. All credits for the following portal customizations go to [Manuel Kammermann](https://twitter.com/kimamil). If you need to know more details about the below customizations, reach out to Manuel. I am sure he is happy to help.
 
-
 ### Service Catalog
-
 
 Normally the first thing a user sees when connecting to the Cireson portal is the Service Catalog. Service Catalog experience can be customized pretty heavily by changing colors, fonts and also some parts of the layout. With this in mind you can create your own custom portal experience according to your company's corporate identity. As you see below, colors, fonts were changed and the search bar was resized. Also, in addition to the Request Offering's name, users can now also click the Request Offering's image to access the corresponding form.
 
@@ -42,9 +39,7 @@ Furthermore, Knowledge Base articles are hidden by default to save some space. U
 
 [![Cireson Portal Knowledge Base](/images/CiresonPortalKnowledgeBase-1024x562.png)](/images/CiresonPortalKnowledgeBase.png)
 
-
 ### Images for Request Offerings
-
 
 When it comes to Request Offerings where users can order hardware and applications, it is often requested to show some images representing the corresponding item. As already mentioned, the Cireson portal out of the box does not support images in Request Offerings. However, one can achieve this by using some Java Script magic which shows appropriate image located on the file system based on the filename.
 
@@ -52,22 +47,14 @@ Along with images,
 
 [![Cireson Portal Images](/images/CiresonPortalImages-1024x546.png)](/images/CiresonPortalImages.png)
 
-
 ### Order Summary
-
 
 Unfortunately the Cireson portal lacks some functionality when it comes to ordering items with a shop like experience, where users have kind of a shopping basket to keep track of their order. This can be (partly) solved by customizing the portal. As you see below, users can now see exactly what items they selected for a given request. What's still missing unfortunately, is the possibility to remove items directly from the basket.
 
 [![Cireson Portal Order Summary](/images/CiresonPortalOrderSummary-1024x563.png)](/images/CiresonPortalOrderSummary.png)
 
-
 ### Activity Status Highlighting
-
 
 Users and Analysts can now see at first sight what activities have which status.
 
 [![Cireson Portal Activity Status](/images/CiresonPortalActivityStatus-1024x661.png)](/images/CiresonPortalActivityStatus.png)
-
-
-
-

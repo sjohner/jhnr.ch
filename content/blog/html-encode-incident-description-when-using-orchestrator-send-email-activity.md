@@ -2,7 +2,6 @@
 author: sjohner
 comments: true
 date: 2014-11-25 17:16:48+00:00
-layout: post
 slug: html-encode-incident-description-when-using-orchestrator-send-email-activity
 title: HTML encode Incident description when using Orchestrator Send Email Activity
 categories:
@@ -20,7 +19,7 @@ When using the Send Email activity in System Center Orchestrator, one can choose
 If you would like Orchestrator to use HTML format when sending E-mails, you can simply change the message format in Advanced properties of the corresponding Send Email activity.
 
 [![Send Email Message Options](/images/sendemailmessageoptions.png)](/images/sendemailmessageoptions.png)
-<!-- more -->
+
 However sending E-mails in HTML format has a drawback when using published data in your E-mail body which can contain line breaks and special characters. For example the description field of Incidents is very likely to contain line brakes. But these line breaks are simply not showing in your HTML message since there is no tag specifying them.
 
 One solution for this is to HTML encode the description's published data before using it in a HTML formatted message. A sample runbook which gets an Incident and afterwards sends an E-mail message to a specified address could look like the following.
@@ -37,11 +36,11 @@ After encoding the Incident description text, the encoded text has to be publish
 
 You can find the code snippet to encode the description text right below. Of course you can use this snippet also to encode other fields than Incident description. Have fun! :-)
 
-    
+```powershell
     $DescriptionText = @'
     //Published data from Get Object (Incident) activity
     '@
     
     Add-Type -AssemblyName System.Web
     $EncodedDescriptionText = [System.Web.HttpUtility]::HtmlEncode($DescriptionText).Replace("`r`n", "<br />")
-    
+```

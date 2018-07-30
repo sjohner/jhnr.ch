@@ -2,7 +2,6 @@
 author: sjohner
 comments: true
 date: 2016-10-14 21:43:40+00:00
-layout: post
 slug: installing-service-manager-2016-with-sql-2016-on-windows-server-2016
 title: Installing Service Manager 2016 with SQL 2016 on Windows Server 2016
 categories:
@@ -24,23 +23,11 @@ tags:
 
 This is the second part of a blog post series called "Installing Service Manager 2016" and will cover how to install Service Manger 2016 and SQL Server 2016 on Windows Server 2016 with Desktop Experience.
 
-
-
- 	
-  * [Installing Service Manager 2016 Part 1: What's new](https://blog.jhnr.ch/2016/10/12/whats-new-in-system-center-service-manager-2016/)
-
- 	
-  * Installing Service Manager 2016 Part 2: Primary Management Server (this post)
-
- 	
-  * [Installing Service Manager 2016 Part 3: Self Service Web Portal](https://blog.jhnr.ch/2016/10/25/installing-service-manger-2016-self-service-portal/)
-
- 	
-  * [Installing Service Manager 2016 Part 4: Data Warehouse Management Server](https://blog.jhnr.ch/2017/01/19/installing-service-manager-2016-data-warehouse-management-server/)
-
- 	
-  * [Installing Service Manager 2016 Part 5: Scripting the installation](https://blog.jhnr.ch/2017/08/24/service-manager-installation-by-using-a-powershell-script/)
-
+* [Installing Service Manager 2016 Part 1: What's new](https://blog.jhnr.ch/2016/10/12/whats-new-in-system-center-service-manager-2016/)
+* Installing Service Manager 2016 Part 2: Primary Management Server (this post)
+* [Installing Service Manager 2016 Part 3: Self Service Web Portal](https://blog.jhnr.ch/2016/10/25/installing-service-manger-2016-self-service-portal/)
+* [Installing Service Manager 2016 Part 4: Data Warehouse Management Server](https://blog.jhnr.ch/2017/01/19/installing-service-manager-2016-data-warehouse-management-server/)
+* [Installing Service Manager 2016 Part 5: Scripting the installation](https://blog.jhnr.ch/2017/08/24/service-manager-installation-by-using-a-powershell-script/)
 
 In this blog post series I will describe the installation of Service Manager 2016 based on a pretty simple 3 computer scenario. The first computer hosts the Service Manager management server as well as the Service Manager database. The second computer hosts the Self Service Web Portal and the third one the data warehouse management server and the Data Warehouse databases.
 
@@ -56,40 +43,22 @@ _Note that installing the Self Service portal on the same computer as the primar
 
 Of course, Service Manager setup depends on some prerequisites. So before starting with Service Manger 2016 installation, we need to make sure that these are installed. The following prerequisites are needed to successfully install Service Manager 2016:
 
-
-
- 	
-  * .NET Framework 3.5
-
- 	
-  * Report Viewer 2008
-
- 	
-  * SQL Server 2014 Analysis Management Objects
-
- 	
-  * SQL Server 2012 Native Client
-
+* .NET Framework 3.5
+* Report Viewer 2008
+* SQL Server 2014 Analysis Management Objects
+* SQL Server 2012 Native Client
 
 Besides installing the above mentioned prerequisites, you will need three service accounts for this setup, where the Service Manager Service Account has to be member of the local administrators group:
 
- 	
-  * SQL Server Service Account
-
- 	
-  * Service Manager Service Account
-
- 	
-  * Service Manager Workflow Account
-
+* SQL Server Service Account
+* Service Manager Service Account
+* Service Manager Workflow Account
 
 It is also recommended to create an Active Directory group which can be used to specify Service Manager Management Group Administrators. See [Accounts Required During Setup](https://technet.microsoft.com/en-us/library/hh495662(v=sc.12).aspx) for more information about needed accounts and groups.
 
 **Important:** *Make sure that you run Service Manager setup with a domain user which has appropriate permissions on the corresponding SQL server instance (sysadmin) as well as local administrator permissions for the server where you are installing Service Manager.*
 
-
-### Install SQL Server 2016
-
+# Install SQL Server 2016
 
 We will get started by installing SQL Server 2016. Basically Service Manager is doing pretty good with an ordinary SQL instance. However, Service Manager is heavily dependent on SQL Server performance. I am no SQL expert and will not go into any details about SQL Server tuning. I recommend reviewing your production SQL installation for best practices and performance bottlenecks with a SQL expert to get the best out of your Service Manager environment.
 
@@ -103,9 +72,7 @@ Most people probably will be fine with _Latin1_General_100_CI_AS _which is recom
 
 [![SQL Collation](/images/SQL_Collation.png)](/images/SQL_Collation.png)
 
-
-### Install Prerequisites
-
+# Install Prerequisites
 
 After installing SQL Server we will now start installing necessary prerequisites. Although Service Manager 2016 now supports .NET Framework 4.5.1, you will need to install version 3.5. Setup wizard will tell you if .NET Framework 3.5 is missing and you will not be able to continue the setup process.
 
@@ -117,9 +84,7 @@ Besides .NET Framework, you will need to install **Microsoft SQL Server 2014 Ana
 
 You may need to install SQL Server 2012 Native Client as well if your SQL Server is installed on another computer (which is not the case in this scenario). Don't worry because the setup wizard will tell you to do so when installing Service Manager on a separate server. If you need SQL Server 2012 Native Client you can get it from [here](https://www.microsoft.com/en-us/download/details.aspx?id=29065) (watch out for _sqlncli.msi_)
 
-
-### Install Service Manager 2016
-
+# Install Service Manager 2016
 
 Now let's get started with Service Manager setup! If you installed all the necessary prerequisites, you should see a similar screen after entering product key and continuing in the setup wizard.
 
@@ -155,14 +120,14 @@ That's pretty much it. There is one final step we need to perform and this is se
 
 Assuming that you configured an Active Directory account as Service Account, create necessary SPN's like the following for each Service Manager management server:
 
-    
-    PS C:\> setspn.exe -S MSOMSdkSvc/LabVM03 Lab\svc-scsm
-    PS C:\> setspn.exe -S MSOMSdkSvc/LabVM03.lab.jhnr.ch Lab\svc-scsm
-    PS C:\> setspn.exe -L Lab\svc-scsm
-    Registered ServicePrincipalNames for CN=SCSM Service Account,CN=Users,DC=lab,DC=jhnr,DC=ch:
-            MSOMSdkSvc/LabVM03.lab.jhnr.ch
-            MSOMSdkSvc/LabVM03
-
+```powershell
+setspn.exe -S MSOMSdkSvc/LabVM03 Lab\svc-scsm
+setspn.exe -S MSOMSdkSvc/LabVM03.lab.jhnr.ch Lab\svc-scsm
+setspn.exe -L Lab\svc-scsm
+Registered ServicePrincipalNames for CN=SCSM Service Account,CN=Users,DC=lab,DC=jhnr,DC=ch:
+        MSOMSdkSvc/LabVM03.lab.jhnr.ch
+        MSOMSdkSvc/LabVM03
+```
 
 That's it for now. Start the Service Manager console which was installed by the setup and get your first impressions of System Center Service Manager 2016.
 

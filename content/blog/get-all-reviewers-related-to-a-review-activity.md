@@ -2,7 +2,6 @@
 author: sjohner
 comments: true
 date: 2016-09-14 21:51:11+00:00
-layout: post
 slug: get-all-reviewers-related-to-a-review-activity
 title: Get all Reviewers related to a Review Activity
 categories:
@@ -18,7 +17,7 @@ In the Service Manager world, review activities (RA) and corresponding reviewers
 
 The following script is also published on my [GitHub Service Manager script repository](https://github.com/sjohner/SCSM-ScriptRepository). Feel free to extend and modify it to fit your needs. You may want to combine it with one of my previously published scripts which will [get you all review activities related to a given Service Request](https://blog.jhnr.ch/2015/03/29/recursively-get-all-review-activities-related-to-a-workitem/). You can also easily adapt it to get details about the actual _System.Reviewer_ object. Like if a specific reviewer has veto configured. If you find any bugs and typos, please let me know :-)
 
-    
+```powershell
     <#
      .Notes
      NAME: Get-SCSMReviewer.ps1
@@ -128,3 +127,4 @@ The following script is also published on my [GitHub Service Manager script repo
     	$error[0]
         @"  
     }
+```

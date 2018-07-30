@@ -2,7 +2,6 @@
 author: sjohner
 comments: true
 date: 2014-07-15 16:23:21+00:00
-layout: post
 slug: how-to-check-if-a-service-manager-notification-template-is-associated-to-a-subscription
 title: How to check if a Service Manager Notification Template is associated to a
   Workflow or Notification Subscription
@@ -16,29 +15,24 @@ tags:
 ---
 
 **Update:** As Trang mentioned in the comments, the first version of the script only found templates which are assigned to a Notification Subscription. I updated the script to look for templates which are assigned either to a Workflow or Notification Subscription.
--------------------------
 
 Sometimes I come across Service Manager environments which have a whole bunch of notification subscriptions and corresponding templates configured. Normally these environments are productive for some time and several changes have been made to processes and notifications.
 
 Well, when changing and deleting workflow and notification subscriptions the corresponding template is mostly left behind. Maybe for good reason because people just don’t know which of their notification templates are referenced by other workflow or notification subscriptions. Since it is pretty awful to open the properties of every subscription in the Service Manager console to check whether it references a given template, I searched for a better way to find out whether a template is assigned to a workflow or notification subscription or not.
 
 [![Find Notification Template Dependencies](/images/findnotificationtemplatedependencies.png?w=604)](/images/findnotificationtemplatedependencies.png)
-<!-- more -->
+
 Like in many situations, PowerShell together with SMlets is your friend ![Smile](/images/wlemoticon-smile.png) Since Notification Subscriptions are in fact workflows, we can check if a template is referenced in the _WriteAction_ of a workflow. So what I do is to get all the workflow objects from Service Manager and check if their _WriteAction _contains a specific pattern which includes the given template GUID.
 
 You can get the GUID of a template by using the template’s DisplayName and the following query:
 
-
-    
+```powershell
     (Get-SCSMObjectTemplate -DisplayName "Escalation").Id
-
-
+```
 
 Et voilà, you can find the PowerShell script I created below. You will need SMLet installed to be able to execute correctly. It is kind of a first draft and may be improved in some ways. Feel free to comment if you have any suggestions on how to enhance the script! Hope this helps!
-
-
     
-    
+```powershell    
     <#
      .Notes
      NAME: Check-NotificationTemplateUsage.ps1
@@ -136,4 +130,4 @@ Et voilà, you can find the PowerShell script I created below. You will need SML
     # Return the error details
     Throw $_.Exception
     }
-    
+```

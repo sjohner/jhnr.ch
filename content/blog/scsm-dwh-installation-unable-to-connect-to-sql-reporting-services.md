@@ -5,7 +5,6 @@ date: 2015-01-21 20:00:00+00:00
 layout: post
 slug: scsm-dwh-installation-unable-to-connect-to-sql-reporting-services
 title: 'SCSM DWH Installation: Unable to connect to SQL Reporting Services'
-wordpress_id: 1016
 categories:
 - Service Manager
 tags:
@@ -20,7 +19,7 @@ tags:
 
 Today I experienced a kind of Reporting Services configuration problem when installing a new Service Manager Data Warehouse Management Server. When clicking through the install wizard I reached the point where I had to specify SQL Report Server and the corresponding Web Service URL. That was the point where I hit the following error: _The request failed with HTTP status 401: Unauthorized._
 
-[![Service Manager Install Error](/images/installerror.png?w=660)](/images/installerror.png)<!-- more -->
+[![Service Manager Install Error](/images/installerror.png?w=660)](/images/installerror.png)
 
 Hmm... The error message seems to be pretty clear. My user account does not seem to be authorized for SQL Reporting Services. Ok let's see if I am able to connect to Report Server by using a browser.
 

@@ -5,7 +5,6 @@ date: 2016-10-14 21:43:40+00:00
 layout: post
 slug: installing-service-manager-2016-with-sql-2016-on-windows-server-2016
 title: Installing Service Manager 2016 with SQL 2016 on Windows Server 2016
-wordpress_id: 1768
 categories:
 - Service Manager
 tags:

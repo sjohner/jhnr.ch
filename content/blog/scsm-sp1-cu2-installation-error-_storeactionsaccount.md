@@ -5,7 +5,6 @@ date: 2013-05-21 12:07:54+00:00
 layout: post
 slug: scsm-sp1-cu2-installation-error-_storeactionsaccount
 title: SCSM SP1 CU2 Installation Error _StoreActionsAccount
-wordpress_id: 573
 categories:
 - Service Manager
 tags:
@@ -19,7 +18,7 @@ tags:
 
 As I was installing CU2 lately on a SCSM management server of one of our customers I experienced a strange error. Since I did not find much about this error on the internet I wanted to share the error and solution in case anyone else came across the problem. I was able to successfully update the Data Warehouse management and Self-Service portal servers, without any issues. However, on the primary management server the update failed and provided the following error.
 
-[![SCSM CU2 Error](/images/error.png?w=696)](/images/error.png)<!-- more -->
+[![SCSM CU2 Error](/images/error.png?w=696)](/images/error.png)
 
 After some troubleshooting I realized that the System Center Management service was stopped for some reasons and could not be started. Instead it provided the following error message:
 

@@ -2,7 +2,7 @@
 author: sjohner
 comments: true
 date: 2018-02-13 16:45:39+00:00
-layout: post
+slug: why-microsoft-azure
 title: Why Microsoft Azure
 categories:
 - Azure
@@ -121,7 +121,7 @@ In such scenarios, applications should be managed the same way using the same to
 
 One of the best things about Microsoft these days is their commitment to Open Source. Open Source means more than just free software. Open Source is about contributing to the community. That's where Microsoft and especially Azure plays the cards. In contrary to other cloud providers, Microsoft is not just using Open Source technology to drive their business but is also heavily contributing to the open source community. [Microsoft is the biggest contributor to open source software as of 2017 when analyzing Github contributions](https://medium.freecodecamp.org/the-top-contributors-to-github-2017-be98ab854e87). Not even Red Hat, a company with commitment to contribute all of its code under an open source license comes close to the number of Microsoft contributors. Microsoft invests a lot of resources and people in contributing to open source projects. Not just because they have to build a good representation among in the open source space, but also because with Satya Nadella as CEO, Microsoft is truly transforming to a company which heavily relies on Open Source software and believes in giving back to the community.
 
-[![Satya Nadella talking about Linux](/images/microsoftloveslinux.0.0-1024x576.jpg)](/images/microsoftloveslinux.0.0.jpg)
+[![Satya Nadella talking about Linux](/images/satya_microsoft_loves_linux.jpg)](/images/satya_microsoft_loves_linux.jpg)
 
 Besides that [Microsoft now owns Github](https://news.microsoft.com/2018/06/04/microsoft-to-acquire-github-for-7-5-billion/) with its 28 million users and 57 million repositories (including 28 million which are public) the largest host of source code in the world, Microsoft is also backing many open source projects like [Google's Kubernetes](https://www.zdnet.com/article/microsoft-to-work-with-google-on-kubernetes-container-management-platform/) and [Docker.](https://www.zdnet.com/article/docker-container-support-coming-to-microsofts-next-windows-server-release/) Microsoft is a Platinum member of the Linux Foundation and the Cloud Native Computing Foundation (whose projects include Kubernetes) and a Gold member of Cloud Foundry. Same time, the .NET is going open-source. Microsoft is also open-sourcing the full [server-side .NET core stack](https://www.zdnet.com/article/microsoft-to-open-source-more-of-net-and-bring-it-to-linux-mac-os-x/) and porting it to Linux and Mac OS X. Microsoft has already [open-sourced a tool for moving virtual machines](https://www.zdnet.com/article/free-tool-simplifies-azure-migration-between-data-centers/) from one Azure data center to another, plus other [.NET code and tools](https://www.zdnet.com/article/microsoft-open-sources-more-of-its-net-technologies/), and [many developer tools](https://www.zdnet.com/article/microsoft-still-open-sources-more-technologies-than-many-think/)
 
@@ -135,7 +135,7 @@ I am not a developer so I am probably not perfectly qualified to rate the develo
 
 The Microsoft development platform is not just about front-end development tools like Visual Studio and Xamarin ([Xamarin SDKs are available under the MIT license](https://open.xamarin.com) by the way). Visual Studio Mobile Center support life cycle management and DevOps activities for mobile apps together with tightly integrated testing (via Xamarin Test Cloud) and analytics (HockeyApp). Further more there are plenty of mobile services available via Microsoft Azure. For example building apps with Azure Mobile Apps and application and data integration via Azure Logic Apps.
 
-[![Xamarin with Microsoft’s Azure technology](/images/Blog-Graphic-2-1024x432.jpg)](/images/Blog-Graphic-2.jpg)
+[![Xamarin with Microsoft’s Azure technology](/images/mobile_application_development_platform.jpg)](/images/mobile_application_development_platform.jpg)
 
 The platform Microsoft offers also has strong support for chatbots, virtual assistants, augmented reality and provides one of the largest sets of cognitive services (probably together with Google). As already pointed out, Microsoft is committed to open-source communities and many services on Azure are either using well-established on open source projects (e.g. Azure Container Service) or are published as open source projects by Microsoft (e.g. CNTK, the machine learning/AI framework used in its Cortana voice assistant).
 
@@ -149,7 +149,7 @@ The Microsoft global network plays an important part in delivering a good cloud 
 
 Microsoft is very committed about building the fastest and most reliable global network of any public cloud provider. With its own backbone network, Microsoft remains independent from telcos and stays in control of capacity and resiliency.
 
-[![Azure Inter-DC dark fiber backbone](/images/Azure-Inter-DC-dark-fiber-backbone-1024x467.png)](/images/Azure-Inter-DC-dark-fiber-backbone.png)
+[![Azure Inter-DC dark fiber backbone](/images/azure_inter_dc_dark_fiber_backbone.png)](/images/azure_inter_dc_dark_fiber_backbone.png)
 
 **Microsoft Research**
 

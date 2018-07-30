@@ -5,7 +5,6 @@ date: 2014-11-09 20:29:25+00:00
 layout: post
 slug: system-center-universe-europe-session-recording-available-on-channel-9
 title: System Center Universe Europe Session Recording available on Channel9
-wordpress_id: 979
 categories:
 - Events
 - Orchestrator

@@ -5,7 +5,6 @@ date: 2016-10-25 21:28:50+00:00
 layout: post
 slug: installing-service-manger-2016-self-service-portal
 title: Installing Service Manger 2016 Self Service Portal
-wordpress_id: 1797
 categories:
 - Service Manager
 tags:

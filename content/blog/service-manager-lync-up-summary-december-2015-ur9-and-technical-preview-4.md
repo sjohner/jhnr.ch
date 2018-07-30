@@ -5,7 +5,6 @@ date: 2015-12-16 22:01:17+00:00
 layout: post
 slug: service-manager-lync-up-summary-december-2015-ur9-and-technical-preview-4
 title: Service Manager Lync Up Summary December 2015 - UR9 and Technical Preview 4
-wordpress_id: 1236
 categories:
 - Service Manager
 tags:

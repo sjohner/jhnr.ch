@@ -6,7 +6,6 @@ layout: post
 slug: service-manager-lync-up-summary-april-2016-technical-preview-5-and-sccm-connector-support
 title: Service Manager Lync Up Summary April 2016 – Technical Preview 5 and SCCM connector
   support
-wordpress_id: 1573
 categories:
 - Service Manager
 tags:
@@ -27,9 +26,7 @@ For this April LyncUp call, the product team shared some interesting facts about
 
 As always you can [download the recording and the slides from here](http://1drv.ms/1r5Czkf). **Next meeting will take place on May 17th.**
 
-
 ## Technical Preview 5 Highlights
-
 
 As mentioned, there were no real news about TP5 which have not yet been covered in [February LyncUp call](https://blog.jhnr.ch/2016/02/18/service-manager-lync-up-summary-february-2016-ur9-and-technical-preview-5/). Basically the product team focused a lot on performance. And as some early adopters mentioned on the call the Console as well as SDK performance seems to be much, much better in TP5. **Service Manager Technical Preview 5 will be released on 27th of April. **Upgrade from 2012 R2 to TP5 will be supported.**
 **

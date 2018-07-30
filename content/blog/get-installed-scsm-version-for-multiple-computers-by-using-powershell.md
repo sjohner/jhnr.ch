@@ -5,7 +5,6 @@ date: 2015-02-24 20:00:00+00:00
 layout: post
 slug: get-installed-scsm-version-for-multiple-computers-by-using-powershell
 title: Get installed SCSM Version for multiple computers by using PowerShell
-wordpress_id: 1024
 categories:
 - Service Manager
 tags:

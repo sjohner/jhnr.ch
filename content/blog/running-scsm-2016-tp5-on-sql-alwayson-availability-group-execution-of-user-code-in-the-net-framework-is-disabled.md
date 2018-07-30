@@ -6,7 +6,6 @@ layout: post
 slug: running-scsm-2016-tp5-on-sql-alwayson-availability-group-execution-of-user-code-in-the-net-framework-is-disabled
 title: Running SCSM 2016 TP5 on SQL AlwaysOn Availability Group - "Execution of user
   code in the .Net Framework is disabled"
-wordpress_id: 1626
 categories:
 - Service Manager
 tags:

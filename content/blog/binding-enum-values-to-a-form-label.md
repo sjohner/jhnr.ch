@@ -5,7 +5,6 @@ date: 2015-11-25 21:06:52+00:00
 layout: post
 slug: binding-enum-values-to-a-form-label
 title: Binding Enum Values to a form label
-wordpress_id: 1196
 categories:
 - Service Manager
 tags:

@@ -6,12 +6,11 @@ layout: post
 published: false
 slug: using-bitbucket-source-control-with-visual-studio-authoring-extensions-vsae
 title: Using BitBucket Source Control with Visual Studio Authoring Extensions (VSAE)
-wordpress_id: 37
 ---
 
-If you are developping your Management Packs in Visual Studio with VSAE, chances are good you have various projects on your hard drive. Maybe you want to have your Projects available at home as well as in your Office. Also it would be nice if co-workers could contribute on a Project. Working in a Team on the same Management Pack is maybe a little tricky. I was asking myself if some Kind of source control repository would also work for Visual Studio with Authoring Extensions installed so that my Management Pack Projects are available to others too and moreover i could Access them online everywhere.
+If you are developing your Management Packs in Visual Studio with VSAE, chances are good you have various projects on your hard drive. Maybe you want to have your Projects available at home as well as in your Office. Also it would be nice if co-workers could contribute on a Project. Working in a Team on the same Management Pack is maybe a little tricky. I was asking myself if some Kind of source control repository would also work for Visual Studio with Authoring Extensions installed so that my Management Pack Projects are available to others too and moreover i could Access them online everywhere.
 
-I started to use Atlassien [bitbucket.org](http://www.bitbucket.org/) as a source control repository. Mainly because it offers free accounts with unlimited numbers of private repositories. These repositories can additionally be shared among up to five users in case of the free accounts. However BitBucket Forces you to use either Git or Mercurial as revesion control System.
+I started to use Atlassian [bitbucket.org](http://www.bitbucket.org/) as a source control repository. Mainly because it offers free accounts with unlimited numbers of private repositories. These repositories can additionally be shared among up to five users in case of the free accounts. However BitBucket Forces you to use either Git or Mercurial as revesion control System.
 
 Installation of Git in Visual Studio 2010 is pretty straitforward. Go to your Visual Studio Extension Manager
 
@@ -31,15 +30,11 @@ Commit Solution, you will probably get a warning about missing configuration
 
 Create new Repository on BitBucket
 
-
-
-
-
 Right-click on your Visual Studio solution and open Git Bash. This will open a command line window
 
 [![opengitbash](/images/opengitbash.png?w=300)](/images/opengitbash.png)
 
-[sourcecode language="bash"]
+```
 git remote add origin https://sjohner@bitbucket.org/sjohner/test.git
 git push -u origin --all
-[/sourcecode]
+```

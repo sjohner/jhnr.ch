@@ -6,7 +6,6 @@ layout: post
 slug: resolve-sql-server-service-not-running-when-installing-service-manager-database-on-sql-alwayson-availability-group
 title: Resolve "SQL Server service not running" when installing Service Manager database
   on SQL AlwaysOn Availability Group
-wordpress_id: 1005
 categories:
 - Service Manager
 tags:
@@ -23,7 +22,7 @@ As you may know, there are some things to remember when installing Service Manag
 **A required SQL Server service is not running on <YourSqlServer> MSSQLServer**
 
 ![ServiceNotRunningError](/images/servicenotrunningerror.png)
-<!-- more -->
+
 Of course you have SQL server up and running on your SQL cluster nodes and the necessary services are running fine. Also you may notice that if you don't use your SQL Availability Group listener but the IP address of one of your SQL cluster nodes, the install wizard will let you continue with Service Manager setup.
 
 Some posts out there are suggesting installing Service Manager database to one of the cluster nodes and switching database server name in registry after a successful installation. And although this perfectly works, there exists a more comfortable way to work around this issue.

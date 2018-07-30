@@ -5,7 +5,6 @@ date: 2014-12-24 17:37:00+00:00
 layout: post
 slug: service-manager-prettyprint-app-now-supports-microsoft-office-2010
 title: Service Manager PrettyPrint app now supports Microsoft Office 2010
-wordpress_id: 1011
 categories:
 - Service Manager
 tags:

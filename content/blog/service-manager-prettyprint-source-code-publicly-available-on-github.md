@@ -5,7 +5,6 @@ date: 2016-06-03 15:34:24+00:00
 layout: post
 slug: service-manager-prettyprint-source-code-publicly-available-on-github
 title: Service Manager PrettyPrint Source Code publicly available on GitHub
-wordpress_id: 1601
 categories:
 - Service Manager
 tags:

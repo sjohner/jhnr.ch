@@ -5,7 +5,6 @@ date: 2017-05-04 16:10:09+00:00
 layout: post
 slug: microsoft-oms-update-deployment-for-linux
 title: Microsoft OMS Update Deployment for Linux
-wordpress_id: 1977
 categories:
 - Linux
 - Operations Managment Suite

@@ -5,7 +5,6 @@ date: 2016-05-17 17:01:23+00:00
 layout: post
 slug: service-manager-self-service-portal-stylesheets-not-interpreted
 title: Service Manager Self-Service Portal Stylesheets not interpreted
-wordpress_id: 1593
 categories:
 - Service Manager
 tags:

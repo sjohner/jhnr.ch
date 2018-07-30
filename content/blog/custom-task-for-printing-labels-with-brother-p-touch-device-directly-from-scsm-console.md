@@ -6,7 +6,6 @@ layout: post
 slug: custom-task-for-printing-labels-with-brother-p-touch-device-directly-from-scsm-console
 title: Custom Task for printing labels with Brother P-Touch device directly from SCSM
   Console
-wordpress_id: 551
 categories:
 - Service Manager
 tags:

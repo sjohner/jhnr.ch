@@ -5,7 +5,6 @@ date: 2017-02-06 22:41:57+00:00
 layout: post
 slug: new-user-group-experts-live-cafe-microsoft-it-pro-switzerland
 title: 'New User Group: Experts Live Café - Microsoft IT Pro Switzerland'
-wordpress_id: 1934
 categories:
 - Events
 tags:

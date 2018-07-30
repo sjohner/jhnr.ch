@@ -5,7 +5,6 @@ date: 2015-06-04 07:59:53+00:00
 layout: post
 slug: e-mail-communication-with-cased-dimensions-free-enterprise-email-app
 title: E-Mail Communication with Cased Dimensions free Enterprise Email app
-wordpress_id: 1092
 categories:
 - Service Manager
 tags:

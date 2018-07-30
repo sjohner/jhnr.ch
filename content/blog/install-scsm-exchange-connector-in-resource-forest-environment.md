@@ -5,7 +5,6 @@ date: 2013-04-22 16:48:52+00:00
 layout: post
 slug: install-scsm-exchange-connector-in-resource-forest-environment
 title: Install SCSM Exchange Connector in Resource Forest Environment
-wordpress_id: 528
 categories:
 - Service Manager
 tags:

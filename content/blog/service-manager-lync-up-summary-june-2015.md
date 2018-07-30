@@ -5,7 +5,6 @@ date: 2015-07-07 15:58:39+00:00
 layout: post
 slug: service-manager-lync-up-summary-june-2015
 title: Service Manager Lync Up Summary June 2015
-wordpress_id: 1110
 categories:
 - Service Manager
 tags:

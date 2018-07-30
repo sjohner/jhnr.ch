@@ -5,7 +5,6 @@ date: 2014-03-13 18:24:37+00:00
 layout: post
 slug: service-manager-2012-r2-upgrade-onenote-checklist
 title: Service Manager 2012 R2 Upgrade OneNote Checklist
-wordpress_id: 860
 categories:
 - Service Manager
 tags:

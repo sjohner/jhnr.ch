@@ -6,7 +6,6 @@ layout: post
 slug: create-custom-scsm-console-workspace-with-high-res-folder-image-on-overview-page
 title: Create custom SCSM Console workspace with High-Res folder image on overview
   page
-wordpress_id: 879
 categories:
 - Service Manager
 tags:

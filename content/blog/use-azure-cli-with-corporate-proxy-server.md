@@ -2,10 +2,8 @@
 author: sjohner
 comments: true
 date: 2017-09-24 19:22:15+00:00
-layout: post
 slug: use-azure-cli-with-corporate-proxy-server
 title: Use Azure CLI 2.0 behind corporate proxy server
-wordpress_id: 2234
 categories:
 - Azure
 - Cloud

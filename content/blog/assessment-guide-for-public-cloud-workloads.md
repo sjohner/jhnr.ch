@@ -5,7 +5,6 @@ date: 2016-03-07 20:27:51+00:00
 layout: post
 slug: assessment-guide-for-public-cloud-workloads
 title: Assessment Guide for Public Cloud Workloads
-wordpress_id: 1176
 categories:
 - Cloud
 tags:

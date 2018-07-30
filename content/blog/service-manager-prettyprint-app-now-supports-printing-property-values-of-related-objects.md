@@ -6,7 +6,6 @@ layout: post
 slug: service-manager-prettyprint-app-now-supports-printing-property-values-of-related-objects
 title: Service Manager PrettyPrint app now supports printing property values of related
   objects
-wordpress_id: 1059
 categories:
 - Service Manager
 tags:

@@ -5,7 +5,6 @@ date: 2016-02-08 17:00:13+00:00
 layout: post
 slug: how-to-format-properties-on-custom-service-manager-forms
 title: How to format properties on custom Service Manager forms
-wordpress_id: 1030
 categories:
 - Service Manager
 tags:

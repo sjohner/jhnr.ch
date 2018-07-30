@@ -5,7 +5,6 @@ date: 2015-09-07 20:39:00+00:00
 layout: post
 slug: overview-of-database-as-a-service-offerings-available-in-public-cloud
 title: Overview of Database-as-a-Service offerings available in Public Cloud
-wordpress_id: 1144
 categories:
 - Cloud
 tags:

@@ -6,7 +6,6 @@ layout: post
 slug: error-when-installing-service-manager-data-warehouse-management-server-the-user-or-group-name-builtinbuiltin-is-not-recognized
 title: 'Error when installing Service Manager Data Warehouse management server: "The
   user or group name ''BUILTIN\BUILTIN'' is not recognized."'
-wordpress_id: 1845
 categories:
 - Service Manager
 tags:

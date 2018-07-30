@@ -5,7 +5,6 @@ date: 2015-04-01 17:00:13+00:00
 layout: post
 slug: service-manager-lyncup-summary-march-2015
 title: Service Manager LyncUp Summary March 2015
-wordpress_id: 1042
 categories:
 - Service Manager
 tags:

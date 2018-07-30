@@ -5,7 +5,6 @@ date: 2014-11-12 21:30:45+00:00
 layout: post
 slug: updated-service-manager-prettyprint-app-released
 title: Updated Service Manager PrettyPrint app published on Technet Gallery
-wordpress_id: 970
 categories:
 - Service Manager
 tags:
@@ -21,7 +20,7 @@ The now released version fixes a bug where the PrettyPrint task failed with the 
 
 [![PrettyPrintErrorThread](/images/prettyprinterrorthread.png)](/images/prettyprinterrorthread.png)
 
-Besides this bugfix, **PrettyPrint now also supports Change Requests. **<!-- more -->
+Besides this bugfix, **PrettyPrint now also supports Change Requests.**
 
 For all of you who don't know yet about PrettyPrint, I will try to explain in short what it does. If you have any suggestions on how to improve this app, please let me know :-)
 
@@ -30,9 +29,6 @@ The PrettyPrint app allows console users to print specific Incident, Service Req
 [![PrettyPrint Word Print Preview](/images/prettyprintwordpreview.png?w=604)](/images/prettyprintwordpreview.png)
 
 To design your templates, you can make use of bookmarks to add placeholders for Incident, Service Request and Change Request properties you want to show in your document. PrettyPrint will work with out of the box class properties as well as with extended properties.
-
-
-
 
 [![PrettyPrint Incident](/images/prettyprintincident.png?w=604)](/images/prettyprintincident.png)
 
@@ -45,5 +41,3 @@ Also, if you are unsure about what properties can be used as Bookmarks or how th
 ![PrettyPrint Incident Properties](/images/prettyprintincidentproperties.png)
 
 The [download on Technet Gallery](https://gallery.technet.microsoft.com/Service-Manager-PrettyPrint-0e1808b1) contains a documentation file where all the necessary information concerning installation and usage of the app can be found. If you find any bugs or have any suggestions on how to improve this app, please let me know :-)
-
-

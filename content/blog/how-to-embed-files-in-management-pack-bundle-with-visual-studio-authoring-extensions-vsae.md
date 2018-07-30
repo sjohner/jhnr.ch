@@ -6,7 +6,6 @@ layout: post
 slug: how-to-embed-files-in-management-pack-bundle-with-visual-studio-authoring-extensions-vsae
 title: How to embed Files in Management Pack Bundle with Visual Studio Authoring Extensions
   (VSAE)
-wordpress_id: 156
 categories:
 - Service Manager
 tags:

@@ -5,7 +5,6 @@ date: 2016-01-15 00:24:46+00:00
 layout: post
 slug: performing-fresh-installation-of-service-manager-with-sql-server-2014
 title: Performing fresh installation of  Service Manager with SQL Server 2014
-wordpress_id: 1407
 categories:
 - Service Manager
 tags:

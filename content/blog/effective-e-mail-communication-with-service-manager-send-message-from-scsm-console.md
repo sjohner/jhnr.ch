@@ -6,7 +6,6 @@ layout: post
 slug: effective-e-mail-communication-with-service-manager-send-message-from-scsm-console
 title: Effective E-Mail Communication with Service Manager - Send Message from SCSM
   Console
-wordpress_id: 643
 categories:
 - Service Manager
 tags:

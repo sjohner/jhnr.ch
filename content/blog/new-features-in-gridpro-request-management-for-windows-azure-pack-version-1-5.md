@@ -5,7 +5,6 @@ date: 2016-05-11 21:23:18+00:00
 layout: post
 slug: new-features-in-gridpro-request-management-for-windows-azure-pack-version-1-5
 title: New features in Gridpro Request Management for Windows Azure Pack version 1.5
-wordpress_id: 1582
 categories:
 - Service Manager
 - Windows Azure Pack

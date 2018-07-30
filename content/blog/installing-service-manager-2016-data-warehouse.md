@@ -5,7 +5,6 @@ date: 2017-01-19 22:47:47+00:00
 layout: post
 slug: installing-service-manager-2016-data-warehouse
 title: Installing Service Manager 2016 Data Warehouse Management Server
-wordpress_id: 1862
 categories:
 - Service Manager
 tags:

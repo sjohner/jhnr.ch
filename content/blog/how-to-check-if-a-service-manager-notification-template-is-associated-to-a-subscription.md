@@ -6,7 +6,6 @@ layout: post
 slug: how-to-check-if-a-service-manager-notification-template-is-associated-to-a-subscription
 title: How to check if a Service Manager Notification Template is associated to a
   Workflow or Notification Subscription
-wordpress_id: 911
 categories:
 - Service Manager
 tags:

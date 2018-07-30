@@ -5,7 +5,6 @@ date: 2015-08-02 21:29:51+00:00
 layout: post
 slug: rebranding-blog-scsmlab-com-is-now-jhnr-ch
 title: 'Rebranding blog: scsmlab.com is now blog.jhnr.ch'
-wordpress_id: 1116
 categories:
 - Blog
 tags:
@@ -21,7 +20,7 @@ I have been blogging about 1.5 years now mostly about System Center Service Mana
 
 Because of the strong focus on Service Manager, I originally decided to use scsmlab as my name for the blog and twitter handle. But since I would like to open scope of this blog to more IT related topics in general instead of only Microsoft System Center Service Manager, I decided to **rename my blog to [http://blog.jhnr.ch ](http://blog.jhnr.ch)**which is a [disemvoweled](https://en.wiktionary.org/wiki/disemvowel) version of my last name :-)
 
-Of course, I will still blog about System Center Service Manager since this is the product I spend most of my time with. But I will try to cover also other technologies like PowerShell and Cloud related stuff.
+Of course, I will still blog about System Center Service Manager since this is the product I spend most of my time with. But I will try to cover also other technologies like PowerShell and cloud related stuff.
 
 The old URL [http://scsmlab.com ](http://scsmlab.com)will still be active for some time and will also be redirected, but my future content will be branded with my new blog URL. Please update your bookmarks and RSS feeds accordingly. If you would like to follow me on Twitter my **renamed handle is [@JohnerStefan](https://twitter.com/JohnerStefan)**.
 

@@ -5,7 +5,6 @@ date: 2015-08-22 11:38:45+00:00
 layout: post
 slug: service-manager-lync-up-summary-august-2015-new-portal-sneak-preview
 title: Service Manager Lync Up Summary August 2015 - New portal sneak preview
-wordpress_id: 1149
 categories:
 - Service Manager
 tags:

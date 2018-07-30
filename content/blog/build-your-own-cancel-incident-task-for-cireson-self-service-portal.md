@@ -5,7 +5,6 @@ date: 2015-05-13 19:34:52+00:00
 layout: post
 slug: build-your-own-cancel-incident-task-for-cireson-self-service-portal
 title: Build your own "Cancel Incident" task for Cireson self-service portal
-wordpress_id: 1068
 categories:
 - Service Manager
 tags:

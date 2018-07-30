@@ -5,7 +5,6 @@ date: 2013-03-17 15:29:34+00:00
 layout: post
 slug: how-to-create-a-new-scsm-object-from-custom-form
 title: How to create a new SCSM object from custom form
-wordpress_id: 190
 categories:
 - Service Manager
 tags:

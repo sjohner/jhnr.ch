@@ -5,7 +5,6 @@ date: 2016-09-14 21:51:11+00:00
 layout: post
 slug: get-all-reviewers-related-to-a-review-activity
 title: Get all Reviewers related to a Review Activity
-wordpress_id: 1663
 categories:
 - Service Manager
 tags:

@@ -5,7 +5,6 @@ date: 2014-06-25 16:28:30+00:00
 layout: post
 slug: change-service-manager-object-properties-directly-from-custom-listview
 title: Change Service Manager related object properties directly from custom ListView
-wordpress_id: 898
 categories:
 - Service Manager
 tags:

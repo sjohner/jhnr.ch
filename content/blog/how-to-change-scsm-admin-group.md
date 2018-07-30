@@ -5,7 +5,6 @@ date: 2013-04-11 19:08:50+00:00
 layout: post
 slug: how-to-change-scsm-admin-group
 title: How to Change SCSM Admin Group
-wordpress_id: 519
 categories:
 - Service Manager
 tags:

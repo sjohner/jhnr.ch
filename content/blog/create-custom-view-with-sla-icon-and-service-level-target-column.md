@@ -5,7 +5,6 @@ date: 2013-07-05 15:23:12+00:00
 layout: post
 slug: create-custom-view-with-sla-icon-and-service-level-target-column
 title: Create custom View with SLA icon and Service Level Target column
-wordpress_id: 619
 categories:
 - Service Manager
 tags:

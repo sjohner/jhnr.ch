@@ -6,7 +6,6 @@ layout: post
 slug: service-manager-lync-up-summary-june-2016-migration-issues-and-mitigation-plan
 title: Service Manager Lync Up Summary June 2016 – Migration Issues and Mitigation
   Plan
-wordpress_id: 1613
 categories:
 - Service Manager
 tags:

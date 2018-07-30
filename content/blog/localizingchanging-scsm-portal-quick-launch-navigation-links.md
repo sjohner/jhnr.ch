@@ -5,7 +5,6 @@ date: 2013-03-25 22:25:25+00:00
 layout: post
 slug: localizingchanging-scsm-portal-quick-launch-navigation-links
 title: Localizing/Changing SCSM Portal quick launch navigation links
-wordpress_id: 206
 categories:
 - Service Manager
 tags:

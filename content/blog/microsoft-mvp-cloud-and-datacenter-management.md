@@ -5,14 +5,8 @@ date: 2016-10-02 20:10:31+00:00
 layout: post
 slug: microsoft-mvp-cloud-and-datacenter-management
 title: Microsoft MVP Cloud and Datacenter Management
-wordpress_id: 1686
 categories:
 - Cloud
-- itnetx
-- Operations Managment Suite
-- Orchestrator
-- Service Manager
-- Speaking
 tags:
 - Cloud and Datacenter Management
 - Community

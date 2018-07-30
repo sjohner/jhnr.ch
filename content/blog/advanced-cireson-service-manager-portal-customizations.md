@@ -5,7 +5,6 @@ date: 2016-07-04 18:21:00+00:00
 layout: post
 slug: advanced-cireson-service-manager-portal-customizations
 title: Advanced Cireson Service Manager Portal Customizations
-wordpress_id: 1560
 categories:
 - Service Manager
 tags:

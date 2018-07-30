@@ -6,7 +6,6 @@ layout: post
 slug: insert-ci-property-values-into-microsoft-word-template-and-print-directly-from-service-manager-console
 title: Insert CI property values into Microsoft Word Template and print directly from
   Service Manager Console
-wordpress_id: 590
 categories:
 - Service Manager
 tags:

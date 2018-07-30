@@ -5,7 +5,6 @@ date: 2017-09-24 20:14:02+00:00
 layout: post
 slug: fluentd-sessions-at-open-source-summit-2017
 title: Fluentd Sessions at Open Source Summit 2017
-wordpress_id: 2146
 categories:
 - Linux
 - Operations Managment Suite

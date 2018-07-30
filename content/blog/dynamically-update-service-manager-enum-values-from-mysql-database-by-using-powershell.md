@@ -6,7 +6,6 @@ layout: post
 slug: dynamically-update-service-manager-enum-values-from-mysql-database-by-using-powershell
 title: Dynamically update Service Manager enum values from MySQL database by using
   PowerShell
-wordpress_id: 1063
 categories:
 - Service Manager
 tags:

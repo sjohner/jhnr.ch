@@ -5,7 +5,6 @@ date: 2018-01-11 22:40:52+00:00
 layout: post
 slug: meltdown-spectre-in-public-cloud-environments
 title: Meltdown & Spectre in public cloud environments
-wordpress_id: 2333
 categories:
 - Azure
 - Cloud

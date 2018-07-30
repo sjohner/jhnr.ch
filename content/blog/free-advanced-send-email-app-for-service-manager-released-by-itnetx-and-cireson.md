@@ -5,7 +5,6 @@ date: 2014-01-16 14:21:11+00:00
 layout: post
 slug: free-advanced-send-email-app-for-service-manager-released-by-itnetx-and-cireson
 title: Free Advanced Send Email App for Service Manager released by itnetx and Cireson
-wordpress_id: 813
 categories:
 - Service Manager
 tags:

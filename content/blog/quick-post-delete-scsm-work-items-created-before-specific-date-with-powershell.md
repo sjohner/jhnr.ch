@@ -5,7 +5,6 @@ date: 2013-10-04 14:00:20+00:00
 layout: post
 slug: quick-post-delete-scsm-work-items-created-before-specific-date-with-powershell
 title: 'Quick Post: Delete SCSM Work Items created before specific date with PowerShell'
-wordpress_id: 711
 categories:
 - Service Manager
 tags:

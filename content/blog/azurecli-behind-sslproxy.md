@@ -1,12 +1,12 @@
 ---
-title: "Working with Azure CLI behind SSL intercepting proxy server"
-date: 2018-05-16T22:50:45+02:00
 author: sjohner
 comments: true
-layout: post
+date: 2018-05-16T22:50:45+02:00
 slug: working-with-azure-cli-behind-ssl-intercepting-proxy-server
+title: "Working with Azure CLI behind SSL intercepting proxy server"
 categories:
 - Cloud
+- Azure
 - Linux
 tags:
 - SSL

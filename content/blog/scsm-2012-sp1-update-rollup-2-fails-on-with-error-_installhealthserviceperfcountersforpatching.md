@@ -5,7 +5,6 @@ date: 2013-07-25 21:43:54+00:00
 layout: post
 slug: scsm-2012-sp1-update-rollup-2-fails-on-with-error-_installhealthserviceperfcountersforpatching
 title: Installation of SCSM 2012 SP1 Update Rollup 2 fails
-wordpress_id: 657
 categories:
 - Service Manager
 tags:

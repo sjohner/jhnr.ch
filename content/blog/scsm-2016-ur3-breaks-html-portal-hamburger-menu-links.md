@@ -5,7 +5,6 @@ date: 2017-06-09 13:24:27+00:00
 layout: post
 slug: scsm-2016-ur3-breaks-html-portal-hamburger-menu-links
 title: SCSM 2016 UR3 breaks HTML portal Hamburger menu hyperlinks
-wordpress_id: 2149
 categories:
 - Service Manager
 tags:

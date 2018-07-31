@@ -26,69 +26,68 @@ The following example was actually demoed at [System Center Universe 2016](http:
 
 First of all you will need to install CollectD on your Ubuntu box. This can be done by using the following command. Make sure you use _no-install-recommends_ because otherwise a lot of packages are installed which are not necessarily needed in this scenario
 
-    
-    apt-get install collectd --no-install-recommends collectd
-    
-
+```bash
+apt-get install collectd --no-install-recommends collectd
+```
 
 If OMS Agent for Linux is already installed on your machine, you can run the following command to set up CollectD to forward metrics to OMS Agent for Linux
 
-    
-    sudo /opt/microsoft/omsagent/bin/omsadmin.sh –c
-
+```bash    
+sudo /opt/microsoft/omsagent/bin/omsadmin.sh –c
+```
 
 Now modify your CollectD configuration to make sure _uptime_, _ping_ and _users_ plugins are enabled. The Users plugin simply measures how many users are logged in on a host. This could be a good metric to create OMS alerts from. An unusual amount of logged in users on a host may be a sign of an ongoing attack or other suspicious activity.
 
 The [**Ping plugin**](https://collectd.org/documentation/manpages/collectd.conf.5.shtml#plugin_ping) measures network latency using ICMP "echo requests", usually known as "ping". Network latency is measured as a round-trip time. So by monitoring the ping connectivity to your hosts you are able get some basic insights about your network performance.
 
-    
-    vim /etc/collectd/collectd.conf
-    
-    LoadPlugin uptime
-    LoadPlugin users
-    LoadPlugin ping
-    <Plugin "ping">
-      Host "labvm01.lab.jhnr.ch"
-      Host "labvm02.lab.jhnr.ch"
-      Host "labvm03.lab.jhnr.ch"
-    </Plugin>
+```bash
+vim /etc/collectd/collectd.conf
 
+LoadPlugin uptime
+LoadPlugin users
+LoadPlugin ping
+<Plugin "ping">
+   Host "labvm01.lab.jhnr.ch"
+   Host "labvm02.lab.jhnr.ch"
+   Host "labvm03.lab.jhnr.ch"
+</Plugin>
+```
 
 When working with the _Ping_ plugin, make sure you install _liboping0 _package because this is required for proper functioning of the plugin. Unfortunately _liboping0_ is not included as dependency when installing collectd package.
 
-    
-    sudo apt-get install liboping0
-
+```bash
+sudo apt-get install liboping0
+```
 
 If you did not install _liboping0_ you will see the following error messages appearing in _/var/log/syslog_ as soon as you restart collectd with _Ping_ module installed:
 
-    
-    Aug  7 10:49:01 LabVM03 collectd[4119]: lt_dlopen ("/usr/lib/collectd/ping.so") failed: file not found. The most common cause for this problem is missing dependencies. Use ldd(1) to check the dependencies of the plugin / shared object.
-    Aug  7 10:49:01 LabVM03 collectd[4119]: ERROR: lt_dlopen ("/usr/lib/collectd/ping.so") failed: file not found. The most common cause for this problem is missing dependencies. Use ldd(1) to check the dependencies of the plugin / shared object.
-    Aug  7 10:49:01 LabVM03 collectd[4119]: plugin_load: Load plugin "ping" failed with status 1.
-    Aug  7 10:49:01 LabVM03 collectd[4119]: Found a configuration for the `ping' plugin, but the plugin isn't loaded or didn't register a configuration callback.
-
+```bash
+Aug  7 10:49:01 LabVM03 collectd[4119]: lt_dlopen ("/usr/lib/collectd/ping.so") failed: file not found. The most common cause for this problem is missing dependencies. Use ldd(1) to check the dependencies of the plugin / shared object.
+Aug  7 10:49:01 LabVM03 collectd[4119]: ERROR: lt_dlopen ("/usr/lib/collectd/ping.so") failed: file not found. The most common cause for this problem is missing dependencies. Use ldd(1) to check the dependencies of the plugin / shared object.
+Aug  7 10:49:01 LabVM03 collectd[4119]: plugin_load: Load plugin "ping" failed with status 1.
+Aug  7 10:49:01 LabVM03 collectd[4119]: Found a configuration for the `ping' plugin, but the plugin isn't loaded or didn't register a configuration callback.
+```
 
 After configuring CollectD, it is now time to install the OMS agent for Linux. Make sure you are using the _--collectd_ switch
 
-    
-    sudo sh ./omsagent-1.2.0-25.universal.x64.sh --upgrade --collectd -w <YOUR OMS WORKSPACE ID> -s <YOUR OMS WORKSPACE PRIMARY KEY>
-
+```bash 
+sudo sh ./omsagent-1.2.0-25.universal.x64.sh --upgrade --collectd -w <YOUR OMS WORKSPACE ID> -s <YOUR OMS WORKSPACE PRIMARY KEY>
+```
 
 When using _--collectd _switch, the OMS install routine will actually add a config file _oms.conf_ to _/etc/collectd/collectd.conf.d. _This conf file will make sure that CollectD is forwarding all the metrics in JSON format to OMS Agent for Linux using the _write_http_ plugin.
 
+```bash 
+vim /etc/collectd/collectd.conf.d/oms.conf
     
-    vim /etc/collectd/collectd.conf.d/oms.conf
-    
-    LoadPlugin write_http
-    <Plugin write_http>
-             <Node "oms">
-             URL "127.0.0.1:26000/oms.collectd"
-             Format "JSON"
-             StoreRates true
-             </Node>
-    </Plugin>
-
+LoadPlugin write_http
+<Plugin write_http>
+     <Node "oms">
+         URL "127.0.0.1:26000/oms.collectd"
+         Format "JSON"
+         StoreRates true
+     </Node>
+</Plugin>
+```
 
 The OMS Agent for Linux listens on port 26000 for CollectD metrics and then converts them to OMS schema metrics. To have a common model between infrastructure metrics that are already collected by the OMS Agent for Linux and the additional metrics that CollectD gathers, the following schema mapping is used:
 
@@ -96,9 +95,9 @@ The OMS Agent for Linux listens on port 26000 for CollectD metrics and then conv
 
 If everything went well and , you should soon see some CollectD metrics data populated in your OMS workspace. If not, you probably have to restart CollectD service because it did not yet pick off the configuration changes made by OMS Agent for Linux installation routine.
 
-    
-    service collectd restart
-
+```bash 
+service collectd restart
+```
 
 As you notice, the CollectD type (users in this case) is mapped to the ObjectName field in OMS.
 
@@ -110,14 +109,12 @@ Now that the data is available in OMS, you can pretty easily create some [custom
 
 For example, use a query like the following to get logged in users aggregated by computer.
 
-    
-    Type=Perf ObjectName=users | measure max(CounterValue) by Computer interval 5minutes
-
+```bash
+Type=Perf ObjectName=users | measure max(CounterValue) by Computer interval 5minutes
+```
 
 When working with the _Ping_ metrics you want to aggregate on CounterName field because that is where the host name of the pinged computer is found. The following should give you the average RTT for a given host.
 
-    
-    Type=Perf ObjectName=ping | measure avg(CounterValue) by CounterName interval 5minutes
-
-
-
+```bash
+Type=Perf ObjectName=ping | measure avg(CounterValue) by CounterName interval 5minutes
+```

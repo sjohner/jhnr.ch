@@ -61,4 +61,4 @@ If you want to move only specific subscriptions from another account to an Enter
 >Be aware that when moving a specific subscription from one Account X associated to Tenant A to another Account Y associated to another Tenant B (which is under EA enrollment), then the existing role assignments would be lost, since in this scenario the subscription is moving across different tenants.
 However if Account X and Y both are under same Azure tenant then RBAC role assignment wont be lost, since the subscription is moved between two different accounts under same tenant.
 
-If you decide to move only specific subscriptions from  PAYG account to an Enterprise Agreement, contact [Microsoft Support]().
+If you decide to move only specific subscriptions from  PAYG account to an Enterprise Agreement, contact [Microsoft Support](https://support.microsoft.com/en-us/getsupport?tenant=classiccommercial&locale=en-us&supportregion=en-us&pesid=15736&sd=&oaspworkflow=start_1.0.0.0&wf=0&ccsid=636238732967168112&forceorigin=esmc).

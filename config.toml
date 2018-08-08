@@ -5,6 +5,7 @@ theme = "hyde"
 disqusShortname = "jhnr"
 googleAnalytics = "UA-72698700-1"
 relativeURLs = true
+socialSharePrivacy = true
 
 [permalinks]
   blog = "/:year/:month/:day/:title/"

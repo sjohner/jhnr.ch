@@ -1,51 +1,78 @@
 ---
-title: "Test Azure Infrastructure With Inspec"
-date: 2018-10-22T10:35:34+02:00
-draft: true
+author: sjohner
+date: 2018-11-05T10:35:34+02:00
+title: "Testing Azure infrastructure with Chef Inspec"
+categories:
+- Cloud
+- Infrastructure as Code
+tags:
+- Testing
+- Chef
+- Inspec
+- CI/CD
+- Pipeline
+- Terraform
+- ARM
+- Azure
+- AWS
 ---
+
+There are lot of discussions going on about how a company can make sure that their infrastructure running in the cloud is and stays compliant. Being compliant in cloud environments can be a challenge. The boundary between infrastructure and application responsibilities is becoming increasingly blurred. DevOps teams distribute both infrastructure and application code and are also responsible for application security. In order to ensure that the infrastructure in the cloud is compliant with the specifications of the respective company, it must be continuously checked and tested. 
+
+# Infrastructure deployments in the cloud
 
 There are many different ways of working with Azure or any other cloud environment. If you are working with any cloud environment, you probably have noticed that each way comes with some advantages and disadvantages.
 
-# Portal
+## Self-service portal
+
 Most people are pretty comfortable with the portal experience of a specific cloud provider and it definitively has some big advantages:
+
 * It is browser based
 * You dont need to setup anything
 * It is great for visually exploring and inspecting services. 
 
-But as you are avancing in your cloud journey, you will see that using the portal comes with some cevats:
+But as you are moving forward in your cloud journey, you will see that using the portal comes with some caveats:
+
 * Everything is performed manually
 * Therefore it is error prone
 * It lacks process integration (DevOps, ITSM)
 
-# Scripting
+## Scripting
+
 Probably the next step in evolution from manually using the cloud provider portal is to script the whole thing
+
 * Scripts can be integrated into processes (DevOps, ITSM)
 * It is less error prone since there is no human interaction
 
 However scripts can
+
 * be very complex and therefore need a lot of scripting knowledge
 * require logic to be hand built
 * be as flexible as you require it to be
 
-# Template based deployments
+## Template based deployments
+
 With template based deployments you describe what you want to build. This is basically known under the term _Infrastructure as Code (IaC)_. Azure Resource Manager (ARM) does this for Azure, Cloud Formation for AWS and with Terraform you can deploy IaC to different (cloud) providers.
+
 * IaC can be integrated into processes (DevOps, ITSM)
 * It is less error prone since there is no human interaction
 * It can handle more complex logic
 * Sometimes you get state management (Terraform)
 
 When using template based deployments you will probably run into the following disadvantages:
+
 * Deep knowledge of templating and the corresponding environment / cloud provider is needed
 * Template based deployments are not as flexible as for example script based deployments
 
 At some point in time you will probably start using template based deployments simply because in larger environments you will need deployments to be integrated into processes and because your deployments will become more and more complex. However as with application code, infrastructure code needs to be tested before it is going to be deployed into production. And furthermore it needs to be monitored for compliance while it lives in production. You probably dont want to be the company that deploys a public AWS bucket and [leaks 128 million records of American voters](https://www.zdnet.com/article/security-lapse-exposes-198-million-united-states-voter-records/)...
 
 # Chef Inspec
+
 That's where Chef Inspec comes into play. InSpec is Chef’s open-source language for describing security and compliance rules. With Inspec you can track the compliance of your infrastructure based on predefined policies. For example, you can describe compliance controls in InSpec and integrate these tests into any stage of your deployment pipeline or choose from a set of pre-packaged InSpec profiles. Tests are very self-explanatory, simple and Ruby-based.
 
-There exist similar solutions like the [Secure DevOps Kit for Azure](https://azsk.azurewebsites.net/index.html) but InSpec supports all major operating systems and platforms (AWS, Azure, GCP, Vmware, etc.), allowing you the freedom to run compliance and security tests pretty much anywhere. Inspec tests let you verify your expected state against the current state of your systems. In terms of cloud providers this means that the tests are run against the cloud providers API. This means, that infrastructure has to be already deployed to the cloud before it can be verified against your expected state. As outlined in the image below, this means that you for example run Inspec tests after you executed a *terraform apply* command and continuosely to check that infrastructure is compliant.
+There exist similar solutions like the [Secure DevOps Kit for Azure](https://azsk.azurewebsites.net/index.html) but InSpec supports all major operating systems and platforms (AWS, Azure, GCP, Vmware, etc.), allowing you the freedom to run compliance and security tests pretty much anywhere. Inspec tests let you verify your expected state against the current state of your systems. In terms of cloud providers this means that the tests are run against the cloud providers API. This means, that infrastructure has to be already deployed to the cloud before it can be verified against your expected state. As outlined in the image below, this means that you for example run Inspec tests after you executed a *terraform apply* command and continuously to check that infrastructure is compliant.
 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+[![IaC Testing](/images/testing_iac.png)](/images/testing_iac.png)
 
 Inspec can be downloaded for various operating systems from [Inspec website](https://downloads.chef.io/inspec). Since Inspec is completely open source you might want to check on its source code which [can be found on Github](https://github.com/inspec/inspec-azure)
 
@@ -83,11 +110,17 @@ Make sure you are removing the example.rb control before running inspec for the 
 
 InSpec Azure resources are available as resource pack and to use them in your controls, you will need to create an inspec profile which depends on the given *inspec_azure* resource pack. While running the tests the proper extension will be downloaded from Github and used. For a full list of available Azure resources, check out [Inspec documentation](https://www.inspec.io/docs/reference/resources/#azure-resources).
 
-# Include gist profile
+{{< gist sjohner e9f879f3cf27c648b4c5d7d1ae861f9c "inspec.yml" >}}
 
 Besides the profile you will need at least one Inspec control which defines what InSpec is going to test in your subscription. Controls are put in the controls folder of your newly created Inspec profile. Below you can find some examples of different controls which I use to test my GRC pool resources running on Azure. As you can see there are already many resources available for Azure and I expect that to grow over time. Some of the available resources are coming in very handy. For example you can easily check whether your subnet has a network security group assigned and if this network security group allows SSH and RDP traffic from the internet. That pretty much exactly covers the scenarios we want to check on from a security point of view. For a complete list of available resources in InSpec azure library you can refer to the [documentation](https://www.inspec.io/docs/reference/resources/#azure-resources) or the [inspec-azure source on Github](https://github.com/inspec/inspec-azure)
 
-#include gist controls
+{{< gist sjohner e9f879f3cf27c648b4c5d7d1ae861f9c "check_vm_azl73627.rb" >}}
+
+{{< gist sjohner e9f879f3cf27c648b4c5d7d1ae861f9c "check_vnet_grcpool-prod-rg-vnet.rb" >}}
+
+{{< gist sjohner e9f879f3cf27c648b4c5d7d1ae861f9c "check_subnet_default.rb" >}}
+
+{{< gist sjohner e9f879f3cf27c648b4c5d7d1ae861f9c "check_nsg_default_subnet.rb" >}}
 
 Once you have created at least one control, go and run a check to see if your profile is valid or if it has any errors or warnings.
  ```bash

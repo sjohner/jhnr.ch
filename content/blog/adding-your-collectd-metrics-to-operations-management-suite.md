@@ -4,7 +4,7 @@ date: 2016-08-26 09:44:18+00:00
 title: Adding your CollectD metrics to Operations Management Suite
 categories:
 - Linux
-- Operations Managment Suite
+- Operations Management Suite
 tags:
 - Cloud
 - CollectD

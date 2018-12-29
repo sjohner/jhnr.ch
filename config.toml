@@ -7,12 +7,12 @@ googleAnalytics = "UA-72698700-1"
 relativeURLs = true
 
 [permalinks]
-  blog = "/:year/:month/:day/:title/"
-  singles = "/:title/"
+  blog = "/:year/:month/:day/:slug/"
+  singles = "/:slug/"
 
 [params]
     themeColor = "theme-base-0d"
-    description = "Working with #Azure. Microsoft MVP. Likes cheese, chocolate and @burgdorferbier. Runs Experts Live Café Switzerland"
+    description = "Working with Cloud. Microsoft MVP. Likes cheese, chocolate and @burgdorferbier. Runs Experts Live Café Switzerland"
     copyright = "This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
     creativeCommons = "by-sa"
     socialSharePrivacy = true

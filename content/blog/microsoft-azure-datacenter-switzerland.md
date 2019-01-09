@@ -31,17 +31,17 @@ Azure will [reportedly](https://www.procloud.ch/aktuelle-informationen-zu-den-mi
 
 [According to Bloomberg](https://www.bloomberg.com/news/articles/2018-12-11/ubs-said-to-prepare-cloud-move-to-hidden-microsoft-data-centers) UBS reached a deal worth hundreds of millions of Swiss francs to use Azure cloud services. Whether the deal took place before or after the decision to build Azure regions in Switzerland is unknown. Although it seems that UBS does not put customer data into the cloud, it is likely that they will be consuming services out of the newly announced Swiss Azure datacenters. In this case, UBS may also have a significant influence on the order in which services are offered.
 
-# When will services become available?
+# When will these services become available?
 
 Microsoft does not communicate specific dates but [they did state]((https://www.procloud.ch/aktuelle-informationen-zu-den-microsoft-datacenter-schweiz-azure-schweiz-office-365-schweiz-dynamics-schweiz/)) that the first available service will be Azure somewhere in 2019, Office 365 will follow 3-6 month later and last but not least Dynamics will become available again 3-6 months later. This means that if Azure would be launched any time in summer, Office 365 might not be available from Switzerland until late 2019 or Q1/2020.
 
-# Pricing
+# What to expect on pricing?
 
 No word from Microsoft about pricing yet. But based on the experience of the also relatively new French datacenters, one can assume that Office 365 will be available at the same price from the Swiss datacenters as it is already offered from the European datacenters.
 
 The same probably goes for Azure pricing. In this sense, services from the Swiss Azure cloud can be expected to add about 10% to the prices in the North and West Europe regions as it is the case for the French datacenters.
 
-# Data privacy
+# Will my data stay in Switzerland?
 
 [In an interview](https://www.itreseller.ch/Artikel/87153/Microsoft_Stillstand_ist_keine_Option.html), Marc Holitscher (Microsoft Switzerland CTO at this time) assured that data within Azure Switzerland regions will stay in Switzerland. However for services which are operated on a global scale (like Azure Active Directory) data will still leave Switzerland regions though (as it does in other regions as well). Microsoft assures in their contracts to comply with the relevant laws of specific regions. Accordingly, the Swiss Data Protection Act also applies to data stored in Switzerland regions.
 

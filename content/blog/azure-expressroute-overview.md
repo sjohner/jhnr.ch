@@ -81,7 +81,7 @@ Unlike Site-to-Site VPN which only works for IaaS, Azure ExpressRoute can be use
 
 # Peering
 
-A peering is essentially a collection of two BGP sessions between the on premises routers and the Microsoft ExpressRoute routers. If the [Cloud Exchange Co-location or Point-to-Point Ethernet Connection connectivity models](https://docs.microsoft.com/en-us/azure/expressroute/expressroute-connectivity-models) are used (which is the case for example when using Equinix Cloud Exchange or interxion Cloud Connect), the customer edge router (CE) would establish BGP peering with MSEEs. Provider edge customer facing (PE-CE) and Provider edge Microsoft facing (PE-MSEE) would still exist but be somewhat transparent as Layer 2 devices.
+A peering is essentially a collectio     n of two BGP sessions between the on premises routers and the Microsoft ExpressRoute routers. If the [Cloud Exchange Co-location or Point-to-Point Ethernet Connection connectivity models](https://docs.microsoft.com/en-us/azure/expressroute/expressroute-connectivity-models) are used (which is the case for example when using Equinix Cloud Exchange or interxion Cloud Connect), the customer edge router (CE) would establish BGP peering with MSEEs. Provider edge customer facing (PE-CE) and Provider edge Microsoft facing (PE-MSEE) would still exist but be somewhat transparent as Layer 2 devices.
 
 An ExpressRoute circuit can have multiple peerings associated with it:
 

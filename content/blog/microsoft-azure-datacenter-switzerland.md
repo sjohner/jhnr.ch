@@ -35,7 +35,7 @@ Azure will [reportedly](https://www.procloud.ch/aktuelle-informationen-zu-den-mi
 
 Microsoft does not communicate specific dates but [they did state]((https://www.procloud.ch/aktuelle-informationen-zu-den-microsoft-datacenter-schweiz-azure-schweiz-office-365-schweiz-dynamics-schweiz/)) that the first available service will be Azure somewhere in 2019, Office 365 will follow 3-6 month later and last but not least Dynamics will become available again 3-6 months later. This means that if Azure would be launched any time in summer, Office 365 might not be available from Switzerland until late 2019 or Q1/2020.
 
-# What to expect on pricing?
+# What to expect regarding prices?
 
 No word from Microsoft about pricing yet. But based on the experience of the also relatively new French datacenters, one can assume that Office 365 will be available at the same price from the Swiss datacenters as it is already offered from the European datacenters.
 

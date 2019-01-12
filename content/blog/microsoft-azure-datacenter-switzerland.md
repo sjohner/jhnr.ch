@@ -15,7 +15,7 @@ tags:
 - Dynamics
 ---
 
-This post should serve as an overview on all things related to Microsoft datacenters in Switzerland. [Microsoft announced](https://news.microsoft.com/fr-ch/2018/03/14/microsoft-cloud-services-expand-in-europe-including-new-swiss-datacenters/) that they will expand its cloud services to Switzerland in 2019 by adding two cloud regions located in the cantons of Geneva and Zurich. Azure, Office 365 and Dynamics 365 will be delivered from Switzerland. [Sources say](https://www.inside-it.ch/articles/52231) that Microsoft is building its Swiss cloud services with [e-shelter](https://www.e-shelter.de/de/location/datacenter-zurich) for Zurich region and [Safe Host](https://www.safehost.com/) for Geneva region.
+This post should serve as an overview on all things related to Microsoft datacenters in Switzerland. [Microsoft announced](https://news.microsoft.com/fr-ch/2018/03/14/microsoft-cloud-services-expand-in-europe-including-new-swiss-datacenters/) that they will expand its cloud services to Switzerland in 2019 by adding two cloud regions located in the cantons of Geneva and Zurich. Azure, Office 365 and Dynamics 365 will be delivered from Switzerland. [Sources say](https://www.inside-it.ch/articles/52231) that Microsoft is building its Swiss cloud services with [e-shelter](https://www.e-shelter.de/de/location/datacenter-zurich) for Zurich region and [Safe Host](https://www.safehost.com/) for Geneva region (which is actually most probably in the canton of Vaud, as the [Safe Host Datacenter in Gland](https://www.safehost.com/en/data-centre/sh2) is much bigger and newer than the one in Geneva).
 
 [![Azure Datacenter Switzerland Overview](/images/azure-switzerland-datacenter.png)](/images/azure-switzerland-datacenter.png)
 
@@ -39,7 +39,7 @@ Microsoft does not communicate specific dates but [they did state]((https://www.
 
 No word from Microsoft about pricing yet. But based on the experience of the also relatively new French datacenters, one can assume that Office 365 will be available at the same price from the Swiss datacenters as it is already offered from the European datacenters.
 
-The same probably goes for Azure pricing. In this sense, services from the Swiss Azure cloud can be expected to add about 10% to the prices in the North and West Europe regions as it is the case for the French datacenters.
+The same probably goes for Azure pricing. In this sense, services from the Swiss Azure cloud can be expected to add about 10%-20% to the prices in the North and West Europe regions - depending with which region you are going to compare prices - as it is the case for the French datacenters.
 
 # Will my data stay in Switzerland?
 

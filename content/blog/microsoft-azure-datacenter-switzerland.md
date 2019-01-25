@@ -27,9 +27,11 @@ Services will be available in the following order:
 2. Office 365
 3. Dynamics 365
 
-Azure will [reportedly](https://www.procloud.ch/aktuelle-informationen-zu-den-microsoft-datacenter-schweiz-azure-schweiz-office-365-schweiz-dynamics-schweiz/) launch with IaaS offerings (Virtual Machines, Storage, Backup, Compute, Networking, etc.). However, you can also expect popular PaaS services like the Azure SQL Database to be available soon.
-
 [According to Bloomberg](https://www.bloomberg.com/news/articles/2018-12-11/ubs-said-to-prepare-cloud-move-to-hidden-microsoft-data-centers) UBS reached a deal worth hundreds of millions of Swiss francs to use Azure cloud services. Whether the deal took place before or after the decision to build Azure regions in Switzerland is unknown. Although it seems that UBS does not put customer data into the cloud, it is likely that they will be consuming services out of the newly announced Swiss Azure datacenters. In this case, UBS may also have a significant influence on the order in which services are offered.
+
+With UBS as primary launch partner and anchor tenant for Microsoft datacenters in Switzerland, one can assume that Microsoft focuses on FSI (Financial Services Industry) market in Switzerland. This industry as well as health care and government is also very sensitive about Swiss data protection laws and FINMA regulations, which makes it a perfect target group for Swiss datacenters.
+
+Azure will [reportedly](https://www.procloud.ch/aktuelle-informationen-zu-den-microsoft-datacenter-schweiz-azure-schweiz-office-365-schweiz-dynamics-schweiz/) launch with IaaS offerings (Virtual Machines, Storage, Backup, Compute, Networking, etc.). However, you can also expect popular PaaS services like the Azure SQL Database to be available soon. Should the assumption with the focus on FSI prove true, we can probably also expect data privacy relevant services such as Key Vault, SAP, possibly Cosmos DB and maybe HPC services in the near future. What we probably won't see from the beginning are GPU enabled virtual machines.
 
 # When will these services become available?
 
@@ -39,7 +41,7 @@ Microsoft does not communicate specific dates but [they did state]((https://www.
 
 No word from Microsoft about pricing yet. But based on the experience of the also relatively new French datacenters, one can assume that Office 365 will be available at the same price from the Swiss datacenters as it is already offered from the European datacenters.
 
-The same probably goes for Azure pricing. In this sense, services from the Swiss Azure cloud can be expected to add about 10%-20% to the prices in the North and West Europe regions - depending with which region you are going to compare prices - as it is the case for the French datacenters.
+The same probably goes for Azure pricing. In this sense, services from the Swiss Azure cloud can be expected to add about 10%-20% to the prices in the North and West Europe regions - depending with which region you are going to compare prices - as it is the case for the French datacenters. So if you want to get a glimpse on Azure Switzerland pricing, check out pricing for French regions on [Azure Calculator](https://azure.microsoft.com/en-us/pricing/calculator/).
 
 # Will my data stay in Switzerland?
 

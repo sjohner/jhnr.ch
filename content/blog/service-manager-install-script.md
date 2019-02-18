@@ -3,7 +3,7 @@ author: sjohner
 comments: true
 date: 2017-08-24 11:02:59+00:00
 layout: post
-slug: service-manager-install-script
+slug: service-manager-installation-by-using-a-powershell-script
 title: Service Manager Installation by using a PowerShell Script
 categories:
 - Service Manager

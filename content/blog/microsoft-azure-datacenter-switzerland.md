@@ -1,7 +1,7 @@
 ---
 author: sjohner
 comments: true
-date: 2019-02-25T20:22:08+01:00
+date: 2019-02-25T15:22:08+01:00
 slug: microsoft-azure-datacenter-switzerland
 title: About Microsoft Azure datacenters in Switzerland
 categories:

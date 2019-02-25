@@ -48,6 +48,7 @@ Most probably the term "Networking" includes other IaaS related services like Lo
 Should the assumption with the focus on FSI prove true, we can probably also expect data privacy relevant services such as Key Vault, SAP and maybe HPC services in the near future.
 
 By looking at service availability in France regions, we might get a glympse on what we **won't** see very soon in Switzerland:
+
 * GPU enabled virtual machines
 * AI services like Azure Machine learning service or bot service
 * IoT services like IoT Hub, IoT Central and Time Series Insights

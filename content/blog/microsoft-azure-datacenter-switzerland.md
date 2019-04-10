@@ -67,6 +67,9 @@ During Microsoft Tech Summit Switzerland 2019 in Bern, [Primo Amrein announced a
 * [Azure Site Recovery](https://azure.microsoft.com/en-us/services/site-recovery/)
 * [Azure Monitor](https://azure.microsoft.com/en-us/services/monitor/)
 
+[![Azure Datacenter Switzerland Launch Services](/images/azure-switzerland-services-techsummit.jpg)](/images/azure-switzerland-services-techsummit.jpg)
+_Credits for the above snapshot go to [Mark Allibone](https://twitter.com/mallibone)_
+
 More Azure services will become available in the coming months after the official launch:
 
 * Azure Web Apps

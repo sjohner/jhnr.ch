@@ -1,7 +1,7 @@
 ---
 author: sjohner
 comments: true
-date: 2019-02-25T15:22:08+01:00
+date: 2019-04-09T15:22:08+01:00
 slug: microsoft-azure-datacenter-switzerland
 title: About Microsoft Azure datacenters in Switzerland
 categories:
@@ -35,28 +35,7 @@ Services will be available in the following order:
 
 With UBS as primary launch partner and anchor tenant for Microsoft datacenters in Switzerland, one can assume that Microsoft focuses on FSI (Financial Services Industry) market in Switzerland. This industry as well as health care and government is also very sensitive about Swiss data protection laws and FINMA regulations, which makes it a perfect target group for Swiss datacenters.
 
-Following services are confirmed to be available from the start (see [this interview with Primo Amrein](https://www.procloud.ch/aktuelle-informationen-zu-den-microsoft-datacenter-schweiz-azure-schweiz-office-365-schweiz-dynamics-schweiz/) and [this one with Marc Holitscher](https://www.procloud.ch/aktuelle-informationen-zu-den-microsoft-datacenter-schweiz-azure-schweiz-office-365-schweiz-dynamics-schweiz/) for reference):
-
-* Virtual machines
-* Storage (including GRS)
-* Backup
-* Networking
-* SQL Database
-* Cosmos DB
-
-Most probably the term "Networking" includes other IaaS related services like Load Balancer, VPN Gateway and maybe Express Route since this is a requirement for many enterprise grade customers. And since the regions are designed for geo-redundancy, the term "Backup" might include Azure Site Recovery as well.
-Should the assumption with the focus on FSI prove true, we can probably also expect data privacy relevant services such as Key Vault, SAP and maybe HPC services in the near future.
-
-By looking at service availability in France regions, we might get a glympse on what we **won't** see very soon in Switzerland:
-
-* GPU enabled virtual machines
-* AI services like Azure Machine learning service or bot service
-* IoT services like IoT Hub, IoT Central and Time Series Insights
-* Container services like AKS, Container Instances and Container Registry
-
-## Update April 2019
-
-During Microsoft Tech Summit Switzerland in Bern, [Primo Amrein announced and published further details](https://www.linkedin.com/pulse/more-details-services-upcoming-microsoft-swiss-primo-amrein/) on what services will launch in the upcoming Microsoft datacenters. For Azure those will be:
+During Microsoft Tech Summit Switzerland 2019 in Bern, [Primo Amrein announced and published further details](https://www.linkedin.com/pulse/more-details-services-upcoming-microsoft-swiss-primo-amrein/) on what services will launch in the upcoming Microsoft datacenters. For Azure those will be:
 
 * [Application Gateway](https://azure.microsoft.com/en-us/services/application-gateway/)
 * [Cosmos DB](https://azure.microsoft.com/en-us/services/cosmos-db/)
@@ -104,6 +83,11 @@ Office 365 will launch with the following services providing local data residenc
 * SharePoint Online
 * OneDrive for Business
 
+By looking at service availability in France regions, we might get a glympse on what we **won't** see very soon in Switzerland:
+
+* GPU enabled virtual machines
+* AI services like Azure Machine learning service or bot service
+* IoT services like IoT Hub, IoT Central and Time Series Insights
 
 # When will these services become available?
 

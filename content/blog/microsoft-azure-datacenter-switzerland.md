@@ -35,7 +35,12 @@ Services will be available in the following order:
 
 With UBS as primary launch partner and anchor tenant for Microsoft datacenters in Switzerland, one can assume that Microsoft focuses on FSI (Financial Services Industry) market in Switzerland. This industry as well as health care and government is also very sensitive about Swiss data protection laws and FINMA regulations, which makes it a perfect target group for Swiss datacenters.
 
-During Microsoft Tech Summit Switzerland 2019 in Bern, [Primo Amrein announced and published further details](https://www.linkedin.com/pulse/more-details-services-upcoming-microsoft-swiss-primo-amrein/) on what services will launch in the upcoming Microsoft datacenters. For Azure those will be:
+During Microsoft Tech Summit Switzerland 2019 in Bern, [Primo Amrein announced and published further details](https://www.linkedin.com/pulse/more-details-services-upcoming-microsoft-swiss-primo-amrein/) on what services will launch in the upcoming Microsoft datacenters.
+
+[![Azure Datacenter Switzerland Launch Services](/images/azure-switzerland-services-techsummit.jpg)](/images/azure-switzerland-services-techsummit.jpg)
+_Credits for the above snapshot go to [Mark Allibone](https://twitter.com/mallibone)_
+
+The following Azure services will be available initially:
 
 * [Application Gateway](https://azure.microsoft.com/en-us/services/application-gateway/)
 * [Cosmos DB](https://azure.microsoft.com/en-us/services/cosmos-db/)
@@ -66,9 +71,6 @@ During Microsoft Tech Summit Switzerland 2019 in Bern, [Primo Amrein announced a
 * [Virtual Networks](https://azure.microsoft.com/en-us/services/virtual-network/)
 * [Azure Site Recovery](https://azure.microsoft.com/en-us/services/site-recovery/)
 * [Azure Monitor](https://azure.microsoft.com/en-us/services/monitor/)
-
-[![Azure Datacenter Switzerland Launch Services](/images/azure-switzerland-services-techsummit.jpg)](/images/azure-switzerland-services-techsummit.jpg)
-_Credits for the above snapshot go to [Mark Allibone](https://twitter.com/mallibone)_
 
 More Azure services will become available in the coming months after the official launch:
 

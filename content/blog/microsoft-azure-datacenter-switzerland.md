@@ -33,6 +33,57 @@ With UBS as primary launch partner and anchor tenant for Microsoft datacenters i
 
 Azure will [reportedly](https://www.procloud.ch/aktuelle-informationen-zu-den-microsoft-datacenter-schweiz-azure-schweiz-office-365-schweiz-dynamics-schweiz/) launch with IaaS offerings (Virtual Machines, Storage, Backup, Compute, Networking, etc.). However, you can also expect popular PaaS services like the Azure SQL Database to be available soon. Should the assumption with the focus on FSI prove true, we can probably also expect data privacy relevant services such as Key Vault, SAP, possibly Cosmos DB and maybe HPC services in the near future. What we probably won't see from the beginning are GPU enabled virtual machines.
 
+## Update April 2019
+
+During Microsoft Tech Summit Switzerland in Bern, [Primo Amrein announced and published further details](https://www.linkedin.com/pulse/more-details-services-upcoming-microsoft-swiss-primo-amrein/) on what services will launch in the upcoming Microsoft datacenters. For Azure those will be:
+
+* [Application Gateway](https://azure.microsoft.com/en-us/services/application-gateway/)
+* [Cosmos DB](https://azure.microsoft.com/en-us/services/cosmos-db/)
+* [Azure SQL Database](https://azure.microsoft.com/en-us/services/sql-database/)
+* [Azure Backup](https://azure.microsoft.com/en-us/services/backup/)
+* [Event Hubs](https://azure.microsoft.com/en-us/services/event-hubs/)
+* [Express Route](https://azure.microsoft.com/en-us/services/expressroute/)
+  * At the moment, Interxion is listed as the only connectivity provider in the [official documentation](https://docs.microsoft.com/en-us/azure/expressroute/expressroute-locations). More providers will be available at launch.
+* [Azure Cache for Redis](https://azure.microsoft.com/en-us/services/cache/)
+* [Key Vault](https://azure.microsoft.com/en-us/services/key-vault/)
+* [Load Balancer](https://azure.microsoft.com/en-us/services/load-balancer/)
+* [Service Bus](https://azure.microsoft.com/en-us/services/service-bus/)
+* [Service Fabric](https://azure.microsoft.com/en-us/services/service-fabric/)
+* [Storage](https://azure.microsoft.com/en-us/services/storage/)
+* [VPN Gateway](https://azure.microsoft.com/en-us/services/vpn-gateway/)
+* [Virtual Machines](https://azure.microsoft.com/en-us/services/virtual-machines/)
+  * A0 - A7-series (general purpose)
+  * Av2-series (general purpose)
+  * B-series (general purpose, burstable)
+  * D-series (general purpose)
+  * DS-series (general purpose)
+  * DSv2-series (general purpose)
+  * DSv3-series (general purpose)
+  * Esv3-series (memory optimized)
+  * Ev3-series (memory optimzed)
+  * F-series (compute optimized)
+  * Fs-series (compute optimized)
+* [Virtual Networks](https://azure.microsoft.com/en-us/services/virtual-network/)
+* [Azure Site Recovery](https://azure.microsoft.com/en-us/services/site-recovery/)
+* [Azure Monitor](https://azure.microsoft.com/en-us/services/monitor/)
+
+More Azure services will become available in the coming months after the official launch:
+
+* Azure Web Apps
+* SAP on Azure (with SAP HANA certified M-series virtual machines)
+* SQL Data Warehouse
+* Azure Kubernetes Services (AKS)
+* Azure database for PostgreSQL / MySQL / MariaDB
+* Media Services
+* Power BI
+
+Office 365 will launch with the following services providing local data residency:
+
+* Exchange Online mailbox content
+* SharePoint Online
+* OneDrive for Business
+
+
 # When will these services become available?
 
 Microsoft does not communicate specific dates but [they did state]((https://www.procloud.ch/aktuelle-informationen-zu-den-microsoft-datacenter-schweiz-azure-schweiz-office-365-schweiz-dynamics-schweiz/)) that the first available service will be Azure somewhere in 2019, Office 365 will follow 3-6 month later and last but not least Dynamics will become available again 3-6 months later. This means that if Azure would be launched any time in summer, Office 365 might not be available from Switzerland until late 2019 or Q1/2020.
@@ -45,6 +96,6 @@ The same probably goes for Azure pricing. In this sense, services from the Swiss
 
 # Will my data stay in Switzerland?
 
-[In an interview](https://www.itreseller.ch/Artikel/87153/Microsoft_Stillstand_ist_keine_Option.html), Marc Holitscher (Microsoft Switzerland CTO at this time) assured that data within Azure Switzerland regions will stay in Switzerland. However for services which are operated on a global scale (like Azure Active Directory) data will still leave Switzerland regions though (as it does in other regions as well). Microsoft assures in their contracts to comply with the relevant laws of specific regions. Accordingly, the Swiss Data Protection Act also applies to data stored in Switzerland regions.
+[In an interview](https://www.itreseller.ch/Artikel/87153/Microsoft_Stillstand_ist_keine_Option.html), Marc Holitscher (Microsoft Switzerland CTO at this time) assured that data within Azure Switzerland regions will stay in Switzerland. However for services which are operated on a global scale (like Azure Active Directory) data will still leave Switzerland regions though (as it does in other regions as well). Microsoft assures in their contracts to comply with the relevant laws of specific regions. Accordingly, the Swiss Data Protection Act also applies to data stored in Switzerland regions. To operate the Swiss data centers, Microsoft founded a separate company under Swiss law. However as of my understanding, this company only operates the datacenters. The services on top are probably still going to be operated by Microsoft Corp.
 
 Most important Office 365 services should be available from Switzerland as well whereas other O365 services which are only available from US (like Sway or Yammer) will not. Moving Office 365 core data to new Switzerland regions should be possible as already known for other regions. Data moves can take up to 24 months to complete. See [Microsoft documentation](https://docs.microsoft.com/en-us/Office365/Enterprise/moving-data-to-new-datacenter-geos) for more details.

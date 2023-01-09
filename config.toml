@@ -1,47 +1,57 @@
 baseURL = "https://blog.jhnr.ch/"
 languageCode = "en-us"
 title = "Stefan Johner"
-theme = "hyde"
-disqusShortname = "jhnr"
-googleAnalytics = "UA-72698700-1"
+theme = "archie"
+copyright = "© Stefan Johner"
 relativeURLs = true
+pygmentsstyle = "monokai"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+paginate=3 # articles per page
 
 [permalinks]
-  blog = "/:year/:month/:day/:slug/"
-  singles = "/:slug/"
+    blog = "/:year/:month/:day/:slug/"
+    singles = "/:slug/"
 
 [params]
-    themeColor = "theme-base-0d"
-    description = "Working with Cloud. Microsoft MVP. Likes cheese, chocolate and @burgdorferbier. Runs Experts Live Café Switzerland"
-    copyright = "This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License."
-    creativeCommons = "by-sa"
-    socialSharePrivacy = true
-    github = "sjohner"
-    twitter = "johnerstefan"
-    linkedin = "sjohner"   
+    mode="toggle" # color-mode → light,dark,toggle or auto
+    useCDN=false # don't use CDNs for fonts and icons, instead serve them locally.
+    subtitle = "Working with Cloud. Microsoft Azure MVP. Likes cheese, chocolate and [Burgdorfer Bier](https://burgdorferbier.ch/). Co-Organizer of [Azure Bern User Group](https://www.meetup.com/de-DE/azure-cloud-bern-user-group/) and [Azure Bootcamp Switzerland](https://azurebootcamp.ch)"
+    mathjax = true # enable MathJax support
+    katex = true # enable KaTeX support
+
+[[params.social]]
+    name = "GitHub"
+    icon = "github"
+    url = "https://github.com/sjohner"
+
+[[params.social]]
+    name = "Twitter"
+    icon = "twitter"
+    url = "https://twitter.com/JohnerStefan/"
+
+[[params.social]]
+    name = "LinkedIn"
+    icon = "linkedin"
+    url = "https://linkedin.com/in/stefanjohner"
+
+[[menu.main]]
+    name = "All posts"
+    url = "/blog"
+    weight = 1
+
+[[menu.main]]
+    name = "Tags"
+    url = "/tags"
+    weight = 2
+
+[[menu.main]]
+    url = "/about/"
+    name = "About"
+    weight = 3
 
 [[menu.main]]
     url = "/privacy-policy/"
     name = "Privacy Policy"
-    weight = 1
-
-[privacy]
-  [privacy.disqus]
-    disable = false
-  [privacy.googleAnalytics]
-    anonymizeIP = true
-    disable = false
-    respectDoNotTrack = true
-    useSessionStorage = true
-  [privacy.instagram]
-    disable = true
-  [privacy.speakerDeck]
-    disable = false
-  [privacy.twitter]
-    disable = false
-    enableDNT = true
-  [privacy.vimeo]
-    disable = true
-  [privacy.youtube]
-    disable = false
-    privacyEnhanced = true
+    weight = 4

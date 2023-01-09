@@ -11,4 +11,6 @@ I’m a Switzerland-based IT guy that kind of specialises in cloud computing. Si
 
 I am passionate about technology and it amazes me how it massively influences the world to run faster and more efficiently. I enjoy sharing my knowledge and enthusasm for technology by [tweeting](https://twitter.com/johnerstefan), blogging and speaking at events. I believe in the power of the collective and that's why i like to get involved in the community. Be it as co-organizer of the [Azure Bootcamp Switzerland](https://azurebootcamp.ch), the [Azure Bern User Group](https://www.meetup.com/de-DE/azure-cloud-bern-user-group/) or in the board of the local sports club. Since 2016, I have regularly received the MVP Award from Microsoft for this commitment to the community.
 
-Except where otherwise noted, content on this site is licensed under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by/4.0/)
+Content from blogposts on this site, unless explicitly noted otherwise, is licensed under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by/4.0/)
+
+This site was built using [HUGO static site generator](https://gohugo.io/), which is released under the [Apache 2.0 license](https://gohugo.io/about/license/) and [Archie theme](https://github.com/athul/archie), which is release unter the [MIT license](https://github.com/athul/archie/blob/master/LICENSE)

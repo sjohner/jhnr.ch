@@ -110,10 +110,10 @@ sudo nano /etc/avahi/services/samba.service
 
 After restarting avahi-daemon the network drive is visible for Time Machine backup on the MacBook.
 
+![Time Machine backkup](/images/timemachine.png)
+
 If you encountered this dialog
 
 > "You do not have the necessary read, write and append privileges on the selected network backup disk."
 
 the timemachine dir on the destination filesystem needs to be chown'd to the user that's connecting. Might also need to be `chmod -R ug+rw`. Thanks [Paul Hammant](https://github.com/paul-hammant) for the hint!
-
-![Time Machine backkup](/images/timemachine.png)

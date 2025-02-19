@@ -23,17 +23,17 @@ paginate=3 # articles per page
 
 [[params.social]]
     name = "GitHub"
-    icon = "github"
+    icon = "simple:github"
     url = "https://github.com/sjohner"
 
 [[params.social]]
-    name = "Twitter"
-    icon = "twitter"
-    url = "https://twitter.com/JohnerStefan/"
+    name = "Bluesky"
+    icon = "simple:bluesky"
+    url = "https://bsky.app/profile/jhnr.ch"
 
 [[params.social]]
     name = "LinkedIn"
-    icon = "linkedin"
+    icon = "simple:linkedin"
     url = "https://linkedin.com/in/stefanjohner"
 
 [[menu.main]]

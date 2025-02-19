@@ -8,8 +8,6 @@ pygmentsstyle = "monokai"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
-paginate=3 # articles per page
-
 [permalinks]
     blog = "/:year/:month/:day/:slug/"
     singles = "/:slug/"

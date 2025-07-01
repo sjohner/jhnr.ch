@@ -18,6 +18,11 @@ First of all you need a working samba configuration. I had samba version 4.15.9 
 
 To make Samba work better with MacOS you can use the [vfs_fruit module](https://www.samba.org/samba/docs/current/man-html/vfs_fruit.8.html). It provides enhanced compatibility with Apple SMB clients and interoperability with a Netatalk 3 AFP fileserver.
 
+vfs_fruit module is part of Virtual FileSystem (VFS) modules. You will have to install samba-vfs-modules to make use of the vfs_fruit and other modules that extend the functionality of Samba:
+{{< highlight shell >}}
+sudo apt install samba-vfs-modules
+{{< /highlight >}}
+
 I ended up with the following working samba configuration.
 
 {{< highlight yaml >}}
